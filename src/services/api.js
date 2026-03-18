@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:5000";
+const API_URL = "https://limpiezas-api.onrender.com";
 
 export const getServices = async () => {
   const response = await fetch(`${API_URL}/service-request`);
