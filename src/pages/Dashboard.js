@@ -1,3 +1,4 @@
+console.log("ENTRANDO AL DASHBOARD");
 import React, { useEffect, useState } from "react";
 import "../Dashboard.css";
 import CalendarView from "../components/CalendarView";
@@ -94,11 +95,11 @@ function Dashboard() {
     loadServices();
   }, []);
 
-  const token = localStorage.getItem("token");
+  // const token = localStorage.getItem("token");
 
-  if (!token) {
-    window.location.href = "/login";
-  }
+  // if (!token) {
+  //   window.location.href = "/login";
+  // }
 
   return (
     <div className="layout">

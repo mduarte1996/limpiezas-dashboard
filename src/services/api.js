@@ -50,15 +50,15 @@ export const updateService = async (id, serviceData) => {
   return response.json();
 }; 
 
-export const loginUser = async (credentials) => {
+// export const loginUser = async (credentials) => {
 
-  const response = await fetch("http://127.0.0.1:5000/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(credentials)
-  });
+//   const response = await fetch("http://127.0.0.1:5000/login", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json"
+//     },
+//     body: JSON.stringify(credentials)
+//   });
 
-  return response.json();
-};
+//   return response.json();
+// };
