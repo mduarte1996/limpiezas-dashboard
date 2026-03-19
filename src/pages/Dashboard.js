@@ -95,12 +95,7 @@ function Dashboard() {
     loadServices();
   }, []);
 
-  // const token = localStorage.getItem("token");
-
-  // if (!token) {
-  //   window.location.href = "/login";
-  // }
-
+  
   return (
     <div className="layout">
 
