@@ -1,4 +1,3 @@
-console.log("ENTRANDO AL DASHBOARD");
 import React, { useEffect, useState } from "react";
 import "../Dashboard.css";
 import CalendarView from "../components/CalendarView";
@@ -7,6 +6,7 @@ import IncomeChart from "../components/IncomeChart";
 import { CheckCircleIcon, ClockIcon, ClipboardDocumentListIcon } from "@heroicons/react/24/solid";
 import { getServices, updateServiceStatus, deleteService, createService, updateService } from "../services/api";
 
+console.log("ENTRANDO AL DASHBOARD");
 
 function Dashboard() {
   const [services, setServices] = useState([]);
