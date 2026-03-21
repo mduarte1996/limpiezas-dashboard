@@ -69,4 +69,23 @@ button {
   color: white;
   text-align: center;
   padding: 50px 20px;
+} 
+
+.form-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
