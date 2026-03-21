@@ -78,6 +78,22 @@ function Home() {
 
             {/* NAVBAR */}
             <Navbar />
+            <div className="hero-video">
+
+                <video autoPlay loop muted playsInline className="video-bg">
+                    <source src="/video-limpieza.mp4" type="video/mp4" />
+                </video>
+
+                <div className="overlay">
+                    <h1>Profesionalismo que cuida cada detalle</h1>
+                    <p>Servicios de limpieza profesionales en Benidorm y alrededores</p>
+
+                    <a href="#form" className="primary-btn">
+                        Solicitar presupuesto
+                    </a>
+                </div>
+
+            </div>
 
             <div className="hero">
 
