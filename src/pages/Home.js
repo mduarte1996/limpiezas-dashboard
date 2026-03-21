@@ -12,7 +12,7 @@ function Home() {
       <div className="hero">
         <div className="overlay">
           <h1>Limpiezas Costa Blanca</h1>
-          <p>Servicios profesionales de limpieza en Benidorm</p>
+          <p>Servicios profesionales de limpieza en Benidorm y alrededores</p>
 
           <button onClick={() => navigate("/login")}>
             Área de clientes
