@@ -6,7 +6,6 @@ import Navbar from "../components/Navbar";
 import emailjs from "emailjs-com";
 
 function Home() {
-    const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
         client_name: "",
