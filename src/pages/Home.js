@@ -150,6 +150,20 @@ function Home() {
 
                 </form>
             </section>
+            <button
+                className="whatsapp-btn"
+                onClick={() => {
+                    const message = "Hola, quiero solicitar un servicio de limpieza";
+                    const phone = "34611009814"; // TU NUMERO CON PREFIJO 34
+
+                    window.open(
+                        `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
+                        "_blank"
+                    );
+                }}
+            >
+                📲 Escríbenos por WhatsApp
+            </button>
 
         </div>
     );

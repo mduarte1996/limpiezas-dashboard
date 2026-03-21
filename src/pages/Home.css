@@ -88,4 +88,39 @@ button {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
+} 
+
+.whatsapp-btn {
+  background-color: #25D366;
+  color: white;
+  margin-top: 10px;
+} 
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+} 
+
+body {
+  margin: 0;
+  background: #f9fafb;
 }
