@@ -1,36 +1,28 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
-  const navigate = useNavigate();
-
   return (
-    <div className="navbar">
-      <h2 className="logo" onClick={() => navigate("/")}>
-        LCB
-      </h2>
+    <nav className="navbar">
 
-      <div className="nav-links">
-        <button onClick={() => navigate("/")}>Inicio</button>
-        <button onClick={() => window.location.href="#form"}>Presupuesto</button>
-
-        <button
-          className="whatsapp"
-          onClick={() => {
-            const phone = "346XXXXXXXX";
-            const message = "Hola, quiero información sobre limpieza";
-            window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`);
-          }}
-        >
-          WhatsApp
-        </button>
-
-        <button onClick={() => navigate("/login")}>
-          Login
-        </button>
+      <div className="logo">
+        <span>LCB</span>
       </div>
-    </div>
+
+      <ul className="nav-links">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="#about">Sobre nosotros</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+
+      <div className="nav-right">
+        <a href="tel:+34611009814" className="phone-btn">
+          📞 +34 611 00 98 14
+        </a>
+      </div>
+
+    </nav>
   );
 }
 

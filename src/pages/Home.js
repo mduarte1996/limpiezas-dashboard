@@ -81,25 +81,25 @@ function Home() {
             {/* NAVBAR */}
             <Navbar />
 
-            {/* HERO */}
             <div className="hero">
-                <div className="overlay">
-                    <h1>Limpiezas Costa Blanca</h1>
-                    <p>Servicios profesionales de limpieza en Benidorm y alrededores</p>
 
-                    <button onClick={() => navigate("/login")}>
-                        Área de clientes
-                    </button>
+                <div className="hero-text">
+                    <h1>Profesionalismo que cuida cada detalle</h1>
 
-                    <button
-                        className="primary-btn"
-                        onClick={() => {
-                            document.getElementById("form").scrollIntoView({ behavior: "smooth" });
-                        }}
-                    >
+                    <p>
+                        Empresa de limpieza profesional en Benidorm especializada en viviendas,
+                        pisos turísticos y limpieza profunda.
+                    </p>
+
+                    <button className="primary-btn">
                         Solicitar presupuesto
                     </button>
                 </div>
+
+                <div className="hero-image">
+                    <img src="/cleaning-hero.jpg" alt="limpieza profesional" />
+                </div>
+
             </div>
 
             {/* SERVICIOS */}

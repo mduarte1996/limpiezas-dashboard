@@ -186,4 +186,20 @@ body {
 .gallery-grid img {
   width: 100%;
   border-radius: 10px;
+} 
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-image img {
+  width: 500px;
+  border-radius: 20px;
 }
