@@ -1,0 +1,72 @@
+.home {
+  font-family: Arial, sans-serif;
+}
+
+/* HERO */
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1581578731548-c64695cc6952");
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  position: relative;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+  padding: 20px;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.primary-btn {
+  background-color: #1e3a8a;
+  color: white;
+}
+
+/* SERVICES */
+.services {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #f3f4f6;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* CTA */
+.cta {
+  background: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
