@@ -81,7 +81,7 @@ function Home() {
             <div className="hero-video">
 
                 <video autoPlay loop muted playsInline className="video-bg">
-                    <source src="/videolimpieza.mp4" type="video/mp4" />
+                    <source src="/videolcb.mp4" type="video/mp4" />
                 </video>
 
                 <div className="overlay">
@@ -157,25 +157,49 @@ function Home() {
                 <div className="carousel">
 
                     <div className="carousel-track">
-                        <div className="img-box">
-                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" />
-                        </div>
-                        <div className="img-box">
-                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" />
-                        </div>
-                        <div className="img-box">
-                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a" />
-                        </div>  
 
                         <div className="img-box">
-                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" />
+                            <img
+                                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952"
+                                alt="Limpieza profesional de cocina en Benidorm"
+                            />
                         </div>
+
                         <div className="img-box">
-                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" />
+                            <img
+                                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+                                alt="Limpieza de salón moderno y ordenado"
+                            />
                         </div>
+
                         <div className="img-box">
-                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a" />
+                            <img
+                                src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a"
+                                alt="Baño limpio y desinfectado profesionalmente"
+                            />
                         </div>
+
+                        <div className="img-box">
+                            <img
+                                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952"
+                                alt="Servicio de limpieza profunda en vivienda"
+                            />
+                        </div>
+
+                        <div className="img-box">
+                            <img
+                                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+                                alt="Limpieza de apartamentos turísticos en Benidorm"
+                            />
+                        </div>
+
+                        <div className="img-box">
+                            <img
+                                src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a"
+                                alt="Resultados de limpieza profesional en baño"
+                            />
+                        </div>
+
                     </div>
 
                 </div>
