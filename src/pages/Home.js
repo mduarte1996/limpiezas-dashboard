@@ -129,7 +129,7 @@ function Home() {
 
                     <div className="card">
                         <h3>🏖 Pisos turísticos</h3>
-                        <p>Servicio especializado para alquileres vacacionales.</p>
+                        <p>Servicio especializado para alquileres vacacionales, check-in y check-out.</p>
                     </div>
 
                     <div className="card">
@@ -140,6 +140,31 @@ function Home() {
                     <div className="card">
                         <h3>🧱 Final de obra</h3>
                         <p>Dejamos tu espacio listo para usar.</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section className="gallery">
+                <h2 className="gallery-title">
+                    Resultados que hablan por nosotros ✨
+                </h2>
+
+                <p className="gallery-subtitle">
+                    Mira cómo transformamos cada espacio con nuestro servicio profesional
+                </p>
+
+                <div className="carousel">
+
+                    <div className="carousel-track">
+                        {/* DUPLICAMOS IMÁGENES PARA EFECTO INFINITO */}
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" />
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" />
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a" />
+
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" />
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" />
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a" />
                     </div>
 
                 </div>
@@ -163,17 +188,6 @@ function Home() {
                         <p>"Muy recomendados, repetiré sin duda."</p>
                         <span>⭐⭐⭐⭐⭐ - Laura</span>
                     </div>
-
-                </div>
-            </section>
-            <section className="gallery">
-                <h2>Trabajos realizados</h2>
-
-                <div className="gallery-grid">
-
-                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" alt="" />
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="" />
-                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a" alt="" />
 
                 </div>
             </section>
@@ -272,7 +286,7 @@ function Home() {
                         );
                     }}
                 >
-                    📲 Escríbenos por WhatsApp
+                    Escríbenos por WhatsApp
                 </button>
 
             </section>

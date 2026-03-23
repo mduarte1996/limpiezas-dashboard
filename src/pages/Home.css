@@ -246,4 +246,77 @@ body {
 .logo img {
   height: 90px;
   object-fit: contain;
+} 
+
+/* GALERÍA PRO */
+.gallery {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #ffffff, #eef2ff);
+  text-align: center;
+}
+
+/* TÍTULO PRO */
+.gallery-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+.gallery-subtitle {
+  color: #6b7280;
+  margin-bottom: 40px;
+}
+
+/* CARRUSEL */
+.carousel {
+  overflow: hidden;
+  position: relative;
+}
+
+/* TRACK ANIMADO */
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+/* IMÁGENES */
+.carousel-track img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: transform 0.3s;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.05);
+}
+
+/* ANIMACIÓN */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+} 
+
+.carousel-track img {
+  position: relative;
+}
+
+.carousel-track img::after {
+  content: "Ver resultado";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
 }
