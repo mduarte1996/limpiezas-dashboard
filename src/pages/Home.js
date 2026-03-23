@@ -81,7 +81,7 @@ function Home() {
             <div className="hero-video">
 
                 <video autoPlay loop muted playsInline className="video-bg">
-                    <source src="c:\Users\Lenov\Downloads\istockphoto-2172198490-640_adpp_is.mp4" type="video/mp4" />
+                    <source src="/videolimpieza.mp4" type="video/mp4" />
                 </video>
 
                 <div className="overlay">
