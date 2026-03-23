@@ -81,7 +81,7 @@ function Home() {
             <div className="hero-video">
 
                 <video autoPlay loop muted playsInline className="video-bg">
-                    <source src="https://pin.it/3TEVYIECP" type="video/mp4" />
+                    <source src="c:\Users\Lenov\Downloads\istockphoto-2172198490-640_adpp_is.mp4" type="video/mp4" />
                 </video>
 
                 <div className="overlay">
@@ -95,7 +95,7 @@ function Home() {
 
             </div>
 
-            <div className="hero">
+            {/* <div className="hero">
 
                 <div className="hero-text">
                     <h1>Profesionalismo que cuida cada detalle</h1>
@@ -114,7 +114,7 @@ function Home() {
                     <img src="/cleaning-hero.jpg" alt="limpieza profesional" />
                 </div>
 
-            </div>
+            </div> */}
 
             {/* SERVICIOS */}
             <section className="services">
