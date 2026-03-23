@@ -157,14 +157,25 @@ function Home() {
                 <div className="carousel">
 
                     <div className="carousel-track">
-                        {/* DUPLICAMOS IMÁGENES PARA EFECTO INFINITO */}
-                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" />
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" />
-                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a" />
+                        <div className="img-box">
+                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" />
+                        </div>
+                        <div className="img-box">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" />
+                        </div>
+                        <div className="img-box">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a" />
+                        </div>  
 
-                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" />
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" />
-                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a" />
+                        <div className="img-box">
+                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" />
+                        </div>
+                        <div className="img-box">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" />
+                        </div>
+                        <div className="img-box">
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a" />
+                        </div>
                     </div>
 
                 </div>
