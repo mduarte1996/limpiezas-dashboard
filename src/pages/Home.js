@@ -43,7 +43,7 @@ function Home() {
         let total = pricePerHour * (data.hours || 0);
 
         if (data.urgent) {
-            total += 15; // extra urgencia
+            total += 10; // extra urgencia
         }
 
         setTotalPrice(total);
@@ -317,10 +317,10 @@ function Home() {
                             Piso turístico (17€/h + IVA)
                         </option>
                         <option value="profunda">
-                            Limpieza profunda (20€/h + IVA)
+                            Limpieza profunda (18€/h + IVA)
                         </option>
                         <option value="obra">
-                            Final de obra (25€/h + IVA)
+                            Final de obra (20€/h + IVA)
                         </option>
                     </select>
                     {/* HORAS */}
@@ -343,7 +343,7 @@ function Home() {
                             checked={formData.urgent}
                             onChange={handleChange}
                         />
-                        Limpieza urgente (+15€)
+                        Limpieza urgente (+10€) por gastos de desplazamiento y urgencia en la gestión.
                     </label>
 
                     <input
@@ -365,7 +365,7 @@ function Home() {
                         <p>{totalPrice} € + IVA</p>
 
                         {formData.urgent && (
-                            <small>Incluye servicio urgente (+15€)</small>
+                            <small>Incluye servicio urgente (+10€)</small>
                         )}
                     </div>
                 )}
@@ -375,8 +375,8 @@ function Home() {
 
                     <p>✔ Limpieza de viviendas: <strong>16€/hora + IVA</strong></p>
                     <p>✔ Pisos turísticos: <strong>17€/hora + IVA</strong></p>
-                    <p>✔ Limpieza profunda: <strong>20€/hora + IVA</strong></p>
-                    <p>✔ Final de obra: <strong>25€/hora + IVA</strong></p>
+                    <p>✔ Limpieza profunda: <strong>18€/hora + IVA</strong></p>
+                    <p>✔ Final de obra: <strong>20€/hora + IVA</strong></p>
 
                     <small>*El precio final puede variar según tamaño y estado del espacio.</small>
                 </div>
