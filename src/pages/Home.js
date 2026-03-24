@@ -3,6 +3,7 @@ import "./Home.css";
 import { createService } from "../services/api";
 import Navbar from "../components/Navbar";
 import emailjs from "emailjs-com";
+import jsPDF from "jspdf";
 
 function Home() {
 
@@ -66,7 +67,10 @@ function Home() {
 
         try {
             //  Guardar en base de datos
-            await createService(formData);
+            await createService({
+                ...formData,
+                price: totalPrice.total
+            });
 
             //  Enviar email automático
             await emailjs.send(
@@ -131,6 +135,21 @@ Gracias!
             `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
             "_blank"
         );
+    };
+    const generatePDF = () => {
+        const doc = new jsPDF();
+
+        doc.text("Limpiezas Costa Blanca", 20, 20);
+
+        doc.text(`Cliente: ${formData.client_name}`, 20, 40);
+        doc.text(`Servicio: ${formData.service_type}`, 20, 50);
+        doc.text(`Horas: ${formData.hours}`, 20, 60);
+
+        doc.text(`Subtotal: ${totalPrice.subtotal} €`, 20, 80);
+        doc.text(`IVA: ${totalPrice.iva} €`, 20, 90);
+        doc.text(`Total: ${totalPrice.total} €`, 20, 100);
+
+        doc.save("presupuesto.pdf");
     };
 
     return (
@@ -441,6 +460,13 @@ Gracias!
                             onClick={handleWhatsAppQuote}
                         >
                             ✅ Confirmar por WhatsApp
+                        </button>
+                        <button
+                            onClick={generatePDF}
+                            className="primary-btn"
+                            style={{ marginTop: "10px" }}
+                        >
+                            Descargar presupuesto PDF
                         </button>
                     </>
                 )}
