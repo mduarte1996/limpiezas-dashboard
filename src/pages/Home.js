@@ -16,7 +16,11 @@ function Home() {
         urgent: false
     });
 
-    const [totalPrice, setTotalPrice] = useState(0);
+    const [totalPrice, setTotalPrice] = useState({
+        subtotal: 0,
+        iva: 0,
+        total: 0
+    });
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -32,6 +36,7 @@ function Home() {
 
         calculatePrice(updatedForm);
     };
+
     const calculatePrice = (data) => {
         let pricePerHour = 0;
 
@@ -40,13 +45,20 @@ function Home() {
         if (data.service_type === "profunda") pricePerHour = 20;
         if (data.service_type === "obra") pricePerHour = 25;
 
-        let total = pricePerHour * (data.hours || 0);
+        let subtotal = pricePerHour * (data.hours || 0);
 
         if (data.urgent) {
-            total += 10; // extra urgencia
+            subtotal += 15;
         }
 
-        setTotalPrice(total);
+        const iva = subtotal * 0.21;
+        const total = subtotal + iva;
+
+        setTotalPrice({
+            subtotal,
+            iva,
+            total
+        });
     };
 
     const handleSubmit = async (e) => {
@@ -63,7 +75,13 @@ function Home() {
                 {
                     name: formData.client_name,
                     phone: formData.phone,
-                    service: formData.service_type
+                    service: formData.service_type,
+                    address: formData.address,
+                    date: formData.scheduled_date,
+                    hours: formData.hours,
+                    subtotal: totalPrice.subtotal.toFixed(2),
+                    iva: totalPrice.iva.toFixed(2),
+                    total: totalPrice.total.toFixed(2)
                 },
                 "k_QAThMrjBr94TO3X"
             );
@@ -81,12 +99,38 @@ function Home() {
                 urgent: false
             });
 
-            setTotalPrice(0);
+            setTotalPrice({
+                subtotal: 0,
+                iva: 0,
+                total: 0
+            });
 
         } catch (error) {
             console.error(error);
             alert("❌ Error al enviar");
         }
+    };
+
+    const handleWhatsAppQuote = () => {
+        const phone = "34611009814";
+
+        const message = `
+Hola, quiero confirmar este servicio:
+
+🧹 Servicio: ${formData.service_type}
+📍 Dirección: ${formData.address}
+📅 Fecha: ${formData.scheduled_date}
+⏱ Horas: ${formData.hours}
+
+💰 Total: ${totalPrice.total?.toFixed(2)} €
+
+Gracias!
+    `;
+
+        window.open(
+            `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
+            "_blank"
+        );
     };
 
     return (
@@ -311,16 +355,16 @@ function Home() {
                     >
                         <option value="">Selecciona servicio</option>
                         <option value="vivienda">
-                            Limpieza de vivienda (16€/h + IVA)
+                            Limpieza de vivienda (16€/h + IVA → 19,36€/h)
                         </option>
                         <option value="turistico">
-                            Piso turístico (17€/h + IVA)
+                            Piso turístico (17€/h + IVA → 20,57€/h)
                         </option>
                         <option value="profunda">
-                            Limpieza profunda (18€/h + IVA)
+                            Limpieza profunda (18€/h + IVA → 21,78€/h)
                         </option>
                         <option value="obra">
-                            Final de obra (20€/h + IVA)
+                            Final de obra (20€/h + IVA → 24,20€/h)
                         </option>
                     </select>
                     {/* HORAS */}
@@ -359,17 +403,47 @@ function Home() {
                     </button>
 
                 </form>
-                {totalPrice > 0 && (
-                    <div className="price-box">
-                        <h3>💰 Precio estimado</h3>
-                        <p>{totalPrice} € + IVA</p>
+                {totalPrice.total > 0 && (
+                    <>
+                        <div className="price-box">
 
-                        {formData.urgent && (
-                            <small>Incluye servicio urgente (+10€)</small>
-                        )}
-                    </div>
+                            <h3>💰 Presupuesto estimado</h3>
+
+                            <div className="price-line">
+                                <span>Subtotal:</span>
+                                <span>{totalPrice.subtotal.toFixed(2)} €</span>
+                            </div>
+
+                            <div className="price-line">
+                                <span>IVA (21%):</span>
+                                <span>{totalPrice.iva.toFixed(2)} €</span>
+                            </div>
+
+                            {formData.urgent && (
+                                <div className="price-line">
+                                    <span>Urgente:</span>
+                                    <span>+10€</span>
+                                </div>
+                            )}
+
+                            <hr />
+
+                            <div className="price-total">
+                                <strong>Total:</strong>
+                                <strong>{totalPrice.total.toFixed(2)} €</strong>
+                            </div>
+
+                        </div>
+
+                        {/* 👇 BOTÓN AQUÍ */}
+                        <button
+                            className="whatsapp-confirm-btn"
+                            onClick={handleWhatsAppQuote}
+                        >
+                            ✅ Confirmar por WhatsApp
+                        </button>
+                    </>
                 )}
-
                 <div className="pricing-info">
                     <h3>💶 Tarifas orientativas</h3>
 

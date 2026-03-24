@@ -432,4 +432,53 @@ body {
 .price-box p {
   font-size: 1.5rem;
   font-weight: bold;
+} 
+
+.price-box {
+  margin-top: 25px;
+  padding: 25px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: left;
+  max-width: 400px;
+  margin-inline: auto;
+  animation: fadeUp 0.4s ease;
+}
+
+.price-box h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #1e3a8a;
+}
+
+.price-line {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  color: #374151;
+}
+
+.price-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  margin-top: 10px;
+  color: #1e3a8a;
+}
+.whatsapp-confirm-btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 15px;
+  background: #25D366;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.whatsapp-confirm-btn:hover {
+  background: #1ebe5d;
 }
