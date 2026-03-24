@@ -1,18 +1,24 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  justify-content: space-between;
+  padding: 10px 40px;
+  height: 80px; /* 👈 CONTROLA EL ALTO */
   background: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
-.logo span {
-  font-size: 24px;
-  font-weight: bold;
-  color: #1e3a8a;
+/* CONTENEDOR LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* LOGO */
+.logo img {
+  height: 60px; /* 👈 AJUSTA AQUÍ */
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-links {

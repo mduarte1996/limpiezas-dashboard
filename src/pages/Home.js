@@ -160,42 +160,42 @@ function Home() {
 
                         <div className="img-box">
                             <img
-                                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952"
+                                src="https://i.pinimg.com/736x/b4/cb/74/b4cb745032c177580975516819de7f92.jpg"
                                 alt="Limpieza profesional de cocina en Benidorm"
                             />
                         </div>
 
                         <div className="img-box">
                             <img
-                                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+                                src="https://i.pinimg.com/736x/fc/3f/12/fc3f12dfee374114b959872e98bedd29.jpg"
                                 alt="Limpieza de salón moderno y ordenado"
                             />
                         </div>
 
                         <div className="img-box">
                             <img
-                                src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a"
+                                src="https://i.pinimg.com/1200x/2d/08/22/2d08228dbfe374ac296bdca2c5760273.jpg"
                                 alt="Baño limpio y desinfectado profesionalmente"
                             />
                         </div>
 
                         <div className="img-box">
                             <img
-                                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952"
+                                src="https://i.pinimg.com/1200x/99/21/2e/99212e1aba0610a0954db70768d8d343.jpg"
                                 alt="Servicio de limpieza profunda en vivienda"
                             />
                         </div>
 
                         <div className="img-box">
                             <img
-                                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+                                src="https://i.pinimg.com/1200x/ee/a1/0e/eea10e34f4e8b689da8599d6bdb081a0.jpg"
                                 alt="Limpieza de apartamentos turísticos en Benidorm"
                             />
                         </div>
 
                         <div className="img-box">
                             <img
-                                src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a"
+                                src="https://i.pinimg.com/736x/32/69/6c/32696c098d7af7d061550ad843538153.jpg"
                                 alt="Resultados de limpieza profesional en baño"
                             />
                         </div>
@@ -205,26 +205,39 @@ function Home() {
                 </div>
             </section>
             <section className="reviews">
-                <h2>Opiniones de nuestros clientes</h2>
+
+                <h2 className="section-title">Lo que dicen nuestros clientes</h2>
+                <p className="section-subtitle">Resultados reales, clientes satisfechos</p>
 
                 <div className="reviews-container">
 
-                    <div className="review">
+                    <div className="review-card">
                         <p>"Excelente servicio, muy puntuales y profesionales."</p>
                         <span>⭐⭐⭐⭐⭐ - María</span>
                     </div>
 
-                    <div className="review">
+                    <div className="review-card">
                         <p>"Dejaron mi piso turístico impecable."</p>
                         <span>⭐⭐⭐⭐⭐ - Carlos</span>
                     </div>
 
-                    <div className="review">
+                    <div className="review-card">
                         <p>"Muy recomendados, repetiré sin duda."</p>
                         <span>⭐⭐⭐⭐⭐ - Laura</span>
                     </div>
 
                 </div>
+
+                {/* FORM OPINIÓN */}
+                <div className="review-form">
+                    <h3>Déjanos tu opinión</h3>
+
+                    <input type="text" placeholder="Tu nombre" />
+                    <textarea placeholder="Escribe tu experiencia..." />
+
+                    <button className="primary-btn">Enviar opinión</button>
+                </div>
+
             </section>
 
             {/* CTA */}
