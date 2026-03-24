@@ -11,30 +11,42 @@ function Home() {
         phone: "",
         address: "",
         service_type: "",
-        scheduled_date: ""
+        scheduled_date: "",
+        hours: 2,
+        urgent: false
     });
 
-    const [estimatedPrice, setEstimatedPrice] = useState(0);
+    const [totalPrice, setTotalPrice] = useState(0);
 
     const handleChange = (e) => {
-        const { name, value } = e.target;
+        const { name, value, type, checked } = e.target;
 
-        setFormData({
+        const newValue = type === "checkbox" ? checked : value;
+
+        const updatedForm = {
             ...formData,
-            [name]: value
-        });
+            [name]: newValue
+        };
 
-        // PRECIO AUTOMÁTICO
-        if (name === "service_type") {
-            let price = 0;
+        setFormData(updatedForm);
 
-            if (value === "vivienda") price = 50;
-            if (value === "turistico") price = 80;
-            if (value === "profunda") price = 100;
-            if (value === "obra") price = 150;
+        calculatePrice(updatedForm);
+    };
+    const calculatePrice = (data) => {
+        let pricePerHour = 0;
 
-            setEstimatedPrice(price);
+        if (data.service_type === "vivienda") pricePerHour = 16;
+        if (data.service_type === "turistico") pricePerHour = 17;
+        if (data.service_type === "profunda") pricePerHour = 20;
+        if (data.service_type === "obra") pricePerHour = 25;
+
+        let total = pricePerHour * (data.hours || 0);
+
+        if (data.urgent) {
+            total += 15; // extra urgencia
         }
+
+        setTotalPrice(total);
     };
 
     const handleSubmit = async (e) => {
@@ -64,8 +76,12 @@ function Home() {
                 phone: "",
                 address: "",
                 service_type: "",
-                scheduled_date: ""
+                scheduled_date: "",
+                hours: 2,
+                urgent: false
             });
+
+            setTotalPrice(0);
 
         } catch (error) {
             console.error(error);
@@ -294,11 +310,41 @@ function Home() {
                         required
                     >
                         <option value="">Selecciona servicio</option>
-                        <option value="vivienda">Limpieza de vivienda</option>
-                        <option value="turistico">Piso turístico</option>
-                        <option value="profunda">Limpieza profunda</option>
-                        <option value="obra">Final de obra</option>
+                        <option value="vivienda">
+                            Limpieza de vivienda (16€/h + IVA)
+                        </option>
+                        <option value="turistico">
+                            Piso turístico (17€/h + IVA)
+                        </option>
+                        <option value="profunda">
+                            Limpieza profunda (20€/h + IVA)
+                        </option>
+                        <option value="obra">
+                            Final de obra (25€/h + IVA)
+                        </option>
                     </select>
+                    {/* HORAS */}
+                    <select
+                        name="hours"
+                        value={formData.hours}
+                        onChange={handleChange}
+                    >
+                        <option value={2}>2 horas</option>
+                        <option value={3}>3 horas</option>
+                        <option value={4}>4 horas</option>
+                        <option value={5}>5 horas</option>
+                    </select>
+
+                    {/* URGENTE */}
+                    <label style={{ marginTop: "10px" }}>
+                        <input
+                            type="checkbox"
+                            name="urgent"
+                            checked={formData.urgent}
+                            onChange={handleChange}
+                        />
+                        Limpieza urgente (+15€)
+                    </label>
 
                     <input
                         type="date"
@@ -313,13 +359,27 @@ function Home() {
                     </button>
 
                 </form>
+                {totalPrice > 0 && (
+                    <div className="price-box">
+                        <h3>💰 Precio estimado</h3>
+                        <p>{totalPrice} € + IVA</p>
 
-                {/* PRECIO ESTIMADO */}
-                {estimatedPrice > 0 && (
-                    <p style={{ fontWeight: "bold", marginTop: "10px" }}>
-                        Precio estimado: {estimatedPrice} €
-                    </p>
+                        {formData.urgent && (
+                            <small>Incluye servicio urgente (+15€)</small>
+                        )}
+                    </div>
                 )}
+
+                <div className="pricing-info">
+                    <h3>💶 Tarifas orientativas</h3>
+
+                    <p>✔ Limpieza de viviendas: <strong>16€/hora + IVA</strong></p>
+                    <p>✔ Pisos turísticos: <strong>17€/hora + IVA</strong></p>
+                    <p>✔ Limpieza profunda: <strong>20€/hora + IVA</strong></p>
+                    <p>✔ Final de obra: <strong>25€/hora + IVA</strong></p>
+
+                    <small>*El precio final puede variar según tamaño y estado del espacio.</small>
+                </div>
 
                 {/* WHATSAPP */}
                 <button
