@@ -38,6 +38,11 @@ function Dashboard() {
     income: 0,
     services: 0
   });
+  useEffect(() => {
+    fetch(`${BASE_URL}/stats`)
+      .then(res => res.json())
+      .then(data => setStats(data));
+  }, []);
 
   const [formData, setFormData] = useState({
     client_name: "",
@@ -223,6 +228,16 @@ function Dashboard() {
           <div className="stat-card">
             <h3>{totalIncome} €</h3>
             <p>Ingresos</p>
+          </div>
+
+          <div className="stat-card">
+            <h3>{stats.income} €</h3>
+            <p>Ingresos (API)</p>
+          </div>
+
+          <div className="stat-card">
+            <h3>{stats.services}</h3>
+            <p>Servicios (API)</p>
           </div>
 
         </div>
