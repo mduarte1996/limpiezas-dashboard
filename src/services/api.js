@@ -1,4 +1,4 @@
-const BASE_URL = "https://limpiezas-api.onrender.com";
+export const BASE_URL = "https://limpiezas-api.onrender.com";
 
 export const getServices = async () => {
   const response = await fetch(`${BASE_URL}/service-request`);
