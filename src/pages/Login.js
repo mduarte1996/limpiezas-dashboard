@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { loginUser } from "../services/api";
 import { useNavigate } from "react-router-dom";
 
@@ -9,6 +9,13 @@ function Login() {
     });
 
     const navigate = useNavigate();
+    useEffect(() => {
+        const token = localStorage.getItem("token");
+
+        if (token) {
+            navigate("/dashboard");
+        }
+    }, []);
 
     const handleChange = (e) => {
         setForm({

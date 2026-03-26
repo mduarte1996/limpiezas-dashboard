@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "../Dashboard.css";
-import CalendarView from "../components/CalendarView";
 import { BASE_URL } from "../services/api";
 import ServicesChart from "../components/ServicesChart";
 import Calendar from "react-calendar";
@@ -21,8 +20,15 @@ import {
 import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
-
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      navigate("/login");
+    }
+  }, []);
 
   const [services, setServices] = useState([]);
   const [search, setSearch] = useState("");
