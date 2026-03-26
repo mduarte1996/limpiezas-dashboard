@@ -1,51 +1,65 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { loginUser } from "../services/api";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const [form, setForm] = useState({
-    username: "",
-    password: ""
-  });
-
-  const handleChange = (e) => {
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleLogin = async (e) => {
-    e.preventDefault();
-
-    const res = await fetch("https://limpiezas-api.onrender.com/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(form)
+    const [form, setForm] = useState({
+        username: "",
+        password: ""
     });
 
-    const data = await res.json();
+    const navigate = useNavigate();
 
-    if (data.token) {
-      localStorage.setItem("token", data.token);
-      window.location.href = "/dashboard";
-    } else {
-      alert("Credenciales incorrectas");
-    }
-  };
+    const handleChange = (e) => {
+        setForm({
+            ...form,
+            [e.target.name]: e.target.value
+        });
+    };
 
-  return (
-    <div>
-      <h2>Login</h2>
+    const handleLogin = async (e) => {
+        e.preventDefault();
 
-      <form onSubmit={handleLogin}>
-        <input name="username" onChange={handleChange} placeholder="Usuario" />
-        <input name="password" type="password" onChange={handleChange} placeholder="Contraseña" />
+        try {
+            const data = await loginUser(form);
 
-        <button type="submit">Entrar</button>
-      </form>
-    </div>
-  );
+            if (data.token) {
+                
+                localStorage.setItem("token", data.token);
+
+                alert("✅ Login correcto");
+
+                // REDIRECCIÓN
+                navigate("/dashboard");
+
+            } else {
+                alert("❌ Credenciales incorrectas");
+            }
+
+        } catch (error) {
+            console.error(error);
+            alert("Error en login");
+        }
+    };
+
+    return (
+        <form onSubmit={handleLogin}>
+            <input
+                name="username"
+                placeholder="Usuario"
+                onChange={handleChange}
+            />
+
+            <input
+                type="password"
+                name="password"
+                placeholder="Contraseña"
+                onChange={handleChange}
+            />
+
+            <button type="submit">Entrar</button>
+        </form>
+    );
 }
 
 export default Login;

@@ -50,15 +50,12 @@ export const updateService = async (id, serviceData) => {
   return response.json();
 }; 
 
-// export const loginUser = async (credentials) => {
+export const loginUser = async (credentials) => {
+  const res = await fetch(`${BASE_URL}/login`, {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify(credentials)
+  });
 
-//   const response = await fetch("https://limpiezas-api.onrender.com", {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json"
-//     },
-//     body: JSON.stringify(credentials)
-//   });
-
-//   return response.json();
-// };
+  return res.json();
+};
