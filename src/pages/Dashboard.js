@@ -22,14 +22,6 @@ import { useNavigate } from "react-router-dom";
 function Dashboard() {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-
-    if (!token) {
-      navigate("/login");
-    }
-  }, []);
-
   const [services, setServices] = useState([]);
   const [search, setSearch] = useState("");
   const [editingId, setEditingId] = useState(null);
@@ -38,11 +30,6 @@ function Dashboard() {
     income: 0,
     services: 0
   });
-  useEffect(() => {
-    fetch(`${BASE_URL}/stats`)
-      .then(res => res.json())
-      .then(data => setStats(data));
-  }, []);
 
   const [formData, setFormData] = useState({
     client_name: "",
