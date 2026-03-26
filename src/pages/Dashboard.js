@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../Dashboard.css";
 import CalendarView from "../components/CalendarView";
+import { BASE_URL } from "../services/api";
 import ServicesChart from "../components/ServicesChart";
 import IncomeChart from "../components/IncomeChart";
 import { CheckCircleIcon, ClockIcon, ClipboardDocumentListIcon } from "@heroicons/react/24/solid";
@@ -94,6 +95,17 @@ function Dashboard() {
   useEffect(() => {
     loadServices();
   }, []);
+
+  const [stats, setStats] = useState({
+    income: 0,
+    services: 0
+  });
+  useEffect(() => {
+    fetch(`${BASE_URL}/stats`)
+      .then(res => res.json())
+      .then(data => setStats(data));
+  }, []);
+
 
   const token = localStorage.getItem("token");
 
@@ -282,6 +294,8 @@ function Dashboard() {
         <CalendarView services={services} />
         <ServicesChart services={services} />
         <IncomeChart services={services} />
+        <h2>💰 Ingresos: {stats.income} €</h2>
+        <h3>📋 Servicios: {stats.services}</h3>
 
 
       </div>
