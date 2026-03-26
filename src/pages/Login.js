@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { loginUser } from "../services/api";
 import { useNavigate } from "react-router-dom";
 
@@ -24,12 +24,9 @@ function Login() {
             const data = await loginUser(form);
 
             if (data.token) {
-                
+
                 localStorage.setItem("token", data.token);
-
-                alert("✅ Login correcto");
-
-                // REDIRECCIÓN
+                alert("Login correcto");
                 navigate("/dashboard");
 
             } else {
