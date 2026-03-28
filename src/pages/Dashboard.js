@@ -215,6 +215,15 @@ function Dashboard() {
           <div className="stat-card">
             <h3>{totalIncome} €</h3>
             <p>Ingresos</p>
+          </div> 
+          <div className="stat-card">
+            <h3>{stats.income} €</h3>
+            <p>Ingresos (API)</p>
+          </div>
+
+          <div className="stat-card">
+            <h3>{stats.services}</h3>
+            <p>Servicios (API)</p>
           </div>
 
         </div>
