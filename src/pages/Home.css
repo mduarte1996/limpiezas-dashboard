@@ -482,3 +482,6 @@ body {
 .whatsapp-confirm-btn:hover {
   background: #1ebe5d;
 }
+html {
+  scroll-behavior: smooth;
+}

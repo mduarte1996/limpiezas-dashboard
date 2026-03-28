@@ -10,12 +10,11 @@ function Navbar() {
             </div>
 
             <ul className="nav-links">
-                <li><a href="/">Inicio</a></li>
-                <li><a href="#services">Servicios</a></li>
-                <li><a href="#about">Sobre nosotros</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#sobre">Sobre nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
-
             <div className="nav-right">
                 <a href="tel:+34611009814" className="phone-btn">
                     📞 +34 611 00 98 14

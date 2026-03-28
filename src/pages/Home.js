@@ -157,7 +157,7 @@ Gracias!
 
             {/* NAVBAR */}
             <Navbar />
-            <div className="hero-video">
+            <div className="hero-video" id="inicio">
 
                 <video autoPlay loop muted playsInline className="video-bg">
                     <source src="/videolcb.mp4" type="video/mp4" />
@@ -196,7 +196,7 @@ Gracias!
             </div> */}
 
             {/* SERVICIOS */}
-            <section className="services">
+            <section className="services" id="servicios">
                 <h2>Nuestros Servicios</h2>
 
                 <div className="cards">
@@ -283,7 +283,20 @@ Gracias!
 
                 </div>
             </section>
-            <section className="reviews">
+            <div className="about-box">
+                <h2>Sobre nosotros</h2>
+                <p>
+                    En Limpiezas Costa Blanca nos especializamos en servicios profesionales de limpieza
+                    en Benidorm y alrededores, ofreciendo soluciones eficaces y adaptadas a cada cliente. Nos caracterizamos por la puntualidad,
+                    confianza y atención al detalle en cada servicio.
+                </p>
+
+                <p>
+                    Trabajamos con viviendas, pisos turísticos y limpiezas profundas,
+                    garantizando siempre resultados impecables.
+                </p>
+            </div>
+            <section className="reviews" id="sobre">
 
                 <h2 className="section-title">Lo que dicen nuestros clientes</h2>
                 <p className="section-subtitle">Resultados reales, clientes satisfechos</p>
@@ -337,7 +350,7 @@ Gracias!
             </section>
 
             {/* FORMULARIO */}
-            <section className="form-section" id="form">
+            <section className="form-section" id="contacto">
                 <h2>Solicita tu presupuesto</h2>
 
                 <form onSubmit={handleSubmit} className="form">
