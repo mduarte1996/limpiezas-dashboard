@@ -151,6 +151,7 @@ Gracias!
 
         doc.save("presupuesto.pdf");
     };
+    const [selectedService, setSelectedService] = useState(null);
 
     return (
         <div className="home">
@@ -220,28 +221,70 @@ Gracias!
 
                 <div className="cards">
 
-                    <div className="card">
+                    <div className="card" onClick={() => setSelectedService("vivienda")}>
                         <h3>🏠 Limpieza de viviendas</h3>
                         <p>Servicio completo para casas y apartamentos.</p>
                     </div>
 
-                    <div className="card">
+                    <div className="card" onClick={() => setSelectedService("turistico")}>
                         <h3>🏖 Pisos turísticos</h3>
-                        <p>Servicio especializado para alquileres vacacionales, check-in y check-out.</p>
+                        <p>Servicio especializado para alquileres vacacionales.</p>
                     </div>
 
-                    <div className="card">
+                    <div className="card" onClick={() => setSelectedService("profunda")}>
                         <h3>✨ Limpieza profunda</h3>
                         <p>Eliminamos suciedad difícil y acumulada.</p>
                     </div>
 
-                    <div className="card">
+                    <div className="card" onClick={() => setSelectedService("final")}>
                         <h3>🧱 Final de obra</h3>
                         <p>Dejamos tu espacio listo para usar.</p>
                     </div>
 
                 </div>
             </section>
+            {selectedService && (
+                <section className="service-detail">
+
+                    <button className="close-btn" onClick={() => setSelectedService(null)}>
+                        ✖
+                    </button>
+
+                    {selectedService === "vivienda" && (
+                        <div className="detail-content">
+
+                            <div className="detail-text">
+                                <h2>Limpieza de viviendas</h2>
+
+                                <p>
+                                    Servicio profesional para mantener tu hogar impecable,
+                                    cuidando cada detalle con productos de alta calidad.
+                                </p>
+
+                                <ul>
+                                    <li>✔ Limpieza de cocina y baños</li>
+                                    <li>✔ Aspirado y fregado de suelos</li>
+                                    <li>✔ Limpieza de superficies y muebles</li>
+                                    <li>✔ Eliminación de polvo</li>
+                                    <li>✔ Cambio de ropa de cama</li>
+                                </ul>
+
+                                <p><strong>💰 Desde 16€/hora + IVA</strong></p>
+
+                                <button className="primary-btn">
+                                    Solicitar servicio
+                                </button>
+                            </div>
+
+                            <div className="detail-image">
+                                <img src="/servicio-vivienda.jpg" alt="Limpieza de viviendas" />
+                            </div>
+
+                        </div>
+                    )}
+
+                </section>
+            )}
 
             <section className="gallery">
                 <h2 className="gallery-title">
@@ -577,6 +620,50 @@ Gracias!
                 </div>
 
             </footer>
+            {selectedService && (
+                <div className="modal-overlay" onClick={() => setSelectedService(null)}>
+
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+
+                        <button className="modal-close" onClick={() => setSelectedService(null)}>
+                            ✖
+                        </button>
+
+                        {selectedService === "vivienda" && (
+                            <div className="modal-body">
+
+                                <div className="modal-text">
+                                    <h2>Limpieza de viviendas</h2>
+
+                                    <p>
+                                        Servicio profesional para mantener tu hogar impecable,
+                                        con atención al detalle y productos de alta calidad.
+                                    </p>
+
+                                    <ul>
+                                        <li>✔ Limpieza de cocina y baño</li>
+                                        <li>✔ Aspirado y fregado</li>
+                                        <li>✔ Eliminación de polvo</li>
+                                        <li>✔ Limpieza de superficies</li>
+                                    </ul>
+
+                                    <p><strong>💰 Desde 16€/hora + IVA</strong></p>
+
+                                    <button className="primary-btn">
+                                        Solicitar servicio
+                                    </button>
+                                </div>
+
+                                <div className="modal-image">
+                                    <img src="/servicio-vivienda.jpg" alt="Servicio vivienda" />
+                                </div>
+
+                            </div>
+                        )}
+
+                    </div>
+                </div>
+            )}
 
         </div>
     );
