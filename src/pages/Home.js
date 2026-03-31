@@ -639,12 +639,14 @@ Gracias!
                                         Servicio profesional para mantener tu hogar impecable,
                                         con atención al detalle y productos de alta calidad.
                                     </p>
+                                    <p><strong>Incluye:</strong></p>
 
                                     <ul>
-                                        <li>✔ Limpieza de cocina y baño</li>
+                                        <li>✔ Limpieza de cocina y baños</li>
                                         <li>✔ Aspirado y fregado</li>
                                         <li>✔ Eliminación de polvo</li>
                                         <li>✔ Limpieza de superficies</li>
+                                        <li>✔ Cambio de ropa de cama</li>
                                     </ul>
 
                                     <p><strong>💰 Desde 16€/hora + IVA</strong></p>
@@ -656,6 +658,117 @@ Gracias!
 
                                 <div className="modal-image">
                                     <img src="/servicio-vivienda.jpg" alt="Servicio vivienda" />
+                                </div>
+
+                            </div>
+                        )}
+                        {selectedService === "turistico" && (
+                            <div className="modal-body">
+
+                                <div className="modal-text">
+                                    <h2>Limpieza de pisos turísticos</h2>
+
+                                    <p>
+                                        Preparamos tu vivienda para cada huésped como si fuera un hotel,
+                                        cuidando cada detalle para ofrecer una experiencia impecable desde el primer momento.
+                                    </p>
+
+                                    <p>
+                                        Sabemos que en el alquiler vacacional la limpieza no es solo higiene,
+                                        es reputación, valoraciones y más reservas.
+                                    </p>
+
+                                    <ul>
+                                        <li>✔ Limpieza completa tras cada salida</li>
+                                        <li>✔ Cambio de sábanas y toallas</li>
+                                        <li>✔ Preparación tipo hotel</li>
+                                        <li>✔ Reposición de básicos</li>
+                                        <li>✔ Revisión general del inmueble</li>
+                                    </ul>
+
+                                    <p className="price">
+                                        💰 17€/hora + IVA
+                                        <br />
+                                        <span>Servicio de lavandería opcional +10€</span>
+                                    </p>
+
+                                    {/* HIGHLIGHT DENTRO DEL TEXTO */}
+                                    <div className="modal-highlight">
+                                        <p>⭐ Mejora tus valoraciones en Airbnb y Booking</p>
+                                        <p>🧼 Servicio rápido entre check-out y check-in</p>
+                                        <p>📸 Posibilidad de reporte del estado del piso</p>
+                                    </div>
+
+                                    <button className="primary-btn" onClick={handleWhatsAppQuote}>
+                                        Reservar por WhatsApp
+                                    </button>
+
+                                </div>
+
+                                {/* IMAGEN */}
+                                <div className="modal-image">
+                                    <img src="/servicio-turistico.jpg" alt="Pisos turísticos" />
+                                </div>
+
+                            </div>
+                        )}
+                        {selectedService === "profunda" && (
+                            <div className="modal-body">
+
+                                <div className="modal-text">
+                                    <h2>Limpieza profunda</h2>
+
+                                    <p>
+                                        Eliminamos suciedad acumulada en profundidad,
+                                        ideal para cambios de temporada o viviendas muy usadas.
+                                    </p>
+
+                                    <ul>
+                                        <li>✔ Desinfección completa</li>
+                                        <li>✔ Limpieza de zonas difíciles</li>
+                                        <li>✔ Cocina y baño a fondo</li>
+                                        <li>✔ Eliminación de grasa y cal</li>
+                                    </ul>
+
+                                    <p><strong>💰 Desde 18€/hora + IVA</strong></p>
+
+                                    <button className="primary-btn">
+                                        Solicitar servicio
+                                    </button>
+                                </div>
+
+                                <div className="modal-image">
+                                    <img src="/servicio-profunda.jpg" alt="Limpieza profunda" />
+                                </div>
+
+                            </div>
+                        )}
+                        {selectedService === "obra" && (
+                            <div className="modal-body">
+
+                                <div className="modal-text">
+                                    <h2>Limpieza fin de obra</h2>
+
+                                    <p>
+                                        Dejamos tu espacio listo para entrar a vivir tras reformas o construcción.
+                                    </p>
+
+                                    <ul>
+                                        <li>✔ Eliminación de polvo de obra</li>
+                                        <li>✔ Limpieza de restos de pintura y materiales</li>
+                                        <li>✔ Cristales y superficies a fondo</li>
+                                        <li>✔ Aspirado industrial</li>
+                                    </ul>
+
+                                    <p><strong>💰 Desde 20€/hora + IVA</strong></p>
+
+                                    <button className="primary-btn">
+                                        Solicitar servicio
+                                    </button>
+                                </div>
+
+                                <div className="modal-image">
+                                    <img src="/servicio-obra.jpg" alt="Final de obra" />
                                 </div>
 
                             </div>
