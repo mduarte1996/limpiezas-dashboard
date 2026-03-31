@@ -487,9 +487,8 @@ html {
 }
 .about-section {
   padding: 80px 20px;
-  background: #f8f9fc;
+  background: linear-gradient(135deg, #eef2ff, #ffffff);
 }
-
 .about-container {
   max-width: 1200px;
   margin: auto;
@@ -504,9 +503,10 @@ html {
 }
 
 .about-text h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #1d3557;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 10px;
 }
 
 .about-text p {
@@ -523,7 +523,8 @@ html {
 }
 
 .about-features span {
-  background: #e3f2fd;
+  background: rgba(37, 99, 235, 0.1);
+  color: #1e3a8a;
   padding: 8px 15px;
   border-radius: 20px;
   font-size: 14px;
@@ -539,4 +540,44 @@ html {
   max-width: 500px;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+} 
+.nav-links li a {
+  position: relative;
+  padding: 10px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #1e3a8a;
+  font-weight: 500;
+  transition: all 0.3s ease;
+} 
+.nav-links li a:hover {
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+} 
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #2563eb;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-links li a:hover::after {
+  width: 60%;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: white;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
