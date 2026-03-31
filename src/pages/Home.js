@@ -173,31 +173,50 @@ Gracias!
                 </div>
 
             </div>
+            <section className="about-section" id="sobre">
 
-            {/* <div className="hero">
+                <div className="about-container">
 
-                <div className="hero-text">
-                    <h1>Profesionalismo que cuida cada detalle</h1>
+                    {/* TEXTO */}
+                    <div className="about-text">
+                        <h2>Sobre nosotros</h2>
 
-                    <p>
-                        Empresa de limpieza profesional en Benidorm especializada en viviendas,
-                        pisos turísticos y limpieza profunda.
-                    </p>
+                        <p>
+                            En <strong>Limpiezas Costa Blanca</strong> ofrecemos servicios profesionales
+                            de limpieza en Benidorm y alrededores, adaptándonos a las necesidades de cada cliente.
+                        </p>
 
-                    <button className="primary-btn">
-                        Solicitar presupuesto
-                    </button>
+                        <p>
+                            Nos destacamos por la <strong>puntualidad, confianza y atención al detalle</strong>,
+                            garantizando siempre resultados impecables en cada servicio.
+                        </p>
+
+                        <p>
+                            Trabajamos con viviendas, pisos turísticos y limpiezas profundas,
+                            aportando tranquilidad y calidad en cada espacio.
+                        </p>
+
+                        <div className="about-features">
+                            <span>✔ Profesionalismo</span>
+                            <span>✔ Confianza</span>
+                            <span>✔ Resultados impecables</span>
+                        </div>
+                    </div>
+
+                    {/* IMAGEN */}
+                    <div className="about-image">
+                        <img src="/imagen-lcb.png" alt="Equipo de limpieza profesional" />
+                    </div>
+
                 </div>
 
-                <div className="hero-image">
-                    <img src="/cleaning-hero.jpg" alt="limpieza profesional" />
-                </div>
-
-            </div> */}
+            </section>
 
             {/* SERVICIOS */}
             <section className="services" id="servicios">
                 <h2>Nuestros Servicios</h2>
+                <p>Ofrecemos soluciones de limpieza adaptadas a cada necesidad, combinando
+                    profesionalismo, eficiencia y atención al detalle en cada servicio.</p>
 
                 <div className="cards">
 
@@ -283,44 +302,7 @@ Gracias!
 
                 </div>
             </section>
-            <section className="about-section" id="sobre">
 
-                <div className="about-container">
-
-                    {/* TEXTO */}
-                    <div className="about-text">
-                        <h2>Sobre nosotros</h2>
-
-                        <p>
-                            En <strong>Limpiezas Costa Blanca</strong> ofrecemos servicios profesionales
-                            de limpieza en Benidorm y alrededores, adaptándonos a las necesidades de cada cliente.
-                        </p>
-
-                        <p>
-                            Nos destacamos por la <strong>puntualidad, confianza y atención al detalle</strong>,
-                            garantizando siempre resultados impecables en cada servicio.
-                        </p>
-
-                        <p>
-                            Trabajamos con viviendas, pisos turísticos y limpiezas profundas,
-                            aportando tranquilidad y calidad en cada espacio.
-                        </p>
-
-                        <div className="about-features">
-                            <span>✔ Profesionalismo</span>
-                            <span>✔ Confianza</span>
-                            <span>✔ Resultados impecables</span>
-                        </div>
-                    </div>
-
-                    {/* IMAGEN */}
-                    <div className="about-image">
-                        <img src="/imagen-lcb.png" alt="Equipo de limpieza profesional" />
-                    </div>
-
-                </div>
-
-            </section>
             <section className="reviews" id="sobre">
 
                 <h2 className="section-title">Lo que dicen nuestros clientes</h2>
