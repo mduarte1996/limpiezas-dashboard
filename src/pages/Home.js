@@ -521,6 +521,13 @@ Gracias!
             <footer className="footer" id="contacto">
 
                 <div className="footer-container">
+                    {/* MARCA */}
+                    <div className="footer-col footer-brand">
+                        <img src="/logo-blanco.png" alt="Limpiezas Costa Blanca" />
+                        <p> • Confianza 
+                            • Puntualidad 
+                            • Resultados impecables</p>
+                    </div>
 
                     {/* CONTACTO */}
                     <div className="footer-col">
@@ -528,13 +535,6 @@ Gracias!
                         <p>Benidorm - España</p>
                         <p>📞 611 00 98 14</p>
                         <p>📧 info@limpiezacostablanca.com</p>
-                    </div>
-
-                    {/* MARCA */}
-                    <div className="footer-col footer-brand">
-                        <img src="/logo-blanco.png" alt="Limpiezas Costa Blanca" />
-                        <p>Profesionalismo que cuida cada detalle</p>
-                        <p>Confianza • Puntualidad • Resultados impecables</p>
                     </div>
 
                     {/* MENÚ */}
@@ -550,15 +550,15 @@ Gracias!
                     <div className="footer-col">
                         <h3>Síguenos</h3>
 
-                        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.instagram.com/limpiezascostablanca/" target="_blank" rel="noopener noreferrer">
                             📸 Instagram
                         </a>
 
-                        <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.tiktok.com/@limpiezascostablanca" target="_blank" rel="noopener noreferrer">
                             🎵 TikTok
                         </a>
 
-                        <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.facebook.com/limpiezascostablanca" target="_blank" rel="noopener noreferrer">
                             📘 Facebook
                         </a>
                     </div>
