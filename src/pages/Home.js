@@ -524,9 +524,9 @@ Gracias!
                     {/* MARCA */}
                     <div className="footer-col footer-brand">
                         <img src="/logo-blanco.png" alt="Limpiezas Costa Blanca" />
-                        <p> • Confianza 
-                            • Puntualidad 
-                            • Resultados impecables</p>
+                        <p> • Confianza</p>
+                        <p> • Puntualidad</p>
+                        <p> • Resultados impecables</p>
                     </div>
 
                     {/* CONTACTO */}
@@ -551,15 +551,15 @@ Gracias!
                         <h3>Síguenos</h3>
 
                         <a href="https://www.instagram.com/limpiezascostablanca/" target="_blank" rel="noopener noreferrer">
-                            📸 Instagram
+                            <img src="https://i.pinimg.com/1200x/df/23/7d/df237dfa10cb1c398b72125efdb03490.jpg" alt="Instagram Costa Blanca" />
                         </a>
 
                         <a href="https://www.tiktok.com/@limpiezascostablanca" target="_blank" rel="noopener noreferrer">
-                            🎵 TikTok
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7kwo2WQJYlS6uLJ4_i1ukMmuTtHcaEQOD-w&s" alt="Limpiezas Costa Blanca" />
                         </a>
 
                         <a href="https://www.facebook.com/limpiezascostablanca" target="_blank" rel="noopener noreferrer">
-                            📘 Facebook
+                            <img src="https://i.pinimg.com/736x/10/66/ba/1066baae6483080eb581e9e75d1fc81a.jpg" alt="Limpiezas Costa Blanca" /> 
                         </a>
                     </div>
 
