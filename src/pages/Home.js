@@ -522,43 +522,50 @@ Gracias!
 
                 <div className="footer-container">
 
-                    {/* MARCA */}
-                    <div className="footer-brand">
-                        <img src="/logo-blanco.png" alt="Limpiezas Costa Blanca" />
-                        <p>
-                            Servicios profesionales de limpieza en Benidorm y alrededores.
-                            Calidad, confianza y resultados impecables.
-                        </p>
+                    {/* CONTACTO */}
+                    <div className="footer-col">
+                        <h3>Información de contacto</h3>
+                        <p>Benidorm - España</p>
+                        <p>📞 611 00 98 14</p>
+                        <p>📧 info@limpiezacostablanca.com</p>
                     </div>
 
-                    {/* CONTACTO */}
-                    <div className="footer-contact">
-                        <h3>Contacto</h3>
-                        <p>📧 info@limpiezacostablanca.com</p>
-                        <p>📞 +34 611 00 98 14</p>
+                    {/* MARCA */}
+                    <div className="footer-col footer-brand">
+                        <img src="/logo-blanco.png" alt="Limpiezas Costa Blanca" />
+                        <p>Profesionalismo que cuida cada detalle</p>
+                        <p>Confianza • Puntualidad • Resultados impecables</p>
+                    </div>
+
+                    {/* MENÚ */}
+                    <div className="footer-col">
+                        <h3>Menú</h3>
+                        <a href="/">Inicio</a>
+                        <a href="#services">Servicios</a>
+                        <a href="#about">Sobre nosotros</a>
+                        <a href="#contacto">Contacto</a>
                     </div>
 
                     {/* REDES */}
-                    <div className="footer-social">
+                    <div className="footer-col">
                         <h3>Síguenos</h3>
 
-                        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
-                            📸 Instagram
-                        </a>
-
-                        <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer">
-                            🎵 TikTok
-                        </a>
-
-                        <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">
-                            📘 Facebook
-                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">🎵 TikTok</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">📘 Facebook</a>
                     </div>
 
                 </div>
 
+                {/* BARRA LEGAL */}
                 <div className="footer-bottom">
-                    <p>© {new Date().getFullYear()} Limpiezas Costa Blanca. Todos los derechos reservados.</p>
+                    <p>© {new Date().getFullYear()} Limpiezas Costa Blanca</p>
+
+                    <div className="footer-links">
+                        <span>Aviso legal</span>
+                        <span>Política de privacidad</span>
+                        <span>Cookies</span>
+                    </div>
                 </div>
 
             </footer>
