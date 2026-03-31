@@ -580,4 +580,65 @@ html {
   position: sticky;
   top: 0;
   z-index: 1000;
+} 
+.footer {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+  padding: 60px 20px 20px;
+  margin-top: 60px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+/* LOGO */
+.footer-brand img {
+  width: 160px;
+  margin-bottom: 15px;
+}
+
+.footer-brand p {
+  color: #dbeafe;
+  font-size: 14px;
+}
+
+/* TITULOS */
+.footer h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+/* LINKS */
+.footer-social a {
+  display: block;
+  margin-bottom: 8px;
+  color: #dbeafe;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+/* CONTACTO */
+.footer-contact p {
+  margin: 6px 0;
+  color: #dbeafe;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  margin-top: 30px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #dbeafe;
 }

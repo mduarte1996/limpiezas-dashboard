@@ -518,6 +518,42 @@ Gracias!
                 </button>
 
             </section>
+            <footer className="footer" id="contacto">
+
+                <div className="footer-container">
+
+                    {/* MARCA */}
+                    <div className="footer-brand">
+                        <img src="/logo-blanco.png" alt="Limpiezas Costa Blanca" />
+                        <p>
+                            Servicios profesionales de limpieza en Benidorm y alrededores.
+                            Calidad, confianza y resultados impecables.
+                        </p>
+                    </div>
+
+                    {/* CONTACTO */}
+                    <div className="footer-contact">
+                        <h3>Contacto</h3>
+                        <p>📧 info@limpiezacostablanca.com</p>
+                        <p>📞 +34 611 00 98 14</p>
+                    </div>
+
+                    {/* REDES */}
+                    <div className="footer-social">
+                        <h3>Síguenos</h3>
+
+                        <a href="https://instagram.com/" target="_blank">📸 Instagram</a>
+                        <a href="https://tiktok.com/" target="_blank">🎵 TikTok</a>
+                        <a href="https://facebook.com/" target="_blank">📘 Facebook</a>
+                    </div>
+
+                </div>
+
+                <div className="footer-bottom">
+                    <p>© {new Date().getFullYear()} Limpiezas Costa Blanca. Todos los derechos reservados.</p>
+                </div>
+
+            </footer>
 
         </div>
     );
