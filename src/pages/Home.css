@@ -641,4 +641,15 @@ html {
   justify-content: center;
   gap: 20px;
   font-size: 14px;
+} 
+.footer-col img {
+    width: 40px; /* ajusta el tamaño que quieras */
+    height: 40px; /* mantiene proporción si quieres */
+    object-fit: contain; /* evita deformar */
+    margin-right: 10px; /* espacio entre logos */
+    transition: transform 0.3s ease;
+}
+
+.footer-col img:hover {
+    transform: scale(1.2); /* efecto top al pasar mouse */
 }
