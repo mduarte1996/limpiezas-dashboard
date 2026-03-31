@@ -550,9 +550,17 @@ Gracias!
                     <div className="footer-col">
                         <h3>Síguenos</h3>
 
-                        <a href="#" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
-                        <a href="#" target="_blank" rel="noopener noreferrer">🎵 TikTok</a>
-                        <a href="#" target="_blank" rel="noopener noreferrer">📘 Facebook</a>
+                        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
+                            📸 Instagram
+                        </a>
+
+                        <a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer">
+                            🎵 TikTok
+                        </a>
+
+                        <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer">
+                            📘 Facebook
+                        </a>
                     </div>
 
                 </div>
