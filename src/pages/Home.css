@@ -622,7 +622,9 @@ html {
 
 /* LOGO */
 .footer-brand img {
-  width: 150px;
+  height: 80px;
+  width: auto;
+  object-fit: contain;
   margin-bottom: 10px;
 }
 
@@ -720,11 +722,27 @@ html {
 .modal-content {
   background: white;
   border-radius: 20px;
-  max-width: 950px;
-  width: 92%;
-  padding: 35px;
-  position: relative;
-  animation: slideUp 0.4s ease;
+  padding: 30px;
+  max-width: 1000px;
+  width: 90%;
+  margin: auto;
+  animation: fadeUp 0.3s ease;
+}
+
+.modal-body {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.modal-text {
+  flex: 1;
+}
+
+.modal-image {
+  flex: 1;
+  text-align: center;
 }
 
 /* ANIMACIONES PREMIUM */
@@ -744,16 +762,6 @@ html {
   }
 }
 
-.modal-body {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.modal-text {
-  flex: 1;
-}
-
 .modal-text h2 {
   color: #1e3a8a;
   margin-bottom: 15px;
@@ -761,8 +769,10 @@ html {
 
 .modal-image img {
   width: 100%;
-  border-radius: 15px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  max-width: 420px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 .modal-image img:hover {
