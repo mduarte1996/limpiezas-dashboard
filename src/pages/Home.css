@@ -710,39 +710,62 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6);
+
+  background: rgba(15, 23, 42, 0.4); /* oscuro elegante */
+  backdrop-filter: blur(8px); /* 👈 EFECTO APPLE */
+
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 999;
-}
 
+  z-index: 9999;
+}
 /* 👇 CLAVE AQUÍ */
 .modal-content {
-  background: white;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+
   border-radius: 20px;
+  padding: 35px;
+
   width: 90%;
   max-width: 1000px;
-  max-height: 90vh; /* 👈 limita altura */
-  overflow-y: auto; /* 👈 PERMITE SCROLL */
-  padding: 30px;
+  max-height: 90vh;
+  overflow-y: auto;
+
+  box-shadow: 
+    0 20px 60px rgba(0,0,0,0.2),
+    0 0 0 1px rgba(255,255,255,0.2);
+
+  animation: modalFade 0.35s ease;
 }
 
 .modal-body {
   display: flex;
   gap: 40px;
+  align-items: center;
   flex-wrap: wrap;
-  align-items: flex-start; /* 👈 IMPORTANTE */
 }
 
 .modal-text {
   flex: 1;
-  min-width: 280px;
 }
 
-.modal-image {
-  flex: 1;
-  min-width: 280px;
+.modal-text h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #1e3a8a;
+}
+
+.modal-text p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.modal-image img {
+  border-radius: 16px;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 .modal-content::-webkit-scrollbar {
   width: 6px;
@@ -754,19 +777,14 @@ html {
 }
 
 /* ANIMACIONES PREMIUM */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
+@keyframes modalFade {
   from {
-    transform: translateY(80px) scale(0.95);
     opacity: 0;
+    transform: translateY(30px) scale(0.95);
   }
   to {
-    transform: translateY(0) scale(1);
     opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }
 
@@ -792,10 +810,23 @@ html {
   position: absolute;
   top: 15px;
   right: 15px;
+
+  background: rgba(0,0,0,0.05);
   border: none;
-  background: none;
-  font-size: 20px;
+
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50%;
   cursor: pointer;
+
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.modal-close:hover {
+  background: rgba(0,0,0,0.15);
+  transform: rotate(90deg);
 }
 .modal-highlight {
   margin-top: 20px;
@@ -847,24 +878,7 @@ html {
   transform: scale(1.03);
   box-shadow: 0 10px 25px rgba(37,99,235,0.4);
 }
-.modal-close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  border: none;
-  background: #f1f5f9;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 18px;
-  transition: all 0.3s ease;
-}
 
-.modal-close:hover {
-  background: #e2e8f0;
-  transform: rotate(90deg);
-}
 .whatsapp-float {
   position: fixed;
   bottom: 25px;
