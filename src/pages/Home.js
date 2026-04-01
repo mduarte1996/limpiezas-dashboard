@@ -598,15 +598,15 @@ Gracias!
 
                         <div className="social-icons">
                             <a href="https://www.instagram.com/limpiezascostablanca/" target="_blank" rel="noopener noreferrer">
-                                <FaInstagram />
+                                <img src="/insta-logo.jpg" alt="Instagram" />
                             </a>
 
                             <a href="https://www.tiktok.com/@limpiezascostablanca" target="_blank" rel="noopener noreferrer">
-                                <FaTiktok />
+                                <img src="/tiktok.png" alt="TikTok" />
                             </a>
 
                             <a href="https://www.facebook.com/limpiezascostablanca" target="_blank" rel="noopener noreferrer">
-                                <FaFacebookF />
+                                <img src="/logofacebook.jpg" alt="Facebook" />
                             </a>
                         </div>
                     </div>

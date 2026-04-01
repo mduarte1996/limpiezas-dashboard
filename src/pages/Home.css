@@ -878,17 +878,23 @@ html {
   transform: scale(1.1);
   box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
+.social-icons {
+  display: flex;
+  gap: 12px; /* separación pequeña elegante */
+  align-items: center;
+}
+
 .social-icons a {
-  font-size: 20px;
-  color: #2563eb;
-  background: white;
-  padding: 12px;
-  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  padding: 8px;
+  border-radius: 8px;
   transition: 0.3s;
 }
 
 .social-icons a:hover {
   background: #2563eb;
-  color: white;
-  transform: scale(1.1);
+}
+
+.social-icons a:hover img {
+  filter: brightness(0) invert(1);
 }
