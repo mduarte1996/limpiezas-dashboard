@@ -665,7 +665,7 @@ Gracias!
                                 </div>
 
                                 <div className="modal-image">
-                                    <img src="/servicio-vivienda.jpg" alt="Servicio vivienda" />
+                                    <img src="/limpieza-vivienda.jpg" alt="Servicio vivienda" />
                                 </div>
 
                             </div>
@@ -718,7 +718,7 @@ Gracias!
 
                                 {/* IMAGEN */}
                                 <div className="modal-image">
-                                    <img src="/servicio-turistico.jpg" alt="Pisos turísticos" />
+                                    <img src="/limpieza-turistica.jpg" alt="Pisos turísticos" />
                                 </div>
 
                             </div>
@@ -752,7 +752,7 @@ Gracias!
                                 </div>
 
                                 <div className="modal-image">
-                                    <img src="/servicio-profunda.jpg" alt="Limpieza profunda" />
+                                    <img src="/profunda.jpg" alt="Limpieza profunda" />
                                 </div>
 
                             </div>
@@ -785,7 +785,7 @@ Gracias!
                                 </div>
 
                                 <div className="modal-image">
-                                    <img src="/servicio-obra.jpg" alt="Final de obra" />
+                                    <img src="/post-obra.jpg" alt="Final de obra" />
                                 </div>
 
                             </div>
