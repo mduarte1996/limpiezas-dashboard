@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Home.css";
 import { createService } from "../services/api";
 import Navbar from "../components/Navbar";
@@ -153,6 +153,34 @@ Gracias!
     };
     const [selectedService, setSelectedService] = useState(null);
 
+    useEffect(() => {
+        const handleEsc = (e) => {
+            if (e.key === "Escape") {
+                setSelectedService(null);
+            }
+        };
+
+        window.addEventListener("keydown", handleEsc);
+
+        return () => {
+            window.removeEventListener("keydown", handleEsc);
+        };
+    }, []);
+
+    useEffect(() => {
+        if (selectedService) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+    }, [selectedService]);
+    
+    useEffect(() => {
+        if (selectedService) {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    }, [selectedService]);
+
     return (
         <div className="home">
 
@@ -236,55 +264,13 @@ Gracias!
                         <p>Eliminamos suciedad difícil y acumulada.</p>
                     </div>
 
-                    <div className="card" onClick={() => setSelectedService("final")}>
+                    <div className="card" onClick={() => setSelectedService("obra")}>
                         <h3>🧱 Final de obra</h3>
                         <p>Dejamos tu espacio listo para usar.</p>
                     </div>
 
                 </div>
             </section>
-            {selectedService && (
-                <section className="service-detail">
-
-                    <button className="close-btn" onClick={() => setSelectedService(null)}>
-                        ✖
-                    </button>
-
-                    {selectedService === "vivienda" && (
-                        <div className="detail-content">
-
-                            <div className="detail-text">
-                                <h2>Limpieza de viviendas</h2>
-
-                                <p>
-                                    Servicio profesional para mantener tu hogar impecable,
-                                    cuidando cada detalle con productos de alta calidad.
-                                </p>
-
-                                <ul>
-                                    <li>✔ Limpieza de cocina y baños</li>
-                                    <li>✔ Aspirado y fregado de suelos</li>
-                                    <li>✔ Limpieza de superficies y muebles</li>
-                                    <li>✔ Eliminación de polvo</li>
-                                    <li>✔ Cambio de ropa de cama</li>
-                                </ul>
-
-                                <p><strong>💰 Desde 16€/hora + IVA</strong></p>
-
-                                <button className="primary-btn">
-                                    Solicitar servicio
-                                </button>
-                            </div>
-
-                            <div className="detail-image">
-                                <img src="/servicio-vivienda.jpg" alt="Limpieza de viviendas" />
-                            </div>
-
-                        </div>
-                    )}
-
-                </section>
-            )}
 
             <section className="gallery">
                 <h2 className="gallery-title">

@@ -708,22 +708,40 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(15, 23, 42, 0.7); /* más elegante */
+  backdrop-filter: blur(6px); /* EFECTO PREMIUM */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 2000;
-  animation: fadeIn 0.3s ease;
+  animation: fadeIn 0.4s ease;
 }
 
 .modal-content {
   background: white;
   border-radius: 20px;
-  max-width: 900px;
-  width: 90%;
-  padding: 30px;
+  max-width: 950px;
+  width: 92%;
+  padding: 35px;
   position: relative;
-  animation: scaleIn 0.3s ease;
+  animation: slideUp 0.4s ease;
+}
+
+/* ANIMACIONES PREMIUM */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(80px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
 }
 
 .modal-body {
@@ -741,13 +759,15 @@ html {
   margin-bottom: 15px;
 }
 
-.modal-image {
-  flex: 1;
-}
-
 .modal-image img {
   width: 100%;
   border-radius: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.modal-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
 .modal-close {
@@ -758,23 +778,6 @@ html {
   background: none;
   font-size: 20px;
   cursor: pointer;
-}
-
-/* ANIMACIONES PRO */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes scaleIn {
-  from {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
 }
 .modal-highlight {
   margin-top: 20px;
@@ -810,4 +813,37 @@ html {
 
 .modal-text li {
   margin-bottom: 8px;
+} 
+.modal-text .primary-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.modal-text .primary-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(37,99,235,0.4);
+}
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  background: #f1f5f9;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: #e2e8f0;
+  transform: rotate(90deg);
 }
