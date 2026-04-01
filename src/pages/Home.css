@@ -878,3 +878,17 @@ html {
   transform: scale(1.1);
   box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
+.social-icons a {
+  font-size: 20px;
+  color: #2563eb;
+  background: white;
+  padding: 12px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #2563eb;
+  color: white;
+  transform: scale(1.1);
+}

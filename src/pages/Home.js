@@ -4,6 +4,8 @@ import { createService } from "../services/api";
 import Navbar from "../components/Navbar";
 import emailjs from "emailjs-com";
 import jsPDF from "jspdf";
+import { FaInstagram, FaTiktok, FaFacebookF } from "react-icons/fa";
+
 
 function Home() {
 
@@ -594,17 +596,19 @@ Gracias!
                     <div className="footer-col">
                         <h3>Síguenos</h3>
 
-                        <a href="https://www.instagram.com/limpiezascostablanca/" target="_blank" rel="noopener noreferrer">
-                            <img src="insta-logo.jpg" alt="Instagram Costa Blanca" />
-                        </a>
+                        <div className="social-icons">
+                            <a href="https://www.instagram.com/limpiezascostablanca/" target="_blank" rel="noopener noreferrer">
+                                <FaInstagram />
+                            </a>
 
-                        <a href="https://www.tiktok.com/@limpiezascostablanca" target="_blank" rel="noopener noreferrer">
-                            <img src="tiktok.png" alt="TikTok Costa Blanca" />
-                        </a>
+                            <a href="https://www.tiktok.com/@limpiezascostablanca" target="_blank" rel="noopener noreferrer">
+                                <FaTiktok />
+                            </a>
 
-                        <a href="https://www.facebook.com/limpiezascostablanca" target="_blank" rel="noopener noreferrer">
-                            <img src="logofacebook.jpg" alt="Facebook Costa Blanca" />
-                        </a>
+                            <a href="https://www.facebook.com/limpiezascostablanca" target="_blank" rel="noopener noreferrer">
+                                <FaFacebookF />
+                            </a>
+                        </div>
                     </div>
 
                 </div>
