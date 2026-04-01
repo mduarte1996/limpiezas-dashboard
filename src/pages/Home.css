@@ -892,7 +892,8 @@ html {
 }
 
 .social-icons a:hover {
-  background: #2563eb;
+  transform: scale(1.15);
+  color: #60a5fa;
 }
 
 .social-icons a:hover img {
