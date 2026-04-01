@@ -15,9 +15,8 @@
 
 /* LOGO */
 .logo img {
-  height: 55px;
-  width: auto;
-  object-fit: contain;
+  height: 70px;
+  transform: scale(1.1);
 }
 
 .nav-links {

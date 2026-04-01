@@ -6,7 +6,7 @@ function Navbar() {
         <nav className="navbar">
 
             <div className="logo">
-                <img src="/logo-blanco.png" alt="Limpiezas Costa Blanca" />
+                <img src="/logo-nuevo-lcb.png" alt="Limpiezas Costa Blanca" />
             </div>
 
             <ul className="nav-links">

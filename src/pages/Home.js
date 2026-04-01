@@ -567,7 +567,7 @@ Gracias!
                 <div className="footer-container">
                     {/* MARCA */}
                     <div className="footer-col footer-brand">
-                        <img src="/logo-blanco.png" alt="Limpiezas Costa Blanca" />
+                        <img src="/logo-nuevo-lcb.png" alt="Limpiezas Costa Blanca" />
                         <p> • Confianza</p>
                         <p> • Puntualidad</p>
                         <p> • Resultados impecables</p>
@@ -790,6 +790,14 @@ Gracias!
                     </div>
                 </div>
             )}
+            <a
+                href="https://wa.me/34611009814?text=Hola,%20quiero%20información%20sobre%20un%20servicio%20de%20limpieza"
+                className="whatsapp-float"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <img src="/whatsapp-icon.png" alt="WhatsApp" />
+            </a>
 
         </div>
     );
