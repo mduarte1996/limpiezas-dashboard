@@ -1,10 +1,9 @@
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 40px;
-  height: 80px; /* 👈 CONTROLA EL ALTO */
   background: white;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 /* CONTENEDOR LOGO */
@@ -16,7 +15,7 @@
 
 /* LOGO */
 .logo img {
-  height: 60px; /* 👈 AJUSTA AQUÍ */
+  height: 55px;
   width: auto;
   object-fit: contain;
 }

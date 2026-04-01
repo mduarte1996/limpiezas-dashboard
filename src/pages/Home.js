@@ -153,6 +153,21 @@ Gracias!
     };
     const [selectedService, setSelectedService] = useState(null);
 
+    const handleSelectService = (service) => {
+        setFormData({
+            ...formData,
+            service_type: service
+        });
+
+        setSelectedService(null);
+
+        setTimeout(() => {
+            document.getElementById("contacto").scrollIntoView({
+                behavior: "smooth"
+            });
+        }, 200);
+    };
+
     useEffect(() => {
         const handleEsc = (e) => {
             if (e.key === "Escape") {
@@ -174,7 +189,7 @@ Gracias!
             document.body.style.overflow = "auto";
         }
     }, [selectedService]);
-    
+
     useEffect(() => {
         if (selectedService) {
             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -196,7 +211,7 @@ Gracias!
                     <h1>Profesionalismo que cuida cada detalle</h1>
                     <p>Servicios de limpieza profesionales en Benidorm y alrededores</p>
 
-                    <a href="#form" className="hero-btn">
+                    <a href="#contacto" className="hero-btn">
                         Solicitar presupuesto
                     </a>
                 </div>
@@ -569,9 +584,9 @@ Gracias!
                     {/* MENÚ */}
                     <div className="footer-col">
                         <h3>Menú</h3>
-                        <a href="/">Inicio</a>
-                        <a href="#services">Servicios</a>
-                        <a href="#about">Sobre nosotros</a>
+                        <a href="#inicio">Inicio</a>
+                        <a href="#servicios">Servicios</a>
+                        <a href="#sobre">Sobre nosotros</a>
                         <a href="#contacto">Contacto</a>
                     </div>
 
@@ -635,10 +650,13 @@ Gracias!
                                         <li>✔ Cambio de ropa de cama</li>
                                     </ul>
 
-                                    <p><strong>💰 Desde 16€/hora + IVA</strong></p>
+                                    <p><strong>💰 16€/hora + IVA</strong></p>
 
-                                    <button className="primary-btn">
-                                        Solicitar servicio
+                                    <button
+                                        className="primary-btn"
+                                        onClick={() => handleSelectService("vivienda")}
+                                    >
+                                        Reservar limpieza de vivienda
                                     </button>
                                 </div>
 
@@ -685,8 +703,11 @@ Gracias!
                                         <p>📸 Posibilidad de reporte del estado del piso</p>
                                     </div>
 
-                                    <button className="primary-btn" onClick={handleWhatsAppQuote}>
-                                        Reservar por WhatsApp
+                                    <button
+                                        className="primary-btn"
+                                        onClick={() => handleSelectService("turistico")}
+                                    >
+                                        Reservar limpieza turística
                                     </button>
 
                                 </div>
@@ -716,10 +737,13 @@ Gracias!
                                         <li>✔ Eliminación de grasa y cal</li>
                                     </ul>
 
-                                    <p><strong>💰 Desde 18€/hora + IVA</strong></p>
+                                    <p><strong>💰 18€/hora + IVA</strong></p>
 
-                                    <button className="primary-btn">
-                                        Solicitar servicio
+                                    <button
+                                        className="primary-btn"
+                                        onClick={() => handleSelectService("profunda")}
+                                    >
+                                        Reservar limpieza profunda
                                     </button>
                                 </div>
 
@@ -746,10 +770,13 @@ Gracias!
                                         <li>✔ Aspirado industrial</li>
                                     </ul>
 
-                                    <p><strong>💰 Desde 20€/hora + IVA</strong></p>
+                                    <p><strong>💰 20€/hora + IVA</strong></p>
 
-                                    <button className="primary-btn">
-                                        Solicitar servicio
+                                    <button
+                                        className="primary-btn"
+                                        onClick={() => handleSelectService("obra")}
+                                    >
+                                        Reservar limpieza de obra
                                     </button>
                                 </div>
 
