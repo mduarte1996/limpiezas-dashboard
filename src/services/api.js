@@ -60,12 +60,12 @@ export const loginUser = async (credentials) => {
   return res.json();
 };
 export const getReviews = async () => {
-    const res = await fetch(process.env.BACKEND_URL + "/reviews");
+    const res = await fetch(`${BASE_URL}/reviews`);
     return res.json();
 };
 
 export const createReview = async (review) => {
-    const res = await fetch(process.env.BACKEND_URL + "/reviews", {
+    const res = await fetch(`${BASE_URL}/reviews`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

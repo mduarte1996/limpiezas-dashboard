@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import emailjs from "emailjs-com";
 import jsPDF from "jspdf";
 import { FaInstagram, FaTiktok, FaFacebookF } from "react-icons/fa";
+import { getReviews, createReview } from "../services/api";
 
 
 function Home() {
