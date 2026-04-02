@@ -154,6 +154,11 @@ Gracias!
         doc.save("presupuesto.pdf");
     };
     const [selectedService, setSelectedService] = useState(null);
+    const [reviews, setReviews] = useState([]);
+    const [newReview, setNewReview] = useState({
+        name: "",
+        message: ""
+    });
 
     const handleSelectService = (service) => {
         setFormData({
@@ -168,6 +173,19 @@ Gracias!
                 behavior: "smooth"
             });
         }, 200);
+    };
+
+    const handleReviewSubmit = async (e) => {
+        e.preventDefault();
+
+        const created = await createReview(newReview);
+
+        setReviews([...reviews, created]);
+
+        setNewReview({
+            name: "",
+            message: ""
+        });
     };
 
     useEffect(() => {
@@ -197,6 +215,15 @@ Gracias!
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
     }, [selectedService]);
+
+    useEffect(() => {
+        const loadReviews = async () => {
+            const data = await getReviews();
+            setReviews(data);
+        };
+
+        loadReviews();
+    }, []);
 
     return (
         <div className="home">
@@ -349,42 +376,58 @@ Gracias!
                 </div>
             </section>
 
-            <section className="reviews" id="sobre">
+            <section className="reviews" id="reviews">
 
                 <h2 className="section-title">Lo que dicen nuestros clientes</h2>
-                <p className="section-subtitle">Resultados reales, clientes satisfechos</p>
+                <p className="section-subtitle">Opiniones reales de nuestros clientes</p>
 
+                {/* REVIEWS DINÁMICAS */}
                 <div className="reviews-container">
 
-                    <div className="review-card">
-                        <p>"Excelente servicio, muy puntuales y profesionales."</p>
-                        <span>⭐⭐⭐⭐⭐ - María</span>
-                    </div>
-
-                    <div className="review-card">
-                        <p>"Dejaron mi piso turístico impecable."</p>
-                        <span>⭐⭐⭐⭐⭐ - Carlos</span>
-                    </div>
-
-                    <div className="review-card">
-                        <p>"Muy recomendados, repetiré sin duda."</p>
-                        <span>⭐⭐⭐⭐⭐ - Laura</span>
-                    </div>
+                    {reviews.length === 0 ? (
+                        <p>Aún no hay opiniones. Sé el primero en comentar ⭐</p>
+                    ) : (
+                        reviews.map((rev) => (
+                            <div key={rev.id} className="review-card">
+                                <p>"{rev.message}"</p>
+                                <span>⭐⭐⭐⭐⭐ - {rev.name}</span>
+                            </div>
+                        ))
+                    )}
 
                 </div>
 
-                {/* FORM OPINIÓN */}
-                <div className="review-form">
+                {/* FORMULARIO */}
+                <form onSubmit={handleReviewSubmit} className="review-form">
+
                     <h3>Déjanos tu opinión</h3>
 
-                    <input type="text" placeholder="Tu nombre" />
-                    <textarea placeholder="Escribe tu experiencia..." />
+                    <input
+                        type="text"
+                        placeholder="Tu nombre"
+                        value={newReview.name}
+                        onChange={(e) =>
+                            setNewReview({ ...newReview, name: e.target.value })
+                        }
+                        required
+                    />
 
-                    <button className="primary-btn">Enviar opinión</button>
-                </div>
+                    <textarea
+                        placeholder="Escribe tu experiencia..."
+                        value={newReview.message}
+                        onChange={(e) =>
+                            setNewReview({ ...newReview, message: e.target.value })
+                        }
+                        required
+                    />
+
+                    <button type="submit" className="primary-btn">
+                        Enviar opinión
+                    </button>
+
+                </form>
 
             </section>
-
             {/* CTA */}
             <section className="cta">
                 <h2>¿Necesitas limpieza urgente?</h2>

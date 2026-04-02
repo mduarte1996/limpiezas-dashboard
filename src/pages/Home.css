@@ -920,4 +920,22 @@ html {
 
 .social-icons a:hover img {
   filter: brightness(0) invert(1);
+} 
+
+.review-form {
+  max-width: 450px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.review-form h3 {
+  text-align: center;
+  color: #1e3a8a;
+}
+
+.reviews-container p {
+  text-align: center;
+  color: #6b7280;
 }
