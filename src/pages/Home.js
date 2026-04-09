@@ -6,6 +6,7 @@ import emailjs from "emailjs-com";
 import jsPDF from "jspdf";
 import { FaInstagram, FaTiktok, FaFacebookF } from "react-icons/fa";
 import { getReviews, createReview } from "../services/api";
+import { getReviews, createReview, deleteReview } from "../services/api";
 
 
 function Home() {
@@ -25,7 +26,7 @@ function Home() {
         iva: 0,
         total: 0
     });
-    
+
     const handleRating = (value) => {
         setNewReview({ ...newReview, rating: value });
     };
@@ -164,7 +165,7 @@ Gracias!
     const [newReview, setNewReview] = useState({
         name: "",
         message: "",
-        rating: 5   
+        rating: 5
     });
 
     const handleSelectService = (service) => {
@@ -184,9 +185,23 @@ Gracias!
 
     const handleReviewSubmit = async (e) => {
         e.preventDefault();
+        if (newReview.message.length < 10) {
+            alert("La opinión debe tener al menos 10 caracteres");
+            return;
+        }
+
+        if (newReview.name.length < 2) {
+            alert("Nombre inválido");
+            return;
+        }
+
+        if (newReview.message.includes("http")) {
+            alert("No se permiten enlaces");
+            return;
+        }
 
         try {
-            await createReview(newReview); // 👈 AQUÍ VA
+            await createReview(newReview);
 
             // limpiar formulario
             setNewReview({
@@ -202,6 +217,13 @@ Gracias!
         } catch (error) {
             console.error(error);
         }
+    };
+
+    const handleDeleteReview = async (id) => {
+        await deleteReview(id);
+
+        const data = await getReviews();
+        setReviews(data);
     };
 
     useEffect(() => {
@@ -256,7 +278,7 @@ Gracias!
                     <h1>Profesionalismo que cuida cada detalle</h1>
                     <p>Servicios de limpieza profesionales en Benidorm y alrededores</p>
 
-                    <a href="#contacto" className="hero-btn">
+                    <a href="#form" className="hero-btn">
                         Solicitar presupuesto
                     </a>
                 </div>
@@ -409,6 +431,13 @@ Gracias!
                                 <span>
                                     {"★".repeat(rev.rating)}{"☆".repeat(5 - rev.rating)} - {rev.name}
                                 </span>
+                                {/* BOTÓN ADMIN */}
+                                <button
+                                    className="delete-review"
+                                    onClick={() => handleDeleteReview(rev.id)}
+                                >
+                                    Eliminar
+                                </button>
                             </div>
                         ))
                     )}

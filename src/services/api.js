@@ -75,3 +75,10 @@ export const createReview = async (review) => {
 
     return res.json();
 };
+export const deleteReview = async (id) => {
+    const res = await fetch(`${BASE_URL}/reviews/${id}`, {
+        method: "DELETE"
+    });
+
+    return res.json();
+};
