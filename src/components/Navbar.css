@@ -1,87 +1,151 @@
+/* NAVBAR */
 .navbar {
-  background: white;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
-  z-index: 1000;
-}
+  z-index: 9999;
 
-/* CONTENEDOR LOGO */
-.logo {
   display: flex;
   align-items: center;
-  height: 100%;
+  justify-content: space-between;
+
+  padding: 15px 40px;
+
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 4px 25px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
 }
 
 /* LOGO */
 .logo img {
   height: 70px;
-  transform: scale(1.1);
+  transition: 0.3s;
 }
 
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* LINKS */
 .nav-links {
   display: flex;
-  gap: 25px;
+  gap: 35px;
   list-style: none;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #1e293b;
   font-weight: 500;
+  position: relative;
+  transition: 0.3s;
 }
 
-.phone-btn {
+/* hover línea pro */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
   background: #2563eb;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* BOTON TEL */
+.phone-btn {
+  background: linear-gradient(135deg,#2563eb,#1e3a8a);
   color: white;
   padding: 10px 20px;
-  border-radius: 25px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.3s;
 }
 
-.whatsapp {
-  background-color: #25D366;
-  color: white;
+.phone-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(37,99,235,0.2);
 }
-.menu-toggle {
+
+/* HAMBURGUESA */
+.hamburger {
   display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
+  flex-direction: column;
+  gap: 5px;
   cursor: pointer;
 }
 
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #1e3a8a;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* animacion */
+.hamburger.active span:nth-child(1){
+  transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger.active span:nth-child(2){
+  opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+
 /* MOBILE */
-@media (max-width: 768px) {
+@media (max-width: 900px){
 
-.navbar {
-  padding: 15px 20px;
+.navbar{
+  padding:15px 20px;
 }
 
-.menu-toggle {
-  display: block;
+.hamburger{
+  display:flex;
 }
 
-.nav-links {
-  position: absolute;
-  top: 80px;
-  left: 0;
-  width: 100%;
-  background: white;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-  display: none;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+.nav-links{
+  position:absolute;
+  top:80px;
+  left:0;
+  width:100%;
+
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+
+  flex-direction:column;
+  align-items:center;
+
+  padding:30px 0;
+  gap:25px;
+
+  box-shadow:0 20px 40px rgba(0,0,0,0.08);
+
+  opacity:0;
+  pointer-events:none;
+  transform:translateY(-10px);
+  transition:0.3s;
 }
 
-.nav-links.active {
-  display: flex;
+.nav-links.active{
+  opacity:1;
+  pointer-events:auto;
+  transform:translateY(0);
 }
 
-.phone-btn {
-  display: none;
+.phone-btn{
+  display:none;
 }
 
 }

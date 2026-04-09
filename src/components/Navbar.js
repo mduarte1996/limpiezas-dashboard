@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 
 function Navbar() {
 
     const [menuOpen, setMenuOpen] = useState(false);
+
+    // cerrar al hacer scroll
+    useEffect(() => {
+        const handleScroll = () => setMenuOpen(false);
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
         <nav className="navbar">
@@ -13,13 +21,15 @@ function Navbar() {
                 <img src="/logo-nuevo-lcb.png" alt="Limpiezas Costa Blanca" />
             </div>
 
-            {/* BOTÓN MOBILE */}
-            <button 
-                className="menu-toggle"
+            {/* HAMBURGUESA */}
+            <div 
+                className={`hamburger ${menuOpen ? "active" : ""}`}
                 onClick={() => setMenuOpen(!menuOpen)}
             >
-                ☰
-            </button>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
             {/* LINKS */}
             <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
@@ -29,7 +39,7 @@ function Navbar() {
                 <li><a href="#contacto" onClick={() => setMenuOpen(false)}>Contacto</a></li>
             </ul>
 
-            {/* TELÉFONO */}
+            {/* BOTÓN TEL */}
             <div className="nav-right">
                 <a href="tel:+34611009814" className="phone-btn">
                     📞 +34 611 00 98 14
