@@ -25,13 +25,7 @@ function Home() {
         iva: 0,
         total: 0
     });
-
-    const [newReview, setNewReview] = useState({
-        name: "",
-        message: "",
-        rating: 5
-    });
-
+    
     const handleRating = (value) => {
         setNewReview({ ...newReview, rating: value });
     };
@@ -166,9 +160,11 @@ Gracias!
     };
     const [selectedService, setSelectedService] = useState(null);
     const [reviews, setReviews] = useState([]);
+
     const [newReview, setNewReview] = useState({
         name: "",
-        message: ""
+        message: "",
+        rating: 5   
     });
 
     const handleSelectService = (service) => {
