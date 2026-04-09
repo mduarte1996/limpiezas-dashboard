@@ -938,4 +938,25 @@ html {
 .reviews-container p {
   text-align: center;
   color: #6b7280;
+} 
+.stars {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  font-size: 28px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.star {
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.star:hover {
+  transform: scale(1.2);
+}
+
+.star.active {
+  color: #fbbf24; /* dorado pro */
 }

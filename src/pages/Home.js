@@ -26,6 +26,16 @@ function Home() {
         total: 0
     });
 
+    const [newReview, setNewReview] = useState({
+        name: "",
+        message: "",
+        rating: 5
+    });
+
+    const handleRating = (value) => {
+        setNewReview({ ...newReview, rating: value });
+    };
+
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
 
@@ -179,14 +189,23 @@ Gracias!
     const handleReviewSubmit = async (e) => {
         e.preventDefault();
 
-        const created = await createReview(newReview);
+        try {
+            await createReview(newReview); // 👈 AQUÍ VA
 
-        setReviews([...reviews, created]);
+            // limpiar formulario
+            setNewReview({
+                name: "",
+                message: "",
+                rating: 5
+            });
 
-        setNewReview({
-            name: "",
-            message: ""
-        });
+            // recargar reviews
+            const data = await getReviews();
+            setReviews(data);
+
+        } catch (error) {
+            console.error(error);
+        }
     };
 
     useEffect(() => {
@@ -391,7 +410,9 @@ Gracias!
                         reviews.map((rev) => (
                             <div key={rev.id} className="review-card">
                                 <p>"{rev.message}"</p>
-                                <span>⭐⭐⭐⭐⭐ - {rev.name}</span>
+                                <span>
+                                    {"★".repeat(rev.rating)}{"☆".repeat(5 - rev.rating)} - {rev.name}
+                                </span>
                             </div>
                         ))
                     )}
@@ -425,6 +446,17 @@ Gracias!
                     <button type="submit" className="primary-btn">
                         Enviar opinión
                     </button>
+                    <div className="stars">
+                        {[1, 2, 3, 4, 5].map((star) => (
+                            <span
+                                key={star}
+                                className={star <= newReview.rating ? "star active" : "star"}
+                                onClick={() => handleRating(star)}
+                            >
+                                ★
+                            </span>
+                        ))}
+                    </div>
 
                 </form>
 
