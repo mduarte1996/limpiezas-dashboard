@@ -277,7 +277,7 @@ Gracias!
                     <h1>Profesionalismo que cuida cada detalle</h1>
                     <p>Servicios de limpieza profesionales en Benidorm y alrededores</p>
 
-                    <a href="#form" className="hero-btn">
+                    <a href="#contacto" className="hero-btn">
                         Solicitar presupuesto
                     </a>
                 </div>

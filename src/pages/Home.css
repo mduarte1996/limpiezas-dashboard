@@ -1005,3 +1005,92 @@ html {
 .review-card:hover::after {
   opacity: 1;
 }
+@media (max-width: 768px) {
+
+.overlay h1 {
+  font-size: 2rem;
+}
+
+.overlay p {
+  font-size: 1rem;
+}
+
+.hero-video {
+  height: 70vh;
+}
+
+}
+@media (max-width: 768px) {
+
+.about-container {
+  flex-direction: column;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+}
+
+}
+@media (max-width: 768px) {
+
+.services {
+  padding: 60px 20px;
+}
+
+.card {
+  padding: 20px;
+}
+
+}
+@media (max-width: 768px) {
+
+.modal-content {
+  width: 95%;
+  height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-body {
+  flex-direction: column;
+}
+
+.modal-image img {
+  width: 100%;
+}
+
+}
+@media (max-width: 768px) {
+
+.reviews-container {
+  grid-template-columns: 1fr;
+}
+
+.review-card {
+  padding: 20px;
+}
+
+}
+@media (max-width: 768px) {
+
+.footer-container {
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+}
+
+.footer-col {
+  width: 100%;
+}
+
+.footer-brand img {
+  margin: auto;
+}
+
+}
+.whatsapp-float {
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+}
