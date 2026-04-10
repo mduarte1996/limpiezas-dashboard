@@ -895,7 +895,7 @@ Gracias!
                 </div>
             )}
             <a
-                href="https://wa.me/34611009814?text=Hola,%20quiero%20información%20sobre%20un%20servicio%20de%20limpieza"
+                href="https://wa.me/34611009814"
                 className="whatsapp-float"
                 target="_blank"
                 rel="noopener noreferrer"
