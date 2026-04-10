@@ -6,6 +6,7 @@ import emailjs from "emailjs-com";
 import jsPDF from "jspdf";
 import { FaInstagram, FaTiktok, FaFacebookF } from "react-icons/fa";
 import { getReviews, createReview, deleteReview } from "../services/api";
+import { Link } from "react-router-dom";
 
 
 function Home() {
@@ -582,6 +583,10 @@ Gracias!
                         onChange={handleChange}
                         required
                     />
+                    <label className="legal-check">
+                        <input type="checkbox" required />
+                        Acepto la <a href="/privacidad">Política de privacidad</a>
+                    </label>
 
                     <button type="submit" className="primary-btn">
                         Enviar solicitud
@@ -718,9 +723,9 @@ Gracias!
                     <p>© {new Date().getFullYear()} Limpiezas Costa Blanca</p>
 
                     <div className="footer-links">
-                        <span>Aviso legal</span>
-                        <span>Política de privacidad</span>
-                        <span>Cookies</span>
+                        <Link to="/AvisoLegal">Aviso legal</Link>
+                        <Link to="/Privacidad">Política de privacidad</Link>
+                        <Link to="/Cookies">Cookies</Link>
                     </div>
                 </div>
 
@@ -902,6 +907,23 @@ Gracias!
             >
                 <img src="/whatsapp-icon-white.png" alt="WhatsApp" />
             </a>
+            {!localStorage.getItem("cookiesAccepted") && (
+                <div className="cookie-banner">
+                    <p>
+                        Utilizamos cookies para mejorar tu experiencia. Al continuar aceptas nuestra{" "}
+                        <a href="/cookies">Política de cookies</a>.
+                    </p>
+
+                    <button
+                        onClick={() => {
+                            localStorage.setItem("cookiesAccepted", "true");
+                            window.location.reload();
+                        }}
+                    >
+                        Aceptar
+                    </button>
+                </div>
+            )}
 
         </div>
     );
