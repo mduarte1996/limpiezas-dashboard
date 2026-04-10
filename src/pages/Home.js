@@ -900,7 +900,7 @@ Gracias!
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <img src="/whatsapp-icon.png" alt="WhatsApp" />
+                <img src="/whatsapp-icon-white.png" alt="WhatsApp" />
             </a>
 
         </div>
