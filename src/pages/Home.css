@@ -1086,6 +1086,8 @@ html {
   align-items: center;
   justify-content: center;
 
+  border: 4px solid white;
+
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 
   z-index: 9999;
