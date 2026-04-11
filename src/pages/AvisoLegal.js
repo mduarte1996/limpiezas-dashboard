@@ -1,6 +1,8 @@
 import React from "react";
-import "./Legal.css";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
+import "./Legal.css";
 
 function AvisoLegal() {
     return (
