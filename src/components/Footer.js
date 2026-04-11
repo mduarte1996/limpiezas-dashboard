@@ -60,9 +60,9 @@ function Footer() {
                 <p>© {new Date().getFullYear()} Limpiezas Costa Blanca</p>
 
                 <div className="footer-links">
-                    <Link to="/AvisoLegal">Aviso legal</Link>
-                    <Link to="/Privacidad">Privacidad</Link>
-                    <Link to="/Cookies">Cookies</Link>
+                    <Link to="/aviso-legal">Aviso legal</Link>
+                    <Link to="/privacidad">Privacidad</Link>
+                    <Link to="/cookies">Cookies</Link>
                 </div>
 
             </div>
