@@ -4,9 +4,7 @@ import { createService } from "../services/api";
 import Navbar from "../components/Navbar";
 import emailjs from "emailjs-com";
 import jsPDF from "jspdf";
-import { FaInstagram, FaTiktok, FaFacebookF } from "react-icons/fa";
 import { getReviews, createReview, deleteReview } from "../services/api";
-import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 
 
