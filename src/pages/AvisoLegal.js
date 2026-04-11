@@ -1,5 +1,6 @@
 import React from "react";
 import "./Legal.css";
+import Footer from "../components/Footer";
 
 function AvisoLegal() {
     return (
