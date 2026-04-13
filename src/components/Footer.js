@@ -38,9 +38,31 @@ function Footer() {
                     <h4>Síguenos</h4>
 
                     <div className="social-icons">
-                        <a href="#"><FaInstagram /></a>
-                        <a href="#"><FaTiktok /></a>
-                        <a href="#"><FaFacebookF /></a>
+
+                        <a
+                            href="https://instagram.com/limpiezascostablanca"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <FaInstagram />
+                        </a>
+
+                        <a
+                            href="https://tiktok.com/@limpiezascostablanca"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <FaTiktok />
+                        </a>
+
+                        <a
+                            href="https://facebook.com/limpiezascostablanca"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <FaFacebookF />
+                        </a>
+
                     </div>
 
                 </div>
