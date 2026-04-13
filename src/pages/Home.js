@@ -96,6 +96,12 @@ function Home() {
                 },
                 "k_QAThMrjBr94TO3X"
             );
+            if (window.gtag) {
+                window.gtag('event', 'formulario_enviado', {
+                    event_category: 'contact',
+                    event_label: 'solicitar_presupuesto'
+                });
+            }
 
             alert("✅ Solicitud enviada correctamente");
 
@@ -202,6 +208,9 @@ Gracias!
         try {
             await createReview(newReview);
 
+            if (window.gtag) {
+                window.gtag('event', 'review_enviada');
+            }
             // limpiar formulario
             setNewReview({
                 name: "",
@@ -277,7 +286,18 @@ Gracias!
                     <h1>Servicios profesionales de limpieza</h1>
                     <p>para viviendas y alquiler turístico en Benidorm y alrededores</p>
 
-                    <a href="#contacto" className="hero-btn">
+                    <a
+                        href="#contacto"
+                        className="primary-btn"
+                        onClick={() => {
+                            if (window.gtag) {
+                                window.gtag('event', 'click_hero_presupuesto', {
+                                    event_category: 'conversion',
+                                    event_label: 'hero_solicitar_presupuesto'
+                                });
+                            }
+                        }}
+                    >
                         Solicitar presupuesto
                     </a>
                 </div>
@@ -292,11 +312,11 @@ Gracias!
                         <h2>Sobre nosotros</h2>
 
                         <p>
-                            En <strong>Limpiezas Costa Blanca</strong> somos especialistas en la limpieza de apartamentos turísticos, viviendas familiares y alojamientos gestionados en plataformas como Airbnb y Booking en Benidorm y alrededores. 
+                            En <strong>Limpiezas Costa Blanca</strong> somos especialistas en la limpieza de apartamentos turísticos, viviendas familiares y alojamientos gestionados en plataformas como Airbnb y Booking en Benidorm y alrededores.
                         </p>
 
                         <p>
-                            Entendemos la importancia de cada cambio de huésped, por eso trabajamos con <strong>puntualidad, organización y una atención minuciosa a los detalles</strong>, garantizando resultados inmediatos y una presentación impecable del alojamiento. 
+                            Entendemos la importancia de cada cambio de huésped, por eso trabajamos con <strong>puntualidad, organización y una atención minuciosa a los detalles</strong>, garantizando resultados inmediatos y una presentación impecable del alojamiento.
                         </p>
                         <p>
                             <strong>Nuestro objetivo</strong> es ayudarte a ofrecer una experiencia agradable desde el primer momento, favoreciendo mejores valoraciones y reviews positivas por parte de tus huéspedes.
@@ -831,11 +851,18 @@ Gracias!
             <a
                 href="https://wa.me/34611009814"
                 className="whatsapp-float"
-                target="_blank"
-                rel="noopener noreferrer"
+                onClick={() => {
+                    if (window.gtag) {
+                        window.gtag('event', 'click_whatsapp', {
+                            event_category: 'contact',
+                            event_label: 'boton_whatsapp'
+                        });
+                    }
+                }}
             >
                 <img src="/whatsapp-icon-white.png" alt="WhatsApp" />
             </a>
+
             {!localStorage.getItem("cookiesAccepted") && (
                 <div className="cookie-banner">
                     <p>
