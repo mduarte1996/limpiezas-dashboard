@@ -8,63 +8,59 @@ function Footer() {
         <footer className="footer">
 
             <div className="footer-container">
-                {/* MARCA */}
-                <div className="footer-col footer-brand">
-                    <img src="/logo-nuevo-lcb.png" alt="Limpiezas Costa Blanca" />
-                    <p> • Confianza</p>
-                    <p> • Puntualidad</p>
-                    <p> • Resultados impecables</p>
+
+                <div className="footer-logo">
+                    <img src="/logo-nuevo-lcb.png" alt="logo" />
+
+                    <ul>
+                        <li>Confianza</li>
+                        <li>Puntualidad</li>
+                        <li>Resultados impecables</li>
+                    </ul>
                 </div>
 
-                {/* CONTACTO */}
-                <div className="footer-col">
-                    <h3>Información de contacto</h3>
+                <div>
+                    <h4>Información de contacto</h4>
                     <p>Benidorm - España</p>
                     <p>📞 611 00 98 14</p>
                     <p>📧 info@limpiezacostablanca.com</p>
                 </div>
 
-                {/* MENÚ */}
-                <div className="footer-col">
-                    <h3>Menú</h3>
+                <div>
+                    <h4>Menú</h4>
                     <a href="#inicio">Inicio</a>
                     <a href="#servicios">Servicios</a>
                     <a href="#sobre">Sobre nosotros</a>
                     <a href="#contacto">Contacto</a>
                 </div>
 
-                {/* REDES */}
-                <div className="footer-col">
-                    <h3>Síguenos</h3>
+                <div>
+                    <h4>Síguenos</h4>
 
                     <div className="social-icons">
-                        <a href="https://www.instagram.com/limpiezascostablanca/" target="_blank" rel="noopener noreferrer">
-                            <FaInstagram />
-                        </a>
-
-                        <a href="https://www.tiktok.com/@limpiezascostablanca" target="_blank" rel="noopener noreferrer">
-                            <FaTiktok />
-                        </a>
-
-                        <a href="https://www.facebook.com/limpiezascostablanca" target="_blank" rel="noopener noreferrer">
-                            <FaFacebookF />
-                        </a>
+                        <a href="#"><FaInstagram /></a>
+                        <a href="#"><FaTiktok /></a>
+                        <a href="#"><FaFacebookF /></a>
                     </div>
+
                 </div>
 
             </div>
 
-            {/* BARRA LEGAL */}
+            <div className="footer-divider"></div>
+
             <div className="footer-bottom">
+                <div className="footer-bottom-container">
 
-                <p>© {new Date().getFullYear()} Limpiezas Costa Blanca</p>
+                    <p>© 2026 Limpiezas Costa Blanca</p>
 
-                <div className="footer-links">
-                    <Link to="/aviso-legal">Aviso legal</Link>
-                    <Link to="/privacidad">Privacidad</Link>
-                    <Link to="/cookies">Cookies</Link>
+                    <div className="footer-legal">
+                        <Link to="/aviso-legal">Aviso legal</Link>
+                        <Link to="/privacidad">Privacidad</Link>
+                        <Link to="/cookies">Cookies</Link>
+                    </div>
+
                 </div>
-
             </div>
 
         </footer>

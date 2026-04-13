@@ -1,39 +1,159 @@
 .footer {
-  background: #0f172a;
-  color: white;
-  padding: 60px 20px 20px;
+  background: #f8fafc;
+  padding: 70px 20px 0;
+  border-top: 1px solid #e2e8f0;
 }
 
+/* GRID */
 .footer-container {
   max-width: 1200px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  gap: 50px;
 }
 
-.footer-col h3 {
+/* LOGO */
+.footer-logo img {
+  width: 150px;
   margin-bottom: 15px;
 }
 
-.footer-col p,
-.footer-col a {
-  color: #cbd5e1;
-  text-decoration: none;
-  display: block;
+.footer-logo ul {
+  padding-left: 18px;
+  color: #64748b;
+}
+
+.footer-logo li {
   margin-bottom: 8px;
 }
 
-.footer-bottom {
-  border-top: 1px solid #1e293b;
-  margin-top: 40px;
-  padding-top: 20px;
-  display: flex;
-  justify-content: space-between;
+/* TITULOS */
+.footer h4 {
+  color: #1e40af;
+  margin-bottom: 18px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
-.footer-links a {
-  color: #94a3b8;
-  margin-left: 15px;
+/* LINKS */
+.footer a {
+  display: block;
+  color: #475569;
   text-decoration: none;
+  margin-bottom: 10px;
+  transition: all .25s ease;
+}
+
+.footer a:hover {
+  color: #2563eb;
+  transform: translateX(3px);
+}
+
+/* ICONOS SOCIALES PREMIUM */
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  font-size: 18px;
+  transition: all .25s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+  background: #2563eb;
+  color: white;
+  box-shadow: 0 8px 25px rgba(37,99,235,0.25);
+}
+
+/* DIVIDER */
+.footer-divider {
+  margin-top: 50px;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  padding: 25px 0;
+}
+
+.footer-bottom-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* COPYRIGHT */
+.footer-bottom p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* LEGAL LINKS */
+.footer-legal {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-legal a {
+  color: #64748b;
+  font-size: 14px;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.footer-legal a:hover {
+  color: #2563eb;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+
+.footer-container {
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+}
+
+@media (max-width: 600px) {
+
+.footer-container {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.footer-logo ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.social-icons {
+  justify-content: center;
+}
+
+.footer-bottom-container {
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-legal {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 }
