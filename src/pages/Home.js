@@ -292,18 +292,13 @@ Gracias!
                         <h2>Sobre nosotros</h2>
 
                         <p>
-                            En <strong>Limpiezas Costa Blanca</strong> ofrecemos servicios profesionales
-                            de limpieza en Benidorm y alrededores, adaptándonos a las necesidades de cada cliente.
-                        </p>
+                            En <strong>Limpiezas Costa Blanca</strong> somos especialistas en la limpieza de apartamentos turísticos, viviendas familiares y alojamientos gestionados en plataformas como Airbnb y Booking en Benidorm y alrededores.
 
-                        <p>
-                            Nos destacamos por la <strong>puntualidad, confianza y atención al detalle</strong>,
-                            garantizando siempre resultados impecables en cada servicio.
-                        </p>
+                            Entendemos la importancia de cada cambio de huéspedes, por eso trabajamos con <strong>puntualidad, organización y una atención minuciosa a los detalles</strong>, garantizando resultados inmediatos y una presentación impecable del alojamiento. <strong>Nuestro objetivo</strong> es ayudarte a ofrecer una experiencia excelente desde el primer momento, favoreciendo mejores valoraciones y reviews positivas por parte de tus huéspedes.
 
-                        <p>
-                            Trabajamos con viviendas, apartamentos turísticos y alquileres Airbnb,Booking, aportando tranquilidad y calidad en cada espacio.
-                        </p>
+                            Nos adaptamos a los horarios del alquiler turístico y a las necesidades de cada propiedad, asegurando espacios <strong>limpios, ordenados y listos para la llegada del siguiente huésped</strong>, aportando tranquilidad, calidad y profesionalidad en cada servicio. </p>
+
+
 
                         <div className="about-features">
                             <span>✔ Profesionalismo</span>
