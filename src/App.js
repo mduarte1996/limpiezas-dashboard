@@ -5,10 +5,12 @@ import Login from "./pages/Login";
 import AvisoLegal from "./pages/AvisoLegal";
 import Privacidad from "./pages/Privacidad";
 import Cookies from "./pages/Cookies";
+import CookieBanner from "./components/CookieBanner";
 
 function App() {
   return (
     <BrowserRouter>
+    <CookieBanner />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
