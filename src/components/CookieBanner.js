@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./CookieBanner.css";
+import { loadAnalytics } from "../utils/analytics";
 
 function CookieBanner() {
 
@@ -12,10 +13,18 @@ const consent = localStorage.getItem("cookie-consent");
 if (!consent) {
 setVisible(true);
 }
+
+if (consent === "accepted") {
+loadAnalytics();
+}
+
 }, []);
 
 const acceptCookies = () => {
 localStorage.setItem("cookie-consent", "accepted");
+
+loadAnalytics();
+
 setVisible(false);
 };
 
