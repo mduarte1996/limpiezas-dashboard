@@ -274,8 +274,8 @@ Gracias!
                 </video>
 
                 <div className="overlay">
-                    <h1>Profesionalismo que cuida cada detalle</h1>
-                    <p>Servicios de limpieza profesionales en Benidorm y alrededores</p>
+                    <h1>Servicios profesionales de limpieza</h1>
+                    <p>para viviendas y alquiler turístico en Benidorm y alrededores</p>
 
                     <a href="#contacto" className="hero-btn">
                         Solicitar presupuesto
@@ -302,8 +302,7 @@ Gracias!
                         </p>
 
                         <p>
-                            Trabajamos con viviendas, pisos turísticos y limpiezas profundas,
-                            aportando tranquilidad y calidad en cada espacio.
+                            Trabajamos con viviendas, apartamentos turísticos y alquileres Airbnb,Booking, aportando tranquilidad y calidad en cada espacio.
                         </p>
 
                         <div className="about-features">
@@ -584,7 +583,7 @@ Gracias!
                     />
                     <label className="legal-check">
                         <input type="checkbox" required />
-                        Acepto la <a href="/privacidad">Política de privacidad</a>
+                        He leído la <a href="/privacidad">Política de privacidad</a> y acepto el tratamiento de mis datos para la solicitud realizada.
                     </label>
 
                     <button type="submit" className="primary-btn">
