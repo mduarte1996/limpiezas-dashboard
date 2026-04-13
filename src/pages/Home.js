@@ -292,13 +292,19 @@ Gracias!
                         <h2>Sobre nosotros</h2>
 
                         <p>
-                            En <strong>Limpiezas Costa Blanca</strong> somos especialistas en la limpieza de apartamentos turísticos, viviendas familiares y alojamientos gestionados en plataformas como Airbnb y Booking en Benidorm y alrededores.
+                            En <strong>Limpiezas Costa Blanca</strong> somos especialistas en la limpieza de apartamentos turísticos, viviendas familiares y alojamientos gestionados en plataformas como Airbnb y Booking en Benidorm y alrededores. 
+                        </p>
 
-                            Entendemos la importancia de cada cambio de huéspedes, por eso trabajamos con <strong>puntualidad, organización y una atención minuciosa a los detalles</strong>, garantizando resultados inmediatos y una presentación impecable del alojamiento. <strong>Nuestro objetivo</strong> es ayudarte a ofrecer una experiencia excelente desde el primer momento, favoreciendo mejores valoraciones y reviews positivas por parte de tus huéspedes.
+                        <p>
+                            Entendemos la importancia de cada cambio de huésped, por eso trabajamos con <strong>puntualidad, organización y una atención minuciosa a los detalles</strong>, garantizando resultados inmediatos y una presentación impecable del alojamiento. 
+                        </p>
+                        <p>
+                            <strong>Nuestro objetivo</strong> es ayudarte a ofrecer una experiencia agradable desde el primer momento, favoreciendo mejores valoraciones y reviews positivas por parte de tus huéspedes.
+                        </p>
 
-                            Nos adaptamos a los horarios del alquiler turístico y a las necesidades de cada propiedad, asegurando espacios <strong>limpios, ordenados y listos para la llegada del siguiente huésped</strong>, aportando tranquilidad, calidad y profesionalidad en cada servicio. </p>
-
-
+                        <p>
+                            Nos adaptamos a los horarios del alquiler turístico y a las necesidades de cada propiedad, asegurando espacios <strong>limpios, ordenados y listos para la llegada del siguiente huésped</strong>, aportando tranquilidad, calidad y profesionalidad en cada servicio.
+                        </p>
 
                         <div className="about-features">
                             <span>✔ Profesionalismo</span>
