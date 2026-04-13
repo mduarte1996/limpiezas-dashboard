@@ -504,6 +504,7 @@ Gracias!
             {/* FORMULARIO */}
             <section className="form-section" id="contacto">
                 <h2>Solicita tu presupuesto</h2>
+                <p>Rellena el siguiente formulario y te contactaremos lo antes posible.</p>
 
                 <form onSubmit={handleSubmit} className="form">
 
@@ -562,17 +563,6 @@ Gracias!
                         <option value={4}>4 horas</option>
                         <option value={5}>5 horas</option>
                     </select>
-
-                    {/* URGENTE */}
-                    <label style={{ marginTop: "10px" }}>
-                        <input
-                            type="checkbox"
-                            name="urgent"
-                            checked={formData.urgent}
-                            onChange={handleChange}
-                        />
-                        Limpieza urgente (+10€) por gastos de desplazamiento y urgencia en la gestión.
-                    </label>
 
                     <input
                         type="date"
