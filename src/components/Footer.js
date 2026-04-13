@@ -22,8 +22,8 @@ function Footer() {
                 <div>
                     <h4>Información de contacto</h4>
                     <p>Benidorm - España</p>
-                    <p>📞 611 00 98 14</p>
-                    <p>📧 info@limpiezacostablanca.com</p>
+                    <p>611 00 98 14</p>
+                    <p>info@limpiezacostablanca.com</p>
                 </div>
 
                 <div>
