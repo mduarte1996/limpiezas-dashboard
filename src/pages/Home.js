@@ -311,29 +311,41 @@ Gracias!
                         <h2>Sobre nosotros</h2>
 
                         <p>
-                            En Limpiezas Costa Blanca somos especialistas en la limpieza de apartamentos turísticos,
-                            viviendas familiares y alojamientos vacacionales gestionados en plataformas como Airbnb y
-                            Booking en Benidorm y alrededores. Ofrecemos servicio en Altea, Altea Hills, Mascarat, Albir,
-                            Cala de Finestrat, Villajoyosa y La Nucía.
+                            En <strong>Limpiezas Costa Blanca</strong> somos especialistas en la
+                            <strong>limpieza de apartamentos turísticos</strong>, viviendas familiares
+                            y alojamientos vacacionales gestionados en plataformas como
+                            <strong>Airbnb</strong> y <strong>Booking</strong> en
+                            <strong>Benidorm</strong> y alrededores. Ofrecemos servicio en
+                            <strong>Altea</strong>, <strong>Altea Hills</strong>, <strong>Albir</strong>,
+                            <strong>Cala de Finestrat</strong>, <strong>Villajoyosa</strong>,
+                            <strong>La Nucía</strong> y <strong>Mascarat</strong>.
                         </p>
 
                         <p>
-                            Entendemos la importancia de cada cambio de huésped, por eso trabajamos con puntualidad,
-                            organización y una atención minuciosa a los detalles, garantizando resultados inmediatos
-                            y una presentación impecable del alojamiento.
+                            Entendemos la importancia de cada <strong>cambio de huésped</strong>,
+                            por eso trabajamos con <strong>puntualidad</strong>,
+                            <strong>organización</strong> y una
+                            <strong>atención minuciosa a los detalles</strong>, garantizando
+                            <strong>resultados inmediatos</strong> y una
+                            <strong>presentación impecable del alojamiento</strong>.
                         </p>
 
                         <p>
-                            Nuestro objetivo es ayudarte a ofrecer una experiencia excelente desde el primer momento,
-                            favoreciendo mejores valoraciones y reviews positivas por parte de tus huéspedes en
-                            plataformas como Airbnb y Booking.
+                            Nuestro objetivo es ayudarte a ofrecer una
+                            <strong>experiencia excelente</strong> desde el primer momento,
+                            favoreciendo <strong>mejores valoraciones</strong> y
+                            <strong>reviews positivas</strong> por parte de tus huéspedes en
+                            <strong>Airbnb</strong> y <strong>Booking</strong>.
                         </p>
 
                         <p>
-                            Nos adaptamos a los horarios del alquiler turístico y a las necesidades de cada propiedad,
-                            asegurando espacios limpios, ordenados y listos para la llegada del siguiente huésped.
-                            Realizamos limpieza profesional de apartamentos turísticos en Benidorm y toda la
-                            Costa Blanca, aportando tranquilidad, calidad y profesionalidad en cada servicio.
+                            Nos adaptamos a los <strong>horarios del alquiler turístico</strong>
+                            y a las necesidades de cada propiedad, asegurando
+                            <strong>espacios limpios, ordenados y listos</strong> para la llegada
+                            del siguiente huésped. Realizamos
+                            <strong>limpieza profesional de apartamentos turísticos en Benidorm
+                                y toda la Costa Blanca</strong>, aportando
+                            <strong>tranquilidad, calidad y profesionalidad</strong> en cada servicio.
                         </p>
 
 
