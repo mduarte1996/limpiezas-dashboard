@@ -287,7 +287,7 @@ Gracias!
 
                     <a
                         href="#contacto"
-                        className="primary-btn"
+                        className="hero-btn"
                         onClick={() => {
                             if (window.gtag) {
                                 window.gtag('event', 'click_hero_presupuesto', {
