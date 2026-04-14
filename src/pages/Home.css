@@ -1251,4 +1251,49 @@ max-width: 700px;
 margin: auto;
 color: #64748b;
 line-height: 1.6;
+} 
+.modal-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* BOTON PRINCIPAL */
+.primary-btn {
+  flex: 1;
+  text-align: center;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  background: linear-gradient(135deg,#2563eb,#1e3a8a);
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37,99,235,0.4);
+}
+
+/* BOTON SEO SECUNDARIO */
+.secondary-btn {
+  flex: 1;
+  text-align: center;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  background: white;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.secondary-btn:hover {
+  background: #2563eb;
+  color: white;
 }

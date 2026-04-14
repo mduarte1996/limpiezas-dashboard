@@ -397,7 +397,10 @@ Gracias!
                         <p>Servicio completo para casas y apartamentos.</p>
                     </div>
 
-                    <div className="card" onClick={() => setSelectedService("turistico")}>
+                    <div
+                        className="card"
+                        onClick={() => navigate("/limpieza-pisos-turisticos-benidorm")}
+                    >
                         <h3>🏖 Pisos turísticos</h3>
                         <p>Servicio especializado para alquileres vacacionales.</p>
                     </div>
@@ -803,12 +806,23 @@ Gracias!
                                         <p>📸 Posibilidad de reporte del estado del piso</p>
                                     </div>
 
-                                    <button
-                                        className="primary-btn"
-                                        onClick={() => handleSelectService("turistico")}
-                                    >
-                                        Reservar limpieza turística
-                                    </button>
+                                    <div className="modal-actions">
+
+                                        <button
+                                            className="primary-btn"
+                                            onClick={() => handleSelectService("turistico")}
+                                        >
+                                            Reservar limpieza turística
+                                        </button>
+
+                                        <a
+                                            href="/limpieza-pisos-turisticos-benidorm"
+                                            className="secondary-btn"
+                                        >
+                                            Ver información completa
+                                        </a>
+
+                                    </div>
 
                                 </div>
 

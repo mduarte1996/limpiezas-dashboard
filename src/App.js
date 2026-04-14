@@ -6,6 +6,7 @@ import AvisoLegal from "./pages/AvisoLegal";
 import Privacidad from "./pages/Privacidad";
 import Cookies from "./pages/Cookies";
 import CookieBanner from "./components/CookieBanner";
+import PisosTuristicos from "./pages/PisosTuristicos";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/aviso-legal" element={<AvisoLegal />} />
         <Route path="/privacidad" element={<Privacidad />} />
         <Route path="/cookies" element={<Cookies />} />
+        <Route path="/limpieza-pisos-turisticos-benidorm" element={<PisosTuristicos />} />
 
       </Routes>
     </BrowserRouter>
