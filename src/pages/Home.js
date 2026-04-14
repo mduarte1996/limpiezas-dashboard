@@ -283,8 +283,7 @@ Gracias!
                 </video>
 
                 <div className="overlay">
-                    <h1>Servicios profesionales de limpieza</h1>
-                    <p>para viviendas y alquiler turístico en Benidorm y alrededores</p>
+                    <h1>Servicios profesionales de limpieza en Benidorm</h1>
 
                     <a
                         href="#contacto"
@@ -312,19 +311,32 @@ Gracias!
                         <h2>Sobre nosotros</h2>
 
                         <p>
-                            En <strong>Limpiezas Costa Blanca</strong> somos especialistas en la limpieza de apartamentos turísticos, viviendas familiares y alojamientos gestionados en plataformas como Airbnb y Booking en Benidorm y alrededores.
+                            En Limpiezas Costa Blanca somos especialistas en la limpieza de apartamentos turísticos,
+                            viviendas familiares y alojamientos vacacionales gestionados en plataformas como Airbnb y
+                            Booking en Benidorm y alrededores. Ofrecemos servicio en Altea, Altea Hills, Mascarat, Albir,
+                            Cala de Finestrat, Villajoyosa y La Nucía.
                         </p>
 
                         <p>
-                            Entendemos la importancia de cada cambio de huésped, por eso trabajamos con <strong>puntualidad, organización y una atención minuciosa a los detalles</strong>, garantizando resultados inmediatos y una presentación impecable del alojamiento.
-                        </p>
-                        <p>
-                            <strong>Nuestro objetivo</strong> es ayudarte a ofrecer una experiencia agradable desde el primer momento, favoreciendo mejores valoraciones y reviews positivas por parte de tus huéspedes.
+                            Entendemos la importancia de cada cambio de huésped, por eso trabajamos con puntualidad,
+                            organización y una atención minuciosa a los detalles, garantizando resultados inmediatos
+                            y una presentación impecable del alojamiento.
                         </p>
 
                         <p>
-                            Nos adaptamos a los horarios del alquiler turístico y a las necesidades de cada propiedad, asegurando espacios <strong>limpios, ordenados y listos para la llegada del siguiente huésped</strong>, aportando tranquilidad, calidad y profesionalidad en cada servicio.
+                            Nuestro objetivo es ayudarte a ofrecer una experiencia excelente desde el primer momento,
+                            favoreciendo mejores valoraciones y reviews positivas por parte de tus huéspedes en
+                            plataformas como Airbnb y Booking.
                         </p>
+
+                        <p>
+                            Nos adaptamos a los horarios del alquiler turístico y a las necesidades de cada propiedad,
+                            asegurando espacios limpios, ordenados y listos para la llegada del siguiente huésped.
+                            Realizamos limpieza profesional de apartamentos turísticos en Benidorm y toda la
+                            Costa Blanca, aportando tranquilidad, calidad y profesionalidad en cada servicio.
+                        </p>
+
+
 
                         <div className="about-features">
                             <span>✔ Profesionalismo</span>
@@ -339,6 +351,36 @@ Gracias!
                     </div>
 
                 </div>
+            </section>
+
+            <section className="zonas">
+
+                <h2 className="section-title">
+                    Servicio de limpieza en Benidorm y alrededores
+                </h2>
+
+                <p className="section-subtitle">
+                    Nos desplazamos con transporte propio por toda la Costa Blanca
+                </p>
+
+                <div className="zonas-grid">
+
+                    <div className="zona-card">Benidorm</div>
+                    <div className="zona-card">Altea</div>
+                    <div className="zona-card">Altea Hills</div>
+                    <div className="zona-card">Mascarat</div>
+                    <div className="zona-card">Albir</div>
+                    <div className="zona-card">Cala de Finestrat</div>
+                    <div className="zona-card">Villajoyosa</div>
+                    <div className="zona-card">La Nucía</div>
+
+                </div>
+
+                <p className="zonas-text">
+                    Realizamos limpieza de apartamentos turísticos, viviendas vacacionales y
+                    propiedades privadas con servicio rápido y profesional en toda la zona
+                    de Benidorm y alrededores.
+                </p>
 
             </section>
 
