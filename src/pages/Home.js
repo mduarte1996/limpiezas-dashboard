@@ -312,38 +312,29 @@ Gracias!
 
                         <p>
                             En <strong>Limpiezas Costa Blanca</strong> somos especialistas en la
-                            <strong>limpieza de apartamentos turísticos</strong>, viviendas familiares
-                            y alojamientos vacacionales gestionados en plataformas como
-                            <strong>Airbnb</strong> y <strong>Booking</strong> en
-                            Benidorm  y alrededores. Ofrecemos servicio en
-                            <strong>Altea</strong>, <strong>Altea Hills</strong>, <strong>Albir</strong>,
-                            <strong>Cala de Finestrat</strong>, <strong>Villajoyosa</strong>,
-                            <strong>La Nucía</strong> y <strong>Mascarat</strong>.
+                            <strong>limpieza de apartamentos turísticos</strong>, viviendas familiares y alojamientos vacacionales
+                            gestionados en plataformas como <strong>Airbnb</strong> y <strong>Booking</strong> en Benidorm y alrededores.
+                            Ofrecemos servicio en <strong>Altea</strong>, <strong>Altea Hills</strong>, <strong>Albir</strong>,
+                            <strong>Cala de Finestrat</strong>, <strong>Villajoyosa</strong>, <strong>La Nucía</strong> y <strong>Mascarat</strong>.
                         </p>
 
                         <p>
-                            Entendemos la importancia de cada <strong>cambio de huésped</strong>,
-                            por eso trabajamos con <strong>puntualidad</strong>,
-                            <strong>organización y una atención minuciosa a los detalles</strong>, garantizando
-                            resultados inmediatos y una presentación impecable del alojamiento.
+                            Entendemos la importancia de cada <strong>cambio de huésped</strong>, por eso trabajamos con
+                            <strong>puntualidad</strong>, <strong>organización</strong> y una <strong>atención minuciosa a los detalles</strong>,
+                            garantizando resultados inmediatos y una presentación impecable del alojamiento.
                         </p>
 
                         <p>
-                            Nuestro objetivo es ayudarte a ofrecer una
-                            <strong>experiencia excelente</strong> desde el primer momento,
-                            favoreciendo <strong>mejores valoraciones</strong> y
-                            <strong> reviews positivas</strong> por parte de tus huéspedes en
-                            <strong> Airbnb</strong> y <strong>Booking</strong>.
+                            Nuestro objetivo es ayudarte a ofrecer una <strong>experiencia excelente</strong> desde el primer momento,
+                            favoreciendo <strong>mejores valoraciones</strong> y <strong>reviews positivas</strong> por parte de tus huéspedes en
+                            <strong>Airbnb</strong> y <strong>Booking</strong>.
                         </p>
 
                         <p>
-                            Nos adaptamos a los <strong>horarios del alquiler turístico</strong>
-                            y a las necesidades de cada propiedad, asegurando
-                            espacios limpios, ordenados y listos para la llegada
-                            del siguiente huésped. Realizamos
-                            <strong>limpieza profesional de apartamentos turísticos en Benidorm
-                                y toda la Costa Blanca</strong>, aportando
-                            <strong>tranquilidad, calidad y profesionalidad</strong> en cada servicio.
+                            Nos adaptamos a los <strong>horarios del alquiler turístico</strong> y a las necesidades de cada propiedad,
+                            asegurando espacios limpios, ordenados y listos para la llegada del siguiente huésped.
+                            Realizamos <strong>limpieza profesional de apartamentos turísticos en Benidorm y toda la Costa Blanca</strong>,
+                            aportando tranquilidad, calidad y profesionalidad en cada servicio.
                         </p>
 
                         <div className="about-features">
@@ -612,10 +603,10 @@ Gracias!
                     >
                         <option value="">Selecciona servicio</option>
                         <option value="vivienda">
-                            Limpieza de vivienda (16€/h + IVA → 19,36€/h)
+                            Limpieza de vivienda (15€/h + IVA → 18,15€/h)
                         </option>
                         <option value="turistico">
-                            Piso turístico (17€/h + IVA → 20,57€/h)
+                            Piso turístico (16€/h + IVA → 19,36€/h)
                         </option>
                         <option value="profunda">
                             Limpieza profunda (18€/h + IVA → 21,78€/h)
@@ -704,8 +695,8 @@ Gracias!
                 <div className="pricing-info">
                     <h3>💶 Tarifas orientativas</h3>
 
-                    <p>✔ Limpieza de viviendas: <strong>16€/hora + IVA</strong></p>
-                    <p>✔ Pisos turísticos: <strong>17€/hora + IVA</strong></p>
+                    <p>✔ Limpieza de viviendas: <strong>15€/hora + IVA</strong></p>
+                    <p>✔ Pisos turísticos: <strong>16€/hora + IVA</strong></p>
                     <p>✔ Limpieza profunda: <strong>18€/hora + IVA</strong></p>
                     <p>✔ Final de obra: <strong>20€/hora + IVA</strong></p>
 
@@ -759,7 +750,7 @@ Gracias!
                                         <li>✔ Cambio de ropa de cama</li>
                                     </ul>
 
-                                    <p><strong>💰 16€/hora + IVA</strong></p>
+                                    <p><strong>💰 15€/hora + IVA</strong></p>
 
                                     <button
                                         className="primary-btn"
@@ -800,7 +791,7 @@ Gracias!
                                     </ul>
 
                                     <p className="price">
-                                        💰 17€/hora + IVA
+                                        💰 16€/hora + IVA
                                         <br />
                                         <span>Servicio de lavandería opcional +10€</span>
                                     </p>
