@@ -6,13 +6,9 @@ import emailjs from "emailjs-com";
 import jsPDF from "jspdf";
 import { getReviews, createReview, deleteReview } from "../services/api";
 import Footer from "../components/Footer";
-import { useNavigate } from "react-router-dom";
 
 
 function Home() {
-
-    const navigate = useNavigate();
-
     const [formData, setFormData] = useState({
         client_name: "",
         phone: "",
@@ -168,7 +164,7 @@ Gracias!
         doc.save("presupuesto.pdf");
     };
     const [selectedService, setSelectedService] = useState(null);
-    
+
     useEffect(() => {
         document.body.style.overflow = selectedService ? "hidden" : "auto";
     }, [selectedService]);
