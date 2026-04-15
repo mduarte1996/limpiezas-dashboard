@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import "./legal.css";
+import "../styles/legal.css";
 
 function PisosTuristicos() {
   return (
