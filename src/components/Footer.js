@@ -27,7 +27,7 @@ function Footer() {
                 </div>
 
                 <div>
-                    <h4>Menú</h4>
+                    <h4>Menú</h4>   
                     <a href="#inicio">Inicio</a>
                     <a href="#servicios">Servicios</a>
                     <a href="#sobre">Sobre nosotros</a>

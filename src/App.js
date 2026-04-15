@@ -8,6 +8,7 @@ import Cookies from "./pages/Cookies";
 import CookieBanner from "./components/CookieBanner";
 import PisosTuristicos from "./pages/PisosTuristicos";
 import LimpiezaViviendas from "./pages/LimpiezaViviendas";  
+import LimpiezaProfunda from "./pages/LimpiezaProfunda";    
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/cookies" element={<Cookies />} />
         <Route path="/limpieza-pisos-turisticos-benidorm" element={<PisosTuristicos />} />
         <Route path="/limpieza-viviendas" element={<LimpiezaViviendas />} />
+        <Route path="/limpieza-profunda" element={<LimpiezaProfunda />} />  
 
       </Routes>
     </BrowserRouter>
