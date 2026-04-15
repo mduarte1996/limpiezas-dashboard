@@ -41,30 +41,29 @@ function Navbar() {
             {/* LINKS */}
             <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
                 <li>
-                    <a href="#inicio" onClick={() => setMenuOpen(false)}>
+                    <a href="/#inicio" onClick={() => setMenuOpen(false)}>
                         {t("inicio")}
                     </a>
                 </li>
 
                 <li>
-                    <a href="#servicios" onClick={() => setMenuOpen(false)}>
+                    <a href="/#servicios" onClick={() => setMenuOpen(false)}>
                         {t("servicios")}
                     </a>
                 </li>
 
                 <li>
-                    <a href="#sobre" onClick={() => setMenuOpen(false)}>
+                    <a href="/#sobre" onClick={() => setMenuOpen(false)}>
                         {t("sobre")}
                     </a>
                 </li>
 
                 <li>
-                    <a href="#contacto" onClick={() => setMenuOpen(false)}>
+                    <a href="/#contacto" onClick={() => setMenuOpen(false)}>
                         {t("contacto")}
                     </a>
                 </li>
             </ul>
-
             {/* BOTÓN TEL */}
             <div className="nav-right">
                 <a href="tel:+34611009814" className="phone-btn">
