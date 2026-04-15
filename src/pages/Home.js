@@ -9,8 +9,8 @@ import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 
 
-function Home() { 
-    
+function Home() {
+
     const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
@@ -168,6 +168,11 @@ Gracias!
         doc.save("presupuesto.pdf");
     };
     const [selectedService, setSelectedService] = useState(null);
+    
+    useEffect(() => {
+        document.body.style.overflow = selectedService ? "hidden" : "auto";
+    }, [selectedService]);
+
     const [reviews, setReviews] = useState([]);
 
     const [newReview, setNewReview] = useState({
@@ -402,7 +407,7 @@ Gracias!
 
                     <div
                         className="card"
-                        onClick={() => navigate("/limpieza-pisos-turisticos-benidorm")}
+                        onClick={() => setSelectedService("turistico")}
                     >
                         <h3>🏖 Pisos turísticos</h3>
                         <p>Servicio especializado para alquileres vacacionales.</p>
