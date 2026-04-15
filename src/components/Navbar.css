@@ -149,3 +149,32 @@
 }
 
 }
+.lang-switch {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.lang-switch button {
+  background: white;
+  border: 1px solid #e5e7eb;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.lang-switch button:hover {
+  background: #2563eb;
+  color: white;
+}
+@media (max-width:768px){
+
+.lang-switch {
+  position: absolute;
+  right: 65px;
+  top: 22px;
+}
+
+}

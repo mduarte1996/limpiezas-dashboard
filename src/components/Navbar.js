@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
+import { useTranslation } from "react-i18next";
 
 function Navbar() {
 
     const [menuOpen, setMenuOpen] = useState(false);
+    const { t, i18n } = useTranslation();
 
     // cerrar al hacer scroll
     useEffect(() => {
@@ -21,8 +23,13 @@ function Navbar() {
                 <img src="/logo-nuevo-lcb.png" alt="Limpiezas Costa Blanca" />
             </div>
 
+            <div className="lang-switch">
+                <button onClick={() => i18n.changeLanguage("es")}>ES</button>
+                <button onClick={() => i18n.changeLanguage("en")}>EN</button>
+            </div>
+
             {/* HAMBURGUESA */}
-            <div 
+            <div
                 className={`hamburger ${menuOpen ? "active" : ""}`}
                 onClick={() => setMenuOpen(!menuOpen)}
             >
@@ -33,10 +40,29 @@ function Navbar() {
 
             {/* LINKS */}
             <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
-                <li><a href="#inicio" onClick={() => setMenuOpen(false)}>Inicio</a></li>
-                <li><a href="#servicios" onClick={() => setMenuOpen(false)}>Servicios</a></li>
-                <li><a href="#sobre" onClick={() => setMenuOpen(false)}>Sobre nosotros</a></li>
-                <li><a href="#contacto" onClick={() => setMenuOpen(false)}>Contacto</a></li>
+                <li>
+                    <a href="#inicio" onClick={() => setMenuOpen(false)}>
+                        {t("inicio")}
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#servicios" onClick={() => setMenuOpen(false)}>
+                        {t("servicios")}
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#sobre" onClick={() => setMenuOpen(false)}>
+                        {t("sobre")}
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contacto" onClick={() => setMenuOpen(false)}>
+                        {t("contacto")}
+                    </a>
+                </li>
             </ul>
 
             {/* BOTÓN TEL */}
