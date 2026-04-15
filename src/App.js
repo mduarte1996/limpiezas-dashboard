@@ -9,6 +9,7 @@ import CookieBanner from "./components/CookieBanner";
 import PisosTuristicos from "./pages/PisosTuristicos";
 import LimpiezaViviendas from "./pages/LimpiezaViviendas";  
 import LimpiezaProfunda from "./pages/LimpiezaProfunda";    
+import LimpiezaFinObra from "./pages/LimpiezaFinObra";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/limpieza-pisos-turisticos-benidorm" element={<PisosTuristicos />} />
         <Route path="/limpieza-viviendas" element={<LimpiezaViviendas />} />
         <Route path="/limpieza-profunda" element={<LimpiezaProfunda />} />  
+        <Route path="/limpieza-fin-obra-benidorm" element={<LimpiezaFinObra />} />
 
       </Routes>
     </BrowserRouter>
