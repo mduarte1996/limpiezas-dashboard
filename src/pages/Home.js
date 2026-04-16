@@ -728,242 +728,222 @@ Gracias!
 
             </section>
 
-            {selectedService === "vivienda" && (
-                <div className="modal-body">
+            {selectedService && (
+                <div className="modal-overlay" onClick={() => setSelectedService(null)}>
 
-                    <div className="modal-text">
-                        <h2>Limpieza de viviendas</h2>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
 
-                        <p>
-                            Servicio profesional para mantener tu hogar impecable,
-                            con atención al detalle y productos de alta calidad.
-                        </p>
-
-                        <p><strong>Incluye:</strong></p>
-
-                        <ul>
-                            <li>✔ Limpieza de cocina y baños</li>
-                            <li>✔ Aspirado y fregado</li>
-                            <li>✔ Eliminación de polvo</li>
-                            <li>✔ Limpieza de superficies</li>
-                            <li>✔ Cambio de ropa de cama</li>
-                        </ul>
-
-                        <p><strong>💰 15€/hora + IVA</strong></p>
-
-                        <div className="modal-actions">
-
-                            <button
-                                className="primary-btn"
-                                onClick={() => handleSelectService("vivienda")}
-                            >
-                                Reservar limpieza vivienda
-                            </button>
-
-                            <a
-                                href="/limpieza-viviendas-benidorm"
-                                className="secondary-btn"
-                            >
-                                Ver servicio completo
-                            </a>
-
-                        </div>
-                    </div>
-
-                    <div className="modal-image">
-                        <img src="/limpieza-vivienda.jpg" alt="Servicio vivienda" />
-                    </div>
-
-                </div>
-            )}
-            {selectedService === "turistico" && (
-                <div className="modal-body">
-
-                    <div className="modal-text">
-                        <h2>Limpieza de pisos turísticos</h2>
-
-                        <p>
-                            Preparamos tu vivienda para cada huésped como si fuera un hotel,
-                            cuidando cada detalle para ofrecer una experiencia impecable desde el primer momento.
-                        </p>
-
-                        <p>
-                            Sabemos que en el alquiler vacacional la limpieza no es solo higiene,
-                            es reputación, valoraciones y más reservas.
-                        </p>
-
-                        <ul>
-                            <li>✔ Limpieza completa tras cada salida</li>
-                            <li>✔ Cambio de sábanas y toallas</li>
-                            <li>✔ Preparación tipo hotel</li>
-                            <li>✔ Reposición de básicos</li>
-                            <li>✔ Revisión general del inmueble</li>
-                        </ul>
-
-                        <p className="price">
-                            💰 16€/hora + IVA
-                            <br />
-                            <span>Servicio de lavandería opcional +10€</span>
-                        </p>
-
-                        {/* HIGHLIGHT DENTRO DEL TEXTO */}
-                        <div className="modal-highlight">
-                            <p>⭐ Mejora tus valoraciones en Airbnb y Booking</p>
-                            <p>🧼 Servicio rápido entre check-out y check-in</p>
-                            <p>📸 Posibilidad de reporte del estado del piso</p>
-                        </div>
-
-                        <div className="modal-actions">
-
-                            <button
-                                className="primary-btn"
-                                onClick={() => handleSelectService("turistico")}
-                            >
-                                Reservar limpieza turística
-                            </button>
-
-                            <a
-                                href="/limpieza-pisos-turisticos-benidorm"
-                                className="secondary-btn"
-                            >
-                                Ver información completa
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                    {/* IMAGEN */}
-                    <div className="modal-image">
-                        <img src="/limpieza-turistica.jpg" alt="Pisos turísticos" />
-                    </div>
-
-                </div>
-            )}
-            {selectedService === "profunda" && (
-                <div className="modal-body">
-
-                    <div className="modal-text">
-                        <h2>Limpieza profunda</h2>
-
-                        <p>
-                            Eliminamos suciedad acumulada en profundidad,
-                            ideal para cambios de temporada o viviendas muy usadas.
-                        </p>
-
-                        <ul>
-                            <li>✔ Desinfección completa</li>
-                            <li>✔ Limpieza de zonas difíciles</li>
-                            <li>✔ Cocina y baño a fondo</li>
-                            <li>✔ Eliminación de grasa y cal</li>
-                        </ul>
-
-                        <p><strong>💰 18€/hora + IVA</strong></p>
-
-                        <button
-                            className="primary-btn"
-                            onClick={() => handleSelectService("profunda")}
-                        >
-                            Reservar limpieza profunda
+                        <button className="modal-close" onClick={() => setSelectedService(null)}>
+                            ✖
                         </button>
 
-                        <a
-                            href="/limpieza-profunda-benidorm"
-                            className="primary-btn"
-                        >
-                            Ver servicio completo
-                        </a>
-                    </div>
+                        {/* VIVIENDA */}
+                        {selectedService === "vivienda" && (
+                            <div className="modal-body">
 
-                    <div className="modal-image">
-                        <img src="/profunda.jpg" alt="Limpieza profunda" />
-                    </div>
+                                <div className="modal-text">
+                                    <h2>Limpieza de viviendas</h2>
 
+                                    <p>
+                                        Servicio profesional para mantener tu hogar impecable,
+                                        con atención al detalle y productos de alta calidad.
+                                    </p>
+
+                                    <p><strong>Incluye:</strong></p>
+
+                                    <ul>
+                                        <li>✔ Limpieza de cocina y baños</li>
+                                        <li>✔ Aspirado y fregado</li>
+                                        <li>✔ Eliminación de polvo</li>
+                                        <li>✔ Limpieza de superficies</li>
+                                        <li>✔ Cambio de ropa de cama</li>
+                                    </ul>
+
+                                    <p><strong>💰 15€/hora + IVA</strong></p>
+
+                                    <div className="modal-actions">
+
+                                        <button
+                                            className="primary-btn"
+                                            onClick={() => handleSelectService("vivienda")}
+                                        >
+                                            Reservar limpieza vivienda
+                                        </button>
+
+                                        <a
+                                            href="/limpieza-viviendas-benidorm"
+                                            className="secondary-btn"
+                                        >
+                                            Ver servicio completo
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                                <div className="modal-image">
+                                    <img src="/limpieza-vivienda.jpg" alt="Servicio vivienda" />
+                                </div>
+
+                            </div>
+                        )}
+
+                        {/* TURISTICO */}
+                        {selectedService === "turistico" && (
+                            <div className="modal-body">
+
+                                <div className="modal-text">
+                                    <h2>Limpieza de pisos turísticos</h2>
+
+                                    <p>
+                                        Preparamos tu vivienda para cada huésped como si fuera un hotel,
+                                        cuidando cada detalle para ofrecer una experiencia impecable.
+                                    </p>
+
+                                    <ul>
+                                        <li>✔ Limpieza completa tras cada salida</li>
+                                        <li>✔ Cambio de sábanas y toallas</li>
+                                        <li>✔ Preparación tipo hotel</li>
+                                        <li>✔ Reposición de básicos</li>
+                                        <li>✔ Revisión general del inmueble</li>
+                                    </ul>
+
+                                    <div className="modal-actions">
+
+                                        <button
+                                            className="primary-btn"
+                                            onClick={() => handleSelectService("turistico")}
+                                        >
+                                            Reservar limpieza turística
+                                        </button>
+
+                                        <a
+                                            href="/limpieza-pisos-turisticos-benidorm"
+                                            className="secondary-btn"
+                                        >
+                                            Ver servicio completo
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                                <div className="modal-image">
+                                    <img src="/limpieza-turistica.jpg" alt="Pisos turísticos" />
+                                </div>
+
+                            </div>
+                        )}
+
+                        {/* PROFUNDA */}
+                        {selectedService === "profunda" && (
+                            <div className="modal-body">
+
+                                <div className="modal-text">
+                                    <h2>Limpieza profunda</h2>
+
+                                    <p>Limpieza intensiva para suciedad acumulada.</p>
+
+                                    <div className="modal-actions">
+
+                                        <button
+                                            className="primary-btn"
+                                            onClick={() => handleSelectService("profunda")}
+                                        >
+                                            Reservar limpieza profunda
+                                        </button>
+
+                                        <a
+                                            href="/limpieza-profunda-benidorm"
+                                            className="secondary-btn"
+                                        >
+                                            Ver servicio completo
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                                <div className="modal-image">
+                                    <img src="/profunda.jpg" alt="Limpieza profunda" />
+                                </div>
+
+                            </div>
+                        )}
+
+                        {/* OBRA */}
+                        {selectedService === "obra" && (
+                            <div className="modal-body">
+
+                                <div className="modal-text">
+                                    <h2>Limpieza fin de obra</h2>
+
+                                    <p>Servicio especializado post reforma.</p>
+
+                                    <div className="modal-actions">
+
+                                        <button
+                                            className="primary-btn"
+                                            onClick={() => handleSelectService("obra")}
+                                        >
+                                            Reservar limpieza fin de obra
+                                        </button>
+
+                                        <a
+                                            href="/limpieza-fin-obra-benidorm"
+                                            className="secondary-btn"
+                                        >
+                                            Ver servicio completo
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                                <div className="modal-image">
+                                    <img src="/post-obra.jpg" alt="Final de obra" />
+                                </div>
+
+                            </div>
+                        )}
+
+                    </div>
                 </div>
             )}
-            {selectedService === "obra" && (
-                <div className="modal-body">
-
-                    <div className="modal-text">
-                        <h2>Limpieza fin de obra</h2>
-
-                        <p>
-                            Dejamos tu espacio listo para entrar a vivir tras reformas o construcción.
-                        </p>
-
-                        <ul>
-                            <li>✔ Eliminación de polvo de obra</li>
-                            <li>✔ Limpieza de restos de pintura y materiales</li>
-                            <li>✔ Cristales y superficies a fondo</li>
-                            <li>✔ Aspirado industrial</li>
-                        </ul>
-
-                        <p><strong>💰 20€/hora + IVA</strong></p>
-
-                        <button
-                            className="primary-btn"
-                            onClick={() => handleSelectService("obra")}
-                        >
-                            Reservar limpieza fin de obra
-                        </button>
-
-                        <a
-                            href="/limpieza-fin-obra-benidorm"
-                            className="primary-btn"
-                        >
-                            Ver servicio completo
-                        </a>
-                    </div>
-
-                    <div className="modal-image">
-                        <img src="/post-obra.jpg" alt="Final de obra" />
-                    </div>
-
-                </div>
-            )}
-
-        </div>
-                </div >
-            )
-}
-<a
-    href="https://wa.me/34611009814"
-    className="whatsapp-float"
-    onClick={() => {
-        if (window.gtag) {
-            window.gtag('event', 'click_whatsapp', {
-                event_category: 'contact',
-                event_label: 'boton_whatsapp'
-            });
-        }
-    }}
->
-    <img src="/whatsapp-icon-white.png" alt="WhatsApp" />
-</a>
-
-{
-    !localStorage.getItem("cookiesAccepted") && (
-        <div className="cookie-banner">
-            <p>
-                Utilizamos cookies para mejorar tu experiencia. Al continuar aceptas nuestra{" "}
-                <a href="/cookies">Política de cookies</a>.
-            </p>
-
-            <button
+            <a
+                href="https://wa.me/34611009814"
+                className="whatsapp-float"
                 onClick={() => {
-                    localStorage.setItem("cookiesAccepted", "true");
-                    window.location.reload();
+                    if (window.gtag) {
+                        window.gtag('event', 'click_whatsapp', {
+                            event_category: 'contact',
+                            event_label: 'boton_whatsapp'
+                        });
+                    }
                 }}
             >
-                Aceptar
-            </button>
-        </div>
-    )
-}
-<Footer />
-                </div >
+                <img src="/whatsapp-icon-white.png" alt="WhatsApp" />
+            </a>
 
-            );
+            {
+                !localStorage.getItem("cookiesAccepted") && (
+                    <div className="cookie-banner">
+                        <p>
+                            Utilizamos cookies para mejorar tu experiencia. Al continuar aceptas nuestra{" "}
+                            <a href="/cookies">Política de cookies</a>.
+                        </p>
+
+                        <button
+                            onClick={() => {
+                                localStorage.setItem("cookiesAccepted", "true");
+                                window.location.reload();
+                            }}
+                        >
+                            Aceptar
+                        </button>
+                    </div>
+                )
+            }
+            <Footer />
+        </div >
+
+    );
 }
 
 export default Home;
