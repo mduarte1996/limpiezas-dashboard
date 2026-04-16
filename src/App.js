@@ -23,8 +23,8 @@ function App() {
         <Route path="/privacidad" element={<Privacidad />} />
         <Route path="/cookies" element={<Cookies />} />
         <Route path="/limpieza-pisos-turisticos-benidorm" element={<PisosTuristicos />} />
-        <Route path="/limpieza-viviendas" element={<LimpiezaViviendas />} />
-        <Route path="/limpieza-profunda" element={<LimpiezaProfunda />} />  
+        <Route path="/limpieza-viviendas-benidorm" element={<LimpiezaViviendas />} />
+        <Route path="/limpieza-profunda-benidorm" element={<LimpiezaProfunda />} />
         <Route path="/limpieza-fin-obra-benidorm" element={<LimpiezaFinObra />} />
 
       </Routes>
