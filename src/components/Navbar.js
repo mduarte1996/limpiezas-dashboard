@@ -24,8 +24,19 @@ function Navbar() {
             </div>
 
             <div className="lang-switch">
-                <button onClick={() => i18n.changeLanguage("es")}>ES</button>
-                <button onClick={() => i18n.changeLanguage("en")}>EN</button>
+                <button
+                    className={i18n.language === "es" ? "active" : ""}
+                    onClick={() => i18n.changeLanguage("es")}
+                >
+                    ES
+                </button>
+
+                <button
+                    className={i18n.language === "en" ? "active" : ""}
+                    onClick={() => i18n.changeLanguage("en")}
+                >
+                    EN
+                </button>
             </div>
 
             {/* HAMBURGUESA */}
