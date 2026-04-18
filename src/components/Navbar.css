@@ -12,19 +12,12 @@
 
   background: rgba(255,255,255,0.85);
   backdrop-filter: blur(12px);
-
   box-shadow: 0 4px 25px rgba(0,0,0,0.05);
-  transition: 0.3s ease;
 }
 
 /* LOGO */
 .logo img {
   height: 70px;
-  transition: 0.3s;
-}
-
-.logo img:hover {
-  transform: scale(1.05);
 }
 
 /* LINKS */
@@ -39,39 +32,6 @@
   color: #1e293b;
   font-weight: 500;
   position: relative;
-  transition: 0.3s;
-}
-
-/* hover línea pro */
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background: #2563eb;
-  transition: 0.3s;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-/* BOTON TEL */
-.phone-btn {
-  background: linear-gradient(135deg,#2563eb,#1e3a8a);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.phone-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(37,99,235,0.2);
 }
 
 /* HAMBURGUESA */
@@ -87,123 +47,9 @@
   height: 3px;
   background: #1e3a8a;
   border-radius: 2px;
-  transition: 0.3s;
 }
 
-/* animacion */
-.hamburger.active span:nth-child(1){
-  transform: rotate(45deg) translateY(8px);
-}
-
-.hamburger.active span:nth-child(2){
-  opacity:0;
-}
-
-.hamburger.active span:nth-child(3){
-  transform: rotate(-45deg) translateY(-8px);
-}
-
-
-@media (max-width: 768px) {
-
-.navbar {
-  padding: 12px 16px;
-  position: relative;
-}
-
-/* LOGO CENTRADO */
-.logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.logo img {
-  height: 55px;
-}
-
-/* IDIOMA IZQUIERDA */
-.lang-switch {
-  display: flex;
-  gap: 6px;
-}
-
-.lang-switch button {
-  background: white;
-  border: 1px solid #e5e7eb;
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-/* HAMBURGUESA DERECHA */
-.hamburger {
-  display: flex;
-  margin-left: auto;
-}
-
-/* MENU MOBILE */
-.nav-links {
-  position: absolute;
-  top: 80px;
-  left: 0;
-  width: 100%;
-
-  background: rgba(255,255,255,0.97);
-  backdrop-filter: blur(10px);
-
-  flex-direction: column;
-  align-items: center;
-
-  padding: 30px 0;
-  gap: 25px;
-
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px);
-  transition: 0.3s;
-}
-
-.nav-links.active {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-
-.phone-btn {
-  display: none;
-}
-
-}
-.lang-switch {
-  display: flex;
-  gap: 6px;
-  margin-left: auto;
-}
-
-.lang-switch button {
-  background: white;
-  border: 1px solid #e5e7eb;
-  padding: 4px 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 13px;
-}
-
-.lang-switch button:hover {
-  background: #2563eb;
-  color: white;
-}
-
-@media (max-width: 768px) {
-.logo img {
-  height: 55px;
-}
-}
+/* IDIOMA */
 .lang-switch {
   display: flex;
   background: #f1f5f9;
@@ -219,7 +65,6 @@
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.25s ease;
   color: #334155;
 }
 
@@ -228,16 +73,67 @@
   color: #2563eb;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
+
+/* MOBILE */
 @media (max-width: 768px) {
 
-.lang-switch {
-  position: absolute;
-  left: 10px;
+.navbar {
+  padding: 12px 16px;
 }
 
-.lang-switch button {
-  padding: 4px 8px;
-  font-size: 12px;
+/* layout 3 columnas */
+.navbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+/* idioma izquierda */
+.lang-switch {
+  justify-self: start;
+}
+
+/* logo centro */
+.logo {
+  justify-self: center;
+}
+
+.logo img {
+  height: 50px;
+}
+
+/* hamburguesa derecha */
+.hamburger {
+  display: flex;
+  justify-self: end;
+}
+
+/* menu mobile */
+.nav-links {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  width: 100%;
+
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(10px);
+
+  flex-direction: column;
+  align-items: center;
+
+  padding: 30px 0;
+  gap: 25px;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: 0.3s;
+}
+
+.nav-links.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 }
