@@ -613,13 +613,13 @@ Gracias!
                             Limpieza de vivienda (15€/h + IVA → 18,15€/h)
                         </option>
                         <option value="turistico">
-                            Piso turístico (16€/h + IVA → 19,36€/h)
+                            Piso turístico (15€/h + IVA → 18,15€/h)
                         </option>
                         <option value="profunda">
-                            Limpieza profunda (18€/h + IVA → 21,78€/h)
+                            Limpieza profunda (16€/h + IVA → 19,36€/h)
                         </option>
                         <option value="obra">
-                            Final de obra (20€/h + IVA → 24,20€/h)
+                            Final de obra (18€/h + IVA → 21,78€/h)
                         </option>
                     </select>
                     {/* HORAS */}
@@ -703,9 +703,9 @@ Gracias!
                     <h3>💶 Tarifas orientativas</h3>
 
                     <p>✔ Limpieza de viviendas: <strong>15€/hora + IVA</strong></p>
-                    <p>✔ Pisos turísticos: <strong>16€/hora + IVA</strong></p>
-                    <p>✔ Limpieza profunda: <strong>18€/hora + IVA</strong></p>
-                    <p>✔ Final de obra: <strong>20€/hora + IVA</strong></p>
+                    <p>✔ Pisos turísticos: <strong>15€/hora + IVA</strong></p>
+                    <p>✔ Limpieza profunda: <strong>16€/hora + IVA</strong></p>
+                    <p>✔ Final de obra: <strong>18€/hora + IVA</strong></p>
 
                     <small>*El precio final puede variar según tamaño y estado del espacio.</small>
                 </div>

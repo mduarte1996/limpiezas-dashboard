@@ -153,3 +153,10 @@
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(37,99,235,0.2);
 }
+@media (max-width: 768px) {
+
+.phone-btn {
+  display: none; /* lo ocultamos en móvil para no romper layout */
+}
+
+}
