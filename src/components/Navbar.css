@@ -10,12 +10,17 @@
 
   padding: 15px 40px;
 
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.9);
   backdrop-filter: blur(12px);
   box-shadow: 0 4px 25px rgba(0,0,0,0.05);
 }
 
 /* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
 .logo img {
   height: 70px;
 }
@@ -34,95 +39,7 @@
   position: relative;
 }
 
-/* HAMBURGUESA */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: #1e3a8a;
-  border-radius: 2px;
-}
-
-@media (max-width: 768px) {
-
-.navbar {
-  padding: 14px 14px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* idioma izquierda */
-.lang-switch {
-  order: 1;
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  /* transform: scale(0.9); */
-}
-
-/* logo centro */
-.logo {
-  order: 2;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.logo img {
-  height: 70px;
-}
-
-/* hamburguesa derecha */
-.hamburger {
-  order: 3;
-  display: flex;
-  margin-left: auto;
-}
-
-/* ocultar telefono */
-.phone-btn {
-  display: none;
-}
-
-/* menu */
-.nav-links {
-  position: absolute;
-  top: 70px;
-  left: 0;
-  width: 100%;
-
-  background: white;
-  flex-direction: column;
-  align-items: center;
-
-  padding: 25px 0;
-  gap: 20px;
-
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px);
-  transition: .25s ease;
-}
-
-.nav-links.active {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-
-}
-/* BOTON TEL */
+/* BOTON TELEFONO */
 .phone-btn {
   background: linear-gradient(135deg,#2563eb,#1e3a8a);
   color: white;
@@ -138,15 +55,24 @@
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(37,99,235,0.2);
 }
-@media (max-width: 768px) {
 
-.phone-btn {
-  display: none; /* lo ocultamos en móvil para no romper layout */
+/* HAMBURGUESA */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
 }
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #1e3a8a;
+  border-radius: 2px;
+}
+
 
 /* IDIOMA */
-
-}
 .lang-switch {
   display: flex;
   background: #f1f5f9;
@@ -174,15 +100,78 @@
   color: #2563eb;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
-@media (max-width:768px){
 
-.lang-switch{
-  transform: scale(.9);
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+.navbar {
+  height: 75px;
+  padding: 0 12px;
+  position: relative;
 }
 
-.lang-switch button{
-  padding:4px 8px;
-  font-size:11px;
+/* idioma izquierda */
+.lang-switch {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%) scale(.95);
+}
+
+/* logo centro */
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo img {
+  height: 70px;
+}
+
+/* hamburguesa derecha */
+.hamburger {
+  display: flex;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ocultar telefono */
+.phone-btn {
+  display: none;
+}
+
+/* menu mobile */
+.nav-links {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  width: 100%;
+
+  background: white;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 25px 0;
+  gap: 20px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: .25s ease;
+}
+
+.nav-links.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 }
