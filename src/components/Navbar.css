@@ -52,7 +52,7 @@
 @media (max-width: 768px) {
 
 .navbar {
-  padding: 10px 14px;
+  padding: 14px 14px;
   height: 70px;
   display: flex;
   align-items: center;
@@ -62,7 +62,11 @@
 /* idioma izquierda */
 .lang-switch {
   order: 1;
-  transform: scale(0.9);
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  /* transform: scale(0.9); */
 }
 
 /* logo centro */
@@ -74,13 +78,14 @@
 }
 
 .logo img {
-  height: 42px;
+  height: 70px;
 }
 
 /* hamburguesa derecha */
 .hamburger {
   order: 3;
   display: flex;
+  margin-left: auto;
 }
 
 /* ocultar telefono */
