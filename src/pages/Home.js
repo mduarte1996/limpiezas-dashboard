@@ -287,7 +287,7 @@ Gracias!
                 </video>
 
                 <div className="overlay">
-                    <h1>Servicios profesionales de limpieza en Benidorm</h1>
+                    <h1>Servicios profesionales de limpieza en la Costa Blanca</h1>
 
                     <a
                         href="#contacto"
@@ -337,13 +337,13 @@ Gracias!
                         <p>
                             Nos adaptamos a los <strong>horarios del alquiler turístico</strong> y a las necesidades de cada propiedad,
                             asegurando espacios limpios, ordenados y listos para la llegada del siguiente huésped.
-                            Realizamos <strong>limpieza profesional de apartamentos turísticos en Benidorm y toda la Costa Blanca</strong>,
+                            Realizamos <strong>limpieza profesional de viviendas turísticas en Benidorm y toda la Costa Blanca</strong>,
                             aportando tranquilidad, calidad y profesionalidad en cada servicio.
                         </p>
 
                         <div className="about-features">
-                            <span>✔ Limpieza Airbnb</span>
-                            <span>✔ Check-in urgente</span>
+                            <span>✔ Gestion Alquiler turístico</span>
+                            <span>✔ limpieza post check-out</span>
                             <span>✔ Servicio de lavandería</span>
                             <span>✔ Benidorm y alrededores</span>
                         </div>
@@ -707,7 +707,7 @@ Gracias!
                     <p>✔ Limpieza profunda: <strong>16€/hora + IVA</strong></p>
                     <p>✔ Final de obra: <strong>18€/hora + IVA</strong></p>
 
-                    <small>*El precio final puede variar según tamaño y estado del espacio.</small>
+                    <small>*El precio final puede variar según tamaño y estado del espacio, se realiza el servicio con un minimo de 2 horas.</small>
                 </div>
 
                 {/* WHATSAPP */}
