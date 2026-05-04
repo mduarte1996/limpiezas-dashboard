@@ -287,22 +287,31 @@ Gracias!
                 </video>
 
                 <div className="overlay">
-                    <h1>Servicios profesionales de limpieza en la Costa Blanca</h1>
+
+                    <h1>
+                        Limpieza profesional en Benidorm y Costa Blanca
+                    </h1>
+
+                    <p className="hero-subtitle">
+                        Servicios de limpieza para viviendas, pisos turísticos y alquiler vacacional en
+                        Benidorm, Altea, Albir, la nucía y alrededores.
+                        Resultados impecables desde la primera visita.
+                    </p>
+
+                    <p className="hero-trust">
+                        ⭐ Servicio rápido y profesional
+                        ⭐ Atención personalizada
+                        ⭐ Clientes satisfechos en toda la zona
+                    </p>
 
                     <a
-                        href="#contacto"
+                        href="https://wa.me/34611009814?text=Hola,%20quiero%20un%20presupuesto%20de%20limpieza"
                         className="hero-btn"
-                        onClick={() => {
-                            if (window.gtag) {
-                                window.gtag('event', 'click_hero_presupuesto', {
-                                    event_category: 'conversion',
-                                    event_label: 'hero_solicitar_presupuesto'
-                                });
-                            }
-                        }}
+                        target="_blank"
                     >
-                        Solicitar presupuesto
+                        Solicitar presupuesto GRATIS por WhatsApp
                     </a>
+
                 </div>
 
             </div>
@@ -781,7 +790,7 @@ Gracias!
                                 </div>
 
                                 <div className="modal-image">
-                                    <img src="/limpieza-vivienda.jpg" alt="Servicio vivienda" />
+                                    <img src="/imagen-lcb.png" alt="Servicio vivienda" />
                                 </div>
 
                             </div>
