@@ -308,6 +308,7 @@ Gracias!
                         href="https://wa.me/34611009814?text=Hola,%20quiero%20un%20presupuesto%20de%20limpieza"
                         className="hero-btn"
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         Solicitar presupuesto GRATIS por WhatsApp
                     </a>
