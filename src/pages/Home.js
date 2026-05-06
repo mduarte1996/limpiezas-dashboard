@@ -19,6 +19,15 @@ function Home() {
         urgent: false
     });
 
+    const [showPromo, setShowPromo] = useState(false);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowPromo(true);
+        }, 5000);
+
+        return () => clearTimeout(timer);
+    }, []);
+
     const [totalPrice, setTotalPrice] = useState({
         subtotal: 0,
         iva: 0,
@@ -982,6 +991,38 @@ Gracias!
                     </div>
                 )
             }
+            {showPromo && (
+                <div className="promo-overlay" onClick={() => setShowPromo(false)}>
+
+                    <div className="promo-modal" onClick={(e) => e.stopPropagation()}>
+
+                        <button
+                            className="promo-close"
+                            onClick={() => setShowPromo(false)}
+                        >
+                            ✖
+                        </button>
+
+                        <h2>🎉 10% de descuento en tu primera limpieza</h2>
+
+                        <p>
+                            Aprovecha esta oferta exclusiva y deja tu hogar impecable
+                            con nuestro servicio profesional en Benidorm y alrededores.
+                        </p>
+
+                        <a
+                            href="https://wa.me/34611009814?text=Hola,%20quiero%20aprovechar%20el%2010%25%20de%20descuento"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="promo-btn"
+                        >
+                            Obtener descuento por WhatsApp
+                        </a>
+
+                    </div>
+
+                </div>
+            )}
             <Footer />
         </div >
 
