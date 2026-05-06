@@ -292,12 +292,6 @@ Gracias!
                         Limpieza profesional en Benidorm y Costa Blanca
                     </h1>
 
-                    <p className="hero-subtitle">
-                        Servicios de limpieza para viviendas, pisos turísticos y alquiler vacacional en
-                        Benidorm, Altea, Albir, la nucía y alrededores.
-                        Resultados impecables desde la primera visita.
-                    </p>
-
                     <p className="hero-trust">
                         ⭐ Servicio rápido y profesional
                         ⭐ Atención personalizada
@@ -850,7 +844,27 @@ Gracias!
                                 <div className="modal-text">
                                     <h2>Limpieza profunda</h2>
 
-                                    <p>Limpieza intensiva para suciedad acumulada.</p>
+                                    <p>
+                                        Eliminamos la suciedad acumulada en profundidad, dejando tu vivienda
+                                        completamente renovada. Ideal para cambios de temporada o espacios
+                                        que necesitan una limpieza intensiva.
+                                    </p>
+
+                                    <ul>
+                                        <li>✔ Desinfección completa del hogar</li>
+                                        <li>✔ Limpieza a fondo de cocina y baño</li>
+                                        <li>✔ Eliminación de grasa, cal y suciedad incrustada</li>
+                                        <li>✔ Atención a zonas difíciles y detalles</li>
+                                    </ul>
+
+                                    <p className="price">
+                                        💰 18€/hora + IVA
+                                    </p>
+
+                                    <div className="modal-highlight">
+                                        <p>✨ Resultados visibles desde la primera limpieza</p>
+                                        <p>🧼 Ideal para viviendas muy usadas o cambios de temporada</p>
+                                    </div>
 
                                     <div className="modal-actions">
 
@@ -872,12 +886,11 @@ Gracias!
                                 </div>
 
                                 <div className="modal-image">
-                                    <img src="/profunda.jpg" alt="Limpieza profunda" />
+                                    <img src="/profunda.jpg" alt="Limpieza profunda en Benidorm" />
                                 </div>
 
                             </div>
                         )}
-
                         {/* OBRA */}
                         {selectedService === "obra" && (
                             <div className="modal-body">
@@ -885,7 +898,27 @@ Gracias!
                                 <div className="modal-text">
                                     <h2>Limpieza fin de obra</h2>
 
-                                    <p>Servicio especializado post reforma.</p>
+                                    <p>
+                                        Dejamos tu vivienda completamente lista para entrar a vivir después
+                                        de una reforma o construcción. Eliminamos todo rastro de polvo,
+                                        restos de obra y suciedad acumulada.
+                                    </p>
+
+                                    <ul>
+                                        <li>✔ Eliminación de polvo de obra en todas las superficies</li>
+                                        <li>✔ Limpieza de restos de pintura, yeso y materiales</li>
+                                        <li>✔ Cristales, ventanas y marcos a fondo</li>
+                                        <li>✔ Aspirado y fregado intensivo</li>
+                                    </ul>
+
+                                    <p className="price">
+                                        💰 20€/hora + IVA
+                                    </p>
+
+                                    <div className="modal-highlight">
+                                        <p>🏡 Espacio listo para entrar a vivir</p>
+                                        <p>🧼 Limpieza profesional tras reformas o nuevas construcciones</p>
+                                    </div>
 
                                     <div className="modal-actions">
 
@@ -907,12 +940,11 @@ Gracias!
                                 </div>
 
                                 <div className="modal-image">
-                                    <img src="/post-obra.jpg" alt="Final de obra" />
+                                    <img src="/post-obra.jpg" alt="Limpieza fin de obra en Benidorm" />
                                 </div>
 
                             </div>
                         )}
-
                     </div>
                 </div>
             )}
