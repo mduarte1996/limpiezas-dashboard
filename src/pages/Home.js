@@ -1013,7 +1013,7 @@ Gracias!
 
                             <button
                                 className="close-popup"
-                                onClick={() => setShowPopup(false)}
+                                onClick={() => setShowPromo(false)}
                             >
                                 ✕
                             </button>
