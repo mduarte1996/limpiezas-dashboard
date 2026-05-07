@@ -504,21 +504,32 @@ Gracias!
                 <div className="reviews-container">
 
                     {reviews.length === 0 ? (
-                        <p>Aún no hay opiniones. Sé el primero en comentar ⭐</p>
+                        <p>Cada cliente satisfecho nos ayuda a seguir creciendo ⭐</p>
                     ) : (
                         reviews.map((rev) => (
-                            <div key={rev.id} className="review-card">
-                                <p>"{rev.message}"</p>
-                                <span>
-                                    {"★".repeat(rev.rating)}{"☆".repeat(5 - rev.rating)} - {rev.name}
+                            < div key={rev.id} className="review-card" >
+
+                                <div className="review-stars">
+                                    {"★".repeat(rev.rating)}{"☆".repeat(5 - rev.rating)}
+                                </div>
+
+                                <p className="review-message">
+                                    "{rev.message}"
+                                </p>
+
+                                <span className="review-name">
+                                    — {rev.name}
                                 </span>
-                                {/* BOTÓN ADMIN */}
-                                <button
-                                    className="delete-review"
-                                    onClick={() => handleDeleteReview(rev.id)}
-                                >
-                                    Eliminar
-                                </button>
+
+                                {isAdmin && (
+                                    <button
+                                        className="delete-review"
+                                        onClick={() => handleDeleteReview(rev.id)}
+                                    >
+                                        Eliminar
+                                    </button>
+                                )}
+
                             </div>
                         ))
                     )}
@@ -566,9 +577,9 @@ Gracias!
 
                 </form>
 
-            </section>
+            </section >
             {/* CTA */}
-            <section className="cta">
+            < section className="cta" >
                 <h2>¿Necesitas limpieza urgente?</h2>
                 <p>Contáctanos y te damos presupuesto en minutos</p>
 
@@ -582,10 +593,10 @@ Gracias!
                 >
                     Contactar ahora
                 </button>
-            </section>
+            </section >
 
             {/* FORMULARIO */}
-            <section className="form-section" id="contacto">
+            < section className="form-section" id="contacto" >
                 <h2>Solicita tu presupuesto</h2>
                 <p>Rellena el siguiente formulario y te contactaremos lo antes posible.</p>
 
@@ -664,54 +675,56 @@ Gracias!
                     </button>
 
                 </form>
-                {totalPrice.total > 0 && (
-                    <>
-                        <div className="price-box">
+                {
+                    totalPrice.total > 0 && (
+                        <>
+                            <div className="price-box">
 
-                            <h3>💰 Presupuesto estimado</h3>
+                                <h3>💰 Presupuesto estimado</h3>
 
-                            <div className="price-line">
-                                <span>Subtotal:</span>
-                                <span>{totalPrice.subtotal.toFixed(2)} €</span>
-                            </div>
-
-                            <div className="price-line">
-                                <span>IVA (21%):</span>
-                                <span>{totalPrice.iva.toFixed(2)} €</span>
-                            </div>
-
-                            {formData.urgent && (
                                 <div className="price-line">
-                                    <span>Urgente:</span>
-                                    <span>+10€</span>
+                                    <span>Subtotal:</span>
+                                    <span>{totalPrice.subtotal.toFixed(2)} €</span>
                                 </div>
-                            )}
 
-                            <hr />
+                                <div className="price-line">
+                                    <span>IVA (21%):</span>
+                                    <span>{totalPrice.iva.toFixed(2)} €</span>
+                                </div>
 
-                            <div className="price-total">
-                                <strong>Total:</strong>
-                                <strong>{totalPrice.total.toFixed(2)} €</strong>
+                                {formData.urgent && (
+                                    <div className="price-line">
+                                        <span>Urgente:</span>
+                                        <span>+10€</span>
+                                    </div>
+                                )}
+
+                                <hr />
+
+                                <div className="price-total">
+                                    <strong>Total:</strong>
+                                    <strong>{totalPrice.total.toFixed(2)} €</strong>
+                                </div>
+
                             </div>
 
-                        </div>
-
-                        {/* 👇 BOTÓN AQUÍ */}
-                        <button
-                            className="whatsapp-confirm-btn"
-                            onClick={handleWhatsAppQuote}
-                        >
-                            ✅ Confirmar por WhatsApp
-                        </button>
-                        <button
-                            onClick={generatePDF}
-                            className="primary-btn"
-                            style={{ marginTop: "10px" }}
-                        >
-                            Descargar presupuesto PDF
-                        </button>
-                    </>
-                )}
+                            {/* 👇 BOTÓN AQUÍ */}
+                            <button
+                                className="whatsapp-confirm-btn"
+                                onClick={handleWhatsAppQuote}
+                            >
+                                ✅ Confirmar por WhatsApp
+                            </button>
+                            <button
+                                onClick={generatePDF}
+                                className="primary-btn"
+                                style={{ marginTop: "10px" }}
+                            >
+                                Descargar presupuesto PDF
+                            </button>
+                        </>
+                    )
+                }
                 <div className="pricing-info">
                     <h3>💶 Tarifas orientativas</h3>
 
@@ -739,7 +752,7 @@ Gracias!
                     Escríbenos por WhatsApp
                 </button>
 
-            </section>
+            </section >
 
             {selectedService && (
                 <div className="modal-overlay" onClick={() => setSelectedService(null)}>
@@ -956,7 +969,8 @@ Gracias!
                         )}
                     </div>
                 </div>
-            )}
+            )
+            }
             <a
                 href="https://wa.me/34611009814"
                 className="whatsapp-float"
@@ -991,38 +1005,40 @@ Gracias!
                     </div>
                 )
             }
-            {showPromo && (
-                <div className="promo-overlay" onClick={() => setShowPromo(false)}>
+            {
+                showPromo && (
+                    <div className="promo-overlay" onClick={() => setShowPromo(false)}>
 
-                    <div className="promo-modal" onClick={(e) => e.stopPropagation()}>
+                        <div className="promo-modal" onClick={(e) => e.stopPropagation()}>
 
-                        <button
-                            className="promo-close"
-                            onClick={() => setShowPromo(false)}
-                        >
-                            ✖
-                        </button>
+                            <button
+                                className="promo-close"
+                                onClick={() => setShowPromo(false)}
+                            >
+                                ✖
+                            </button>
 
-                        <h2>🎉 10% de descuento en tu primera limpieza</h2>
+                            <h2>🎉 10% de descuento en tu primera limpieza</h2>
 
-                        <p>
-                            Aprovecha esta oferta exclusiva y deja tu hogar impecable
-                            con nuestro servicio profesional en Benidorm y alrededores.
-                        </p>
+                            <p>
+                                Aprovecha esta oferta exclusiva y deja tu hogar impecable
+                                con nuestro servicio profesional en Benidorm y alrededores.
+                            </p>
 
-                        <a
-                            href="https://wa.me/34611009814?text=Hola,%20quiero%20aprovechar%20el%2010%25%20de%20descuento"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="promo-btn"
-                        >
-                            Obtener descuento por WhatsApp
-                        </a>
+                            <a
+                                href="https://wa.me/34611009814?text=Hola,%20quiero%20aprovechar%20el%2010%25%20de%20descuento"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="promo-btn"
+                            >
+                                Obtener descuento por WhatsApp
+                            </a>
+
+                        </div>
 
                     </div>
-
-                </div>
-            )}
+                )
+            }
             <Footer />
         </div >
 

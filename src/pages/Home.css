@@ -1426,3 +1426,46 @@ color: white;
   font-size: 18px;
   cursor: pointer;
 }
+.review-card {
+  background: white;
+  padding: 28px;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  margin: 25px auto;
+  max-width: 750px;
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+}
+
+.review-stars {
+  color: #fbbf24;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.review-message {
+  color: #475569;
+  line-height: 1.8;
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+.review-name {
+  color: #1e3a8a;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.delete-review {
+  margin-top: 18px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
