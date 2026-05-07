@@ -19,6 +19,8 @@ function Home() {
         urgent: false
     });
 
+    const isAdmin = true;
+
     const [showPromo, setShowPromo] = useState(false);
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -1010,10 +1012,10 @@ Gracias!
                         <div className="promo-modal" onClick={(e) => e.stopPropagation()}>
 
                             <button
-                                className="promo-close"
-                                onClick={() => setShowPromo(false)}
+                                className="close-popup"
+                                onClick={() => setShowPopup(false)}
                             >
-                                ✖
+                                ✕
                             </button>
 
                             <h2>🎉 10% de descuento en tu primera limpieza</h2>

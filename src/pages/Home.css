@@ -1382,6 +1382,8 @@ color: white;
 }
 
 .promo-modal {
+  position: relative;
+
   background: white;
   padding: 30px;
   border-radius: 20px;
@@ -1417,14 +1419,39 @@ color: white;
   transform: scale(1.05);
 }
 
-.promo-close {
+.close-popup{
   position: absolute;
-  top: 10px;
-  right: 15px;
-  background: none;
+  top: 14px;
+  right: 14px;
+
+  width: 36px;
+  height: 36px;
+
   border: none;
-  font-size: 18px;
+  border-radius: 50%;
+
+  background: #f1f5f9;
+  color: #1e3a8a;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   cursor: pointer;
+
+  transition: all .25s ease;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.close-popup:hover{
+  background: #2563eb;
+  color: white;
+
+  transform: rotate(90deg) scale(1.08);
 }
 .review-card {
   background: white;
