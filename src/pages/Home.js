@@ -523,12 +523,14 @@ Gracias!
                                     — {rev.name}
                                 </span>
 
-                                <button
-                                    className="delete-review"
-                                    onClick={() => handleDeleteReview(rev.id)}
-                                >
-                                    Eliminar
-                                </button>
+                                {isAdmin && (
+                                    <button
+                                        className="delete-review"
+                                        onClick={() => handleDeleteReview(rev.id)}
+                                    >
+                                        Eliminar
+                                    </button>
+                                )}
 
                             </div>
                         ))
