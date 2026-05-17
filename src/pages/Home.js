@@ -835,6 +835,10 @@ Gracias!
                                         <li>✔ Revisión general del inmueble</li>
                                     </ul>
 
+                                    <p className="price">
+                                        💰 15€/hora + IVA
+                                    </p>
+
                                     <div className="modal-actions">
 
                                         <button
