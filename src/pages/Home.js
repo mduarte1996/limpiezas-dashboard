@@ -420,7 +420,7 @@ Gracias!
                         className="card"
                         onClick={() => setSelectedService("turistico")}
                     >
-                        <h3>🏖 Pisos turísticos</h3>
+                        <h3>🏖 Alquiler turístico</h3>
                         <p>Servicio especializado para alquileres vacacionales.</p>
                     </div>
 
@@ -639,7 +639,7 @@ Gracias!
                             Limpieza de vivienda (15€/h + IVA → 18,15€/h)
                         </option>
                         <option value="turistico">
-                            Piso turístico (15€/h + IVA → 18,15€/h)
+                            Alquiler turístico (15€/h + IVA → 18,15€/h)
                         </option>
                         <option value="profunda">
                             Limpieza profunda (16€/h + IVA → 19,36€/h)
@@ -731,7 +731,7 @@ Gracias!
                     <h3>💶 Tarifas orientativas</h3>
 
                     <p>✔ Limpieza de viviendas: <strong>15€/hora + IVA</strong></p>
-                    <p>✔ Pisos turísticos: <strong>15€/hora + IVA</strong></p>
+                    <p>✔ Alquiler turístico: <strong>15€/hora + IVA</strong></p>
                     <p>✔ Limpieza profunda: <strong>16€/hora + IVA</strong></p>
                     <p>✔ Final de obra: <strong>18€/hora + IVA</strong></p>
 
@@ -820,7 +820,7 @@ Gracias!
                             <div className="modal-body">
 
                                 <div className="modal-text">
-                                    <h2>Limpieza de pisos turísticos</h2>
+                                    <h2>Limpieza de alquileres turísticos</h2>
 
                                     <p>
                                         Preparamos tu vivienda para cada huésped como si fuera un hotel,
@@ -845,7 +845,7 @@ Gracias!
                                         </button>
 
                                         <a
-                                            href="/limpieza-pisos-turisticos-benidorm"
+                                            href="/limpieza-alquileres-turisticos-benidorm"
                                             className="secondary-btn"
                                         >
                                             Ver servicio completo
@@ -855,7 +855,7 @@ Gracias!
                                 </div>
 
                                 <div className="modal-image">
-                                    <img src="/limpieza-turistica.jpg" alt="Pisos turísticos" />
+                                    <img src="/limpieza-turistica.jpg" alt="Alquileres turísticos" />
                                 </div>
 
                             </div>
@@ -936,7 +936,7 @@ Gracias!
                                     </ul>
 
                                     <p className="price">
-                                        💰 20€/hora + IVA
+                                        💰 18€/hora + IVA
                                     </p>
 
                                     <div className="modal-highlight">
