@@ -82,3 +82,19 @@ export const deleteReview = async (id) => {
 
     return res.json();
 };
+
+export const getPendingReviews = async () => {
+
+    const res = await fetch(`${BASE_URL}/reviews/pending`);
+
+    return res.json();
+};
+
+export const approveReview = async (id) => {
+
+    const res = await fetch(`${BASE_URL}/reviews/${id}/approve`, {
+        method: "PUT"
+    });
+
+    return res.json();
+};

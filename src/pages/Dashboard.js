@@ -215,7 +215,7 @@ function Dashboard() {
           <div className="stat-card">
             <h3>{totalIncome} €</h3>
             <p>Ingresos</p>
-          </div> 
+          </div>
           <div className="stat-card">
             <h3>{stats.income} €</h3>
             <p>Ingresos (API)</p>
@@ -277,9 +277,29 @@ function Dashboard() {
                 <td>{service.status}</td>
                 <td>{service.price} €</td>
                 <td>
-                  <button onClick={() => startEdit(service)}>Editar</button>
-                  <button onClick={() => completeService(service.id)}>Completar</button>
-                  <button onClick={() => removeService(service.id)}>Eliminar</button>
+
+                  <button onClick={() => startEdit(service)}>
+                    Editar
+                  </button>
+
+                  <button onClick={() => completeService(service.id)}>
+                    Completar
+                  </button>
+
+                  <button onClick={() => removeService(service.id)}>
+                    Eliminar
+                  </button>
+
+                  <a
+                    href={`https://wa.me/34${service.phone}?text=Hola%20👋%20Gracias%20por%20confiar%20en%20Limpiezas%20Costa%20Blanca.%20Tu%20opinión%20nos%20ayuda%20muchísimo.%20⭐%20¿Podrías%20dejarnos%20una%20reseña%20rápida?%20👉%20https://www.limpiezacostablanca.com/#reviews`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <button>
+                      Solicitar review
+                    </button>
+                  </a>
+
                 </td>
               </tr>
             ))}
