@@ -204,7 +204,9 @@ Gracias!
     };
 
     const handleReviewSubmit = async (e) => {
+
         e.preventDefault();
+
         if (newReview.message.length < 10) {
             alert("La opinión debe tener al menos 10 caracteres");
             return;
@@ -215,30 +217,29 @@ Gracias!
             return;
         }
 
-        if (newReview.message.includes("http")) {
-            alert("No se permiten enlaces");
-            return;
-        }
-
         try {
+
+            console.log(newReview);
+
             await createReview(newReview);
 
-            if (window.gtag) {
-                window.gtag('event', 'review_enviada');
-            }
-            // limpiar formulario
+            alert("Opinión enviada correctamente ✅");
+
             setNewReview({
                 name: "",
                 message: "",
                 rating: 5
             });
 
-            // recargar reviews
             const data = await getReviews();
+
             setReviews(data);
 
         } catch (error) {
-            console.error(error);
+
+            console.error("ERROR REVIEW:", error);
+
+            alert("Error enviando opinión");
         }
     };
 
