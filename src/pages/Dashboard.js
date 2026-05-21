@@ -8,21 +8,28 @@ import IncomeChart from "../components/IncomeChart";
 import {
   CheckCircleIcon,
   ClockIcon,
-  ClipboardDocumentListIcon
+  ClipboardDocumentListIcon,
+  StarIcon
 } from "@heroicons/react/24/solid";
+
 import {
   getServices,
   updateServiceStatus,
   deleteService,
   createService,
-  updateService
+  updateService,
+  getReviews,
+  approveReview,
+  deleteReview
 } from "../services/api";
+
 import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
   const navigate = useNavigate();
 
   const [services, setServices] = useState([]);
+  const [reviews, setReviews] = useState([]);
   const [search, setSearch] = useState("");
   const [editingId, setEditingId] = useState(null);
 
@@ -59,6 +66,17 @@ function Dashboard() {
     }
   };
 
+  // ⭐ CARGAR REVIEWS
+  const loadReviews = async () => {
+    try {
+      const res = await fetch(`${BASE_URL}/reviews/all`);
+      const data = await res.json();
+      setReviews(data);
+    } catch (error) {
+      console.error("Error cargando reviews:", error);
+    }
+  };
+
   // 📊 STATS
   const loadStats = async () => {
     try {
@@ -73,9 +91,10 @@ function Dashboard() {
   useEffect(() => {
     loadServices();
     loadStats();
+    loadReviews();
   }, []);
 
-  // 🔍 FILTRO SEGURO
+  // 🔍 FILTRO
   const filteredServices = services.filter(service =>
     (service.client_name || "").toLowerCase().includes(search.toLowerCase()) ||
     (service.phone || "").includes(search)
@@ -98,10 +117,12 @@ function Dashboard() {
     e.preventDefault();
 
     try {
+
       if (editingId) {
         await updateService(editingId, formData);
         alert("✏️ Servicio actualizado");
         setEditingId(null);
+
       } else {
         await createService(formData);
         alert("✅ Servicio creado");
@@ -125,7 +146,8 @@ function Dashboard() {
     }
   };
 
-  // ⚙️ ACCIONES
+  // ⚙️ ACCIONES SERVICIOS
+
   const completeService = async (id) => {
     try {
       await updateServiceStatus(id, "completado");
@@ -158,15 +180,50 @@ function Dashboard() {
 
     setEditingId(service.id);
   };
+
   const moveService = async (id, newDate) => {
     try {
+
       await updateService(id, {
         scheduled_date: newDate.toISOString().split("T")[0]
       });
 
       loadServices();
+
     } catch (error) {
       alert("Error moviendo servicio");
+    }
+  };
+
+  // ⭐ APROBAR REVIEW
+  const handleApproveReview = async (id) => {
+    try {
+
+      await approveReview(id);
+
+      alert("⭐ Review aprobada");
+
+      loadReviews();
+
+    } catch (error) {
+      console.error(error);
+      alert("Error aprobando review");
+    }
+  };
+
+  // 🗑 ELIMINAR REVIEW
+  const handleDeleteReview = async (id) => {
+    try {
+
+      await deleteReview(id);
+
+      alert("🗑 Review eliminada");
+
+      loadReviews();
+
+    } catch (error) {
+      console.error(error);
+      alert("Error eliminando review");
     }
   };
 
@@ -176,9 +233,11 @@ function Dashboard() {
       {/* SIDEBAR */}
       <div className="sidebar">
         <h2 className="logo-text">LCB</h2>
+
         <ul>
           <li>📊 Dashboard</li>
           <li>🧹 Servicios</li>
+          <li>⭐ Reviews</li>
           <li>⚙ Ajustes</li>
         </ul>
       </div>
@@ -216,14 +275,11 @@ function Dashboard() {
             <h3>{totalIncome} €</h3>
             <p>Ingresos</p>
           </div>
-          <div className="stat-card">
-            <h3>{stats.income} €</h3>
-            <p>Ingresos (API)</p>
-          </div>
 
           <div className="stat-card">
-            <h3>{stats.services}</h3>
-            <p>Servicios (API)</p>
+            <StarIcon className="stat-icon" />
+            <h3>{reviews.length}</h3>
+            <p>Reviews</p>
           </div>
 
         </div>
@@ -233,12 +289,49 @@ function Dashboard() {
 
         <form onSubmit={handleSubmit} className="form">
 
-          <input name="client_name" placeholder="Nombre" value={formData.client_name} onChange={handleChange} required />
-          <input name="phone" placeholder="Teléfono" value={formData.phone} onChange={handleChange} required />
-          <input name="address" placeholder="Dirección" value={formData.address} onChange={handleChange} />
-          <input name="service_type" placeholder="Servicio" value={formData.service_type} onChange={handleChange} />
-          <input name="price" placeholder="Precio (€)" value={formData.price} onChange={handleChange} />
-          <input type="date" name="scheduled_date" value={formData.scheduled_date} onChange={handleChange} />
+          <input
+            name="client_name"
+            placeholder="Nombre"
+            value={formData.client_name}
+            onChange={handleChange}
+            required
+          />
+
+          <input
+            name="phone"
+            placeholder="Teléfono"
+            value={formData.phone}
+            onChange={handleChange}
+            required
+          />
+
+          <input
+            name="address"
+            placeholder="Dirección"
+            value={formData.address}
+            onChange={handleChange}
+          />
+
+          <input
+            name="service_type"
+            placeholder="Servicio"
+            value={formData.service_type}
+            onChange={handleChange}
+          />
+
+          <input
+            name="price"
+            placeholder="Precio (€)"
+            value={formData.price}
+            onChange={handleChange}
+          />
+
+          <input
+            type="date"
+            name="scheduled_date"
+            value={formData.scheduled_date}
+            onChange={handleChange}
+          />
 
           <button type="submit">
             {editingId ? "Actualizar" : "Crear"}
@@ -255,8 +348,9 @@ function Dashboard() {
           className="search-input"
         />
 
-        {/* TABLA */}
+        {/* TABLA SERVICIOS */}
         <table className="table">
+
           <thead>
             <tr>
               <th>Cliente</th>
@@ -269,13 +363,17 @@ function Dashboard() {
           </thead>
 
           <tbody>
+
             {filteredServices.map(service => (
+
               <tr key={service.id}>
+
                 <td>{service.client_name}</td>
                 <td>{service.phone}</td>
                 <td>{service.service_type}</td>
                 <td>{service.status}</td>
                 <td>{service.price} €</td>
+
                 <td>
 
                   <button onClick={() => startEdit(service)}>
@@ -301,20 +399,88 @@ function Dashboard() {
                   </a>
 
                 </td>
+
               </tr>
+
             ))}
+
           </tbody>
+
         </table>
 
-        {/* COMPONENTES PRO */}
+        {/* ⭐ PANEL REVIEWS */}
+        <div className="reviews-admin">
+
+          <h2>⭐ Panel de Reviews</h2>
+
+          <table className="table">
+
+            <thead>
+              <tr>
+                <th>Cliente</th>
+                <th>Mensaje</th>
+                <th>Rating</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              {reviews.map(review => (
+
+                <tr key={review.id}>
+
+                  <td>{review.name}</td>
+
+                  <td>{review.message}</td>
+
+                  <td>{"⭐".repeat(review.rating)}</td>
+
+                  <td>
+                    {review.approved ? "✅ Aprobada" : "⏳ Pendiente"}
+                  </td>
+
+                  <td>
+
+                    {!review.approved && (
+                      <button
+                        onClick={() => handleApproveReview(review.id)}
+                      >
+                        Aprobar
+                      </button>
+                    )}
+
+                    <button
+                      onClick={() => handleDeleteReview(review.id)}
+                    >
+                      Eliminar
+                    </button>
+
+                  </td>
+
+                </tr>
+
+              ))}
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+        {/* COMPONENTES */}
         <BigCalendar
           services={services}
           onComplete={completeService}
           onDelete={removeService}
           onMove={moveService}
         />
+
         <ServicesChart services={services} />
+
         <IncomeChart services={services} />
+
         <Calendar />
 
       </div>
