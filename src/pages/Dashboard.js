@@ -18,7 +18,6 @@ import {
   deleteService,
   createService,
   updateService,
-  getReviews,
   approveReview,
   deleteReview
 } from "../services/api";
@@ -33,10 +32,6 @@ function Dashboard() {
   const [search, setSearch] = useState("");
   const [editingId, setEditingId] = useState(null);
 
-  const [stats, setStats] = useState({
-    income: 0,
-    services: 0
-  });
 
   const [formData, setFormData] = useState({
     client_name: "",
@@ -77,20 +72,9 @@ function Dashboard() {
     }
   };
 
-  // 📊 STATS
-  const loadStats = async () => {
-    try {
-      const res = await fetch(`${BASE_URL}/stats`);
-      const data = await res.json();
-      setStats(data);
-    } catch (error) {
-      console.error("Error cargando stats:", error);
-    }
-  };
 
   useEffect(() => {
     loadServices();
-    loadStats();
     loadReviews();
   }, []);
 
@@ -138,7 +122,6 @@ function Dashboard() {
       });
 
       loadServices();
-      loadStats();
 
     } catch (error) {
       console.error(error);
@@ -152,7 +135,6 @@ function Dashboard() {
     try {
       await updateServiceStatus(id, "completado");
       loadServices();
-      loadStats();
     } catch {
       alert("Error al completar");
     }
@@ -162,7 +144,6 @@ function Dashboard() {
     try {
       await deleteService(id);
       loadServices();
-      loadStats();
     } catch {
       alert("Error al eliminar");
     }
