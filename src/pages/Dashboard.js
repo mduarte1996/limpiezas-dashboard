@@ -158,19 +158,6 @@ function Dashboard() {
     setEditingId(service.id);
   };
 
-  const moveService = async (id, newDate) => {
-    try {
-
-      await updateService(id, {
-        scheduled_date: newDate.toISOString().split("T")[0]
-      });
-
-      loadServices();
-
-    } catch (error) {
-      alert("Error moviendo servicio");
-    }
-  };
 
   // ⭐ APROBAR REVIEW
   const handleApproveReview = async (id) => {
