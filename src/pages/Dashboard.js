@@ -195,7 +195,7 @@ function Dashboard() {
   const handleDeleteReview = async (id) => {
     try {
 
-      await deleteReview(id);021
+      await deleteReview(id);
 
       alert("🗑 Review eliminada");
 
