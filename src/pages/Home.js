@@ -204,8 +204,10 @@ Gracias!
     };
 
     const handleReviewSubmit = async (e) => {
-
         e.preventDefault();
+
+        console.log("CLICK OK");
+        console.log(newReview);
 
         if (newReview.message.length < 10) {
             alert("La opinión debe tener al menos 10 caracteres");
@@ -218,10 +220,9 @@ Gracias!
         }
 
         try {
+            const response = await createReview(newReview);
 
-            console.log(newReview);
-
-            await createReview(newReview);
+            console.log("RESPUESTA API:", response);
 
             alert("Opinión enviada correctamente ✅");
 
@@ -231,14 +232,8 @@ Gracias!
                 rating: 5
             });
 
-            const data = await getReviews();
-
-            setReviews(data);
-
         } catch (error) {
-
             console.error("ERROR REVIEW:", error);
-
             alert("Error enviando opinión");
         }
     };
