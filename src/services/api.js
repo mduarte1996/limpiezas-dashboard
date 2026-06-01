@@ -73,7 +73,11 @@ export const createReview = async (review) => {
         body: JSON.stringify(review)
     });
 
-    return res.json();
+    if (!res.ok) {
+        throw new Error("Error al crear review");
+    }
+
+    return true;
 };
 export const deleteReview = async (id) => {
     const res = await fetch(`${BASE_URL}/reviews/${id}`, {
