@@ -64,7 +64,7 @@ function Dashboard() {
   // ⭐ CARGAR REVIEWS
   const loadReviews = async () => {
     try {
-      const res = await fetch(`${BASE_URL}/reviews/all`);
+      const res = await fetch(`${BASE_URL}/reviews`);
       const data = await res.json();
       setReviews(data);
     } catch (error) {
@@ -185,7 +185,6 @@ function Dashboard() {
       alert("⭐ Review aprobada");
 
       loadReviews();
-
     } catch (error) {
       console.error(error);
       alert("Error aprobando review");
@@ -196,7 +195,7 @@ function Dashboard() {
   const handleDeleteReview = async (id) => {
     try {
 
-      await deleteReview(id);
+      await deleteReview(id);021
 
       alert("🗑 Review eliminada");
 
@@ -216,10 +215,19 @@ function Dashboard() {
         <h2 className="logo-text">LCB</h2>
 
         <ul>
-          <li>📊 Dashboard</li>
-          <li>🧹 Servicios</li>
-          <li>⭐ Reviews</li>
-          <li>⚙ Ajustes</li>
+          <li onClick={() => window.scrollTo(0, 0)}>📊 Dashboard</li>
+
+          <li onClick={() =>
+            document.querySelector(".table")?.scrollIntoView({ behavior: "smooth" })
+          }>
+            🧹 Servicios
+          </li>
+
+          <li onClick={() =>
+            document.querySelector(".reviews-admin")?.scrollIntoView({ behavior: "smooth" })
+          }>
+            ⭐ Reviews
+          </li>
         </ul>
       </div>
 
