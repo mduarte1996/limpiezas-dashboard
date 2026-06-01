@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../Dashboard.css";
 import { BASE_URL } from "../services/api";
-import ServicesChart from "../components/ServicesChart";
-import Calendar from "react-calendar";
-import BigCalendar from "../components/BigCalendar";
-import IncomeChart from "../components/IncomeChart";
 import {
   CheckCircleIcon,
   ClockIcon,
@@ -457,20 +453,6 @@ function Dashboard() {
           </table>
 
         </div>
-
-        {/* COMPONENTES */}
-        <BigCalendar
-          services={services}
-          onComplete={completeService}
-          onDelete={removeService}
-          onMove={moveService}
-        />
-
-        <ServicesChart services={services} />
-
-        <IncomeChart services={services} />
-
-        <Calendar />
 
       </div>
     </div>
