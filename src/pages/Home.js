@@ -18,6 +18,12 @@ function Home() {
         hours: 2,
         urgent: false
     });
+    
+    const [totalPrice, setTotalPrice] = useState({
+        subtotal: 0,
+        iva: 0,
+        total: 0
+    });
 
     const isAdmin = true;
 
