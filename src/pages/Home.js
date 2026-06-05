@@ -22,19 +22,47 @@ function Home() {
     const isAdmin = true;
 
     const [showPromo, setShowPromo] = useState(false);
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setShowPromo(true);
-        }, 5000);
 
-        return () => clearTimeout(timer);
+    useEffect(() => {
+
+        const reviewSent = localStorage.getItem("reviewSent");
+
+        if (reviewSent) return;
+
+        const popupClosedAt = localStorage.getItem("popupClosedAt");
+
+        if (!popupClosedAt) {
+
+            const timer = setTimeout(() => {
+                setShowPromo(true);
+            }, 10000);
+
+            return () => clearTimeout(timer);
+        }
+
+        const now = Date.now();
+        const diff = now - Number(popupClosedAt);
+
+        if (diff > 180000) {
+
+            const timer = setTimeout(() => {
+                setShowPromo(true);
+            }, 10000);
+
+            return () => clearTimeout(timer);
+        }
+
     }, []);
 
-    const [totalPrice, setTotalPrice] = useState({
-        subtotal: 0,
-        iva: 0,
-        total: 0
-    });
+    const closePromo = () => {
+
+        localStorage.setItem(
+            "popupClosedAt",
+            Date.now()
+        );
+
+        setShowPromo(false);
+    };
 
     const handleRating = (value) => {
         setNewReview({ ...newReview, rating: value });
@@ -225,6 +253,8 @@ Gracias!
             console.log("RESPUESTA API:", response);
 
             alert("Opinión enviada correctamente ✅");
+            localStorage.setItem("reviewSent", "true");
+            setShowPromo(false);
 
             setNewReview({
                 name: "",
