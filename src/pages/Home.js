@@ -18,7 +18,7 @@ function Home() {
         hours: 2,
         urgent: false
     });
-    
+
     const [totalPrice, setTotalPrice] = useState({
         subtotal: 0,
         iva: 0,
@@ -1051,7 +1051,7 @@ Gracias!
 
                             <button
                                 className="close-popup"
-                                onClick={() => setShowPromo(false)}
+                                onClick={closePromo}
                             >
                                 ✕
                             </button>
