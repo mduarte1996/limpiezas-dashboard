@@ -94,6 +94,14 @@ function Home() {
 
         if (data.service_type === "vivienda") pricePerHour = 16;
         if (data.service_type === "turistico") pricePerHour = 17;
+        if (data.service_type === "gestion_turistica") {
+            setTotalPrice({
+                subtotal: 0,
+                iva: 0,
+                total: 0
+            });
+            return;
+        }
         if (data.service_type === "profunda") pricePerHour = 20;
         if (data.service_type === "obra") pricePerHour = 25;
 
@@ -454,6 +462,11 @@ Gracias!
                     >
                         <h3>🏖 Alquiler turístico</h3>
                         <p>Servicio especializado para alquileres vacacionales.</p>
+                    </div>
+
+                    <div className="card" onClick={() => setSelectedService("gestion_turistica")}>
+                        <h3>🏡 Gestión de alquiler turístico</h3>
+                        <p>Nos encargamos de la gestión integral de tu vivienda vacacional.</p>
                     </div>
 
                     <div className="card" onClick={() => setSelectedService("profunda")}>
@@ -892,6 +905,69 @@ Gracias!
 
                                 <div className="modal-image">
                                     <img src="/limpieza-turistica.jpg" alt="Alquileres turísticos" />
+                                </div>
+
+                            </div>
+                        )}
+
+                        {/* GESTIÓN ALQUILER TURÍSTICO */}
+                        {selectedService === "gestion_turistica" && (
+                            <div className="modal-body">
+
+                                <div className="modal-text">
+                                    <h2>Gestión de alquiler turístico</h2>
+
+                                    <p>
+                                        Nos encargamos de la gestión operativa de tu vivienda vacacional
+                                        para que puedas obtener rentabilidad sin preocuparte por el día a día.
+                                    </p>
+
+                                    <p><strong>Incluye:</strong></p>
+
+                                    <ul>
+                                        <li>✔ Publicación en plataformas de alquiler</li>
+                                        <li>✔ Gestión de reservas</li>
+                                        <li>✔ Coordinación de check-in y check-out</li>
+                                        <li>✔ Marketing</li>
+                                        <li>✔ Atención y comunicación con huéspedes</li>
+                                        <li>✔ Servicio de limpieza</li>
+                                        <li>✔ Servicio de lavandería</li>
+                                        <li>✔ Reposición de amenities y suministros</li>
+                                        <li>✔ Gestión de incidencias</li>
+                                        <li>✔ Optimización de precios</li>
+                                    </ul>
+
+                                    <p>
+                                        Ideal para propietarios que desean delegar la gestión de su
+                                        vivienda turística y ofrecer una experiencia profesional a sus huéspedes.
+                                    </p>
+
+                                    <p><strong>💰 Presupuesto personalizado</strong></p>
+
+                                    <div className="modal-actions">
+
+                                        <button
+                                            className="primary-btn"
+                                            onClick={() => handleSelectService("gestion_turistica")}
+                                        >
+                                            Solicitar gestión turística
+                                        </button>
+
+                                        <a
+                                            href="/gestion-alquiler-turistico-benidorm"
+                                            className="secondary-btn"
+                                        >
+                                            Ver servicio completo
+                                        </a>
+
+                                    </div>
+                                </div>
+
+                                <div className="modal-image">
+                                    <img
+                                        src="/gestion-turistica.jpeg"
+                                        alt="Gestión de alquiler turístico"
+                                    />
                                 </div>
 
                             </div>

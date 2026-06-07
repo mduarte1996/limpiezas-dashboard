@@ -10,6 +10,7 @@ import PisosTuristicos from "./pages/PisosTuristicos";
 import LimpiezaViviendas from "./pages/LimpiezaViviendas";  
 import LimpiezaProfunda from "./pages/LimpiezaProfunda";    
 import LimpiezaFinObra from "./pages/LimpiezaFinObra";
+import GestionTuristica from "./pages/GestionTuristica";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
         <Route path="/limpieza-viviendas-benidorm" element={<LimpiezaViviendas />} />
         <Route path="/limpieza-profunda-benidorm" element={<LimpiezaProfunda />} />
         <Route path="/limpieza-fin-obra-benidorm" element={<LimpiezaFinObra />} />
-
+        <Route path="/gestion-alquiler-turistico-benidorm" element={<GestionTuristica />} />
       </Routes>
     </BrowserRouter>
   );
