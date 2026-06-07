@@ -925,16 +925,13 @@ Gracias!
                                     <p><strong>Incluye:</strong></p>
 
                                     <ul>
-                                        <li>✔ Publicación en plataformas de alquiler</li>
-                                        <li>✔ Gestión de reservas</li>
-                                        <li>✔ Coordinación de check-in y check-out</li>
-                                        <li>✔ Marketing</li>
-                                        <li>✔ Atención y comunicación con huéspedes</li>
-                                        <li>✔ Servicio de limpieza</li>
-                                        <li>✔ Servicio de lavandería</li>
-                                        <li>✔ Reposición de amenities y suministros</li>
-                                        <li>✔ Gestión de incidencias</li>
-                                        <li>✔ Optimización de precios</li>
+                                        <li>Check-in y check-out de huéspedes</li>
+                                        <li>Atención al cliente</li>
+                                        <li>Supervisión de limpiezas</li>
+                                        <li>Reposición de suministros</li>
+                                        <li>Control de incidencias</li>
+                                        <li>Seguimiento operativo</li>
+
                                     </ul>
 
                                     <p>
@@ -950,7 +947,7 @@ Gracias!
                                             className="primary-btn"
                                             onClick={() => handleSelectService("gestion_turistica")}
                                         >
-                                            Solicitar gestión turística
+                                            Solicitar presupuesto 
                                         </button>
 
                                         <a
