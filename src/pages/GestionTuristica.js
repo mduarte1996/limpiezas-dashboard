@@ -29,7 +29,7 @@ function GestionTuristica() {
                     <p>
                         Nos encargamos de la gestión operativa de apartamentos turísticos,
                         viviendas vacacionales y alojamientos de corta estancia para que
-                        los propietarios puedan obtener rentabilidad sin preocuparse por
+                        los propietarios puedan maximizar su rentabilidad sin preocuparse por
                         la coordinación diaria.
                     </p>
 
@@ -38,12 +38,12 @@ function GestionTuristica() {
                     <ul>
                         <li>Coordinación de check-in y check-out</li>
                         <li>Atención y comunicación con huéspedes</li>
-                        <li>Supervisión de limpiezas</li>
+                        <li>Servicio de limpieza</li>
                         <li>Reposición de amenities y suministros</li>
                         <li>Control de incidencias</li>
-                        <li>Seguimiento operativo de la vivienda</li>
+                        <li>Servicio de lavandería</li>
                         <li>Inspección del estado del inmueble</li>
-                        <li>Coordinación con personal de mantenimiento</li>
+                        <li>marketing y publicación en plataformas de alquiler</li>
                     </ul>
 
                     <h2>Gestión integral para propietarios</h2>
