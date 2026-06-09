@@ -11,6 +11,14 @@ import LimpiezaViviendas from "./pages/LimpiezaViviendas";
 import LimpiezaProfunda from "./pages/LimpiezaProfunda";    
 import LimpiezaFinObra from "./pages/LimpiezaFinObra";
 import GestionTuristica from "./pages/GestionTuristica";
+import LimpiezaBenidorm from "./pages/LimpiezaBenidorm";
+import LimpiezaAltea from "./pages/LimpiezaAltea";
+import LimpiezaAlteahills from "./pages/LimpiezaAlteahills";
+import LimpiezaMascarat from "./pages/LimpiezaMascarat";
+import LimpiezaAlbir from "./pages/LimpiezaAlbir";
+import LimpiezaFinestrat from "./pages/LimpiezaFinestrat";
+import LimpiezaVillajoyosa from "./pages/LimpiezaVillajoyosa";
+import LimpiezaLanucia from "./pages/LimpiezaLanucia";
 
 function App() {
   return (
@@ -28,6 +36,15 @@ function App() {
         <Route path="/limpieza-profunda-benidorm" element={<LimpiezaProfunda />} />
         <Route path="/limpieza-fin-obra-benidorm" element={<LimpiezaFinObra />} />
         <Route path="/gestion-alquiler-turistico-benidorm" element={<GestionTuristica />} />
+        <Route path="/limpieza-benidorm" element={<LimpiezaBenidorm />} />
+        <Route path="/limpieza-altea" element={<LimpiezaAltea />} />
+        <Route path="/limpieza-alteahills" element={<LimpiezaAlteahills />} />
+        <Route path="/limpieza-mascarat" element={<LimpiezaMascarat />} />
+        <Route path="/limpieza-albir" element={<LimpiezaAlbir />} />
+        <Route path="/limpieza-finestrat" element={<LimpiezaFinestrat />} />
+        <Route path="/limpieza-villajoyosa" element={<LimpiezaVillajoyosa />} />
+        <Route path="/limpieza-lanucia" element={<LimpiezaLanucia />} />
+
       </Routes>
     </BrowserRouter>
   );

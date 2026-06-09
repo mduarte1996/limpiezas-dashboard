@@ -6,6 +6,7 @@ import emailjs from "emailjs-com";
 import jsPDF from "jspdf";
 import { getReviews, createReview, deleteReview } from "../services/api";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 
 function Home() {
@@ -424,14 +425,30 @@ Gracias!
 
                 <div className="zonas-grid">
 
-                    <div className="zona-card">Benidorm</div>
-                    <div className="zona-card">Altea</div>
-                    <div className="zona-card">Altea Hills</div>
-                    <div className="zona-card">Mascarat</div>
-                    <div className="zona-card">Albir</div>
-                    <div className="zona-card">Cala de Finestrat</div>
-                    <div className="zona-card">Villajoyosa</div>
-                    <div className="zona-card">La Nucía</div>
+                    <Link to="/limpieza-benidorm" className="zona-card">
+                        Benidorm
+                    </Link>
+                    <Link to="/limpieza-altea" className="zona-card">
+                        Altea
+                    </Link>
+                    <Link to="/limpieza-altea-hills" className="zona-card">
+                        Altea Hills
+                    </Link>
+                    <Link to="/limpieza-mascarat" className="zona-card">
+                        Mascarat
+                    </Link>
+                    <Link to="/limpieza-albir" className="zona-card">
+                        Albir
+                    </Link>
+                    <Link to="/limpieza-cala-de-finestrat" className="zona-card">
+                        Cala de Finestrat
+                    </Link>
+                    <Link to="/limpieza-villajoyosa" className="zona-card">
+                        Villajoyosa
+                    </Link>
+                    <Link to="/limpieza-la-nucia" className="zona-card">
+                        La Nucía
+                    </Link>
 
                 </div>
 
@@ -947,7 +964,7 @@ Gracias!
                                             className="primary-btn"
                                             onClick={() => handleSelectService("gestion_turistica")}
                                         >
-                                            Solicitar presupuesto 
+                                            Solicitar presupuesto
                                         </button>
 
                                         <a

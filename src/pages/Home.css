@@ -1496,3 +1496,8 @@ color: white;
   border-radius: 8px;
   cursor: pointer;
 }
+.zona-card {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
