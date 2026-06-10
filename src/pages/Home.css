@@ -1540,22 +1540,3 @@ color: white;
     height: 100%;
     object-fit: cover;
 }
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,.35);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    color: white;
-    text-align: center;
-    z-index: 2;
-}
-
-.hero-overlay h1{
-    color:white;
-    font-size:3rem;
-}

@@ -32,16 +32,6 @@ function LimpiezaBenidorm() {
                             <source src="/benidorm.mp4" type="video/mp4" />
                         </video>
 
-                        <div className="hero-overlay">
-                            <h1>
-                                Limpieza de apartamentos turísticos en Benidorm
-                            </h1>
-
-                            <p>
-                                Airbnb · Booking · Viviendas vacacionales
-                            </p>
-                        </div>
-
                     </div>
 
                     <h1>
