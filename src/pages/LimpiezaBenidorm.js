@@ -41,11 +41,13 @@ function LimpiezaBenidorm() {
 
                     <ul>
                         <li>Limpieza de viviendas</li>
-                        <li>Limpieza de apartamentos turísticos</li>
+                        <li>Limpieza de alquiler turístico</li>
                         <li>Limpieza profunda</li>
                         <li>Limpieza fin de obra</li>
+                        <li>limpieza de comunidades</li>
                         <li>Gestión de alquiler turístico</li>
                         <li>Check-in y check-out de huéspedes</li>
+                        
                     </ul>
 
                     <h2>¿Por qué elegirnos?</h2>
@@ -73,7 +75,7 @@ function LimpiezaBenidorm() {
 
                     <p>
                         Contacta con nuestro equipo y recibe un presupuesto personalizado
-                        sin compromiso para tu vivienda, apartamento turístico o propiedad vacacional.
+                        sin compromiso para tu vivienda,comunidad,apartamento turístico o propiedad vacacional.
                     </p>
 
                     <div className="cta-buttons">

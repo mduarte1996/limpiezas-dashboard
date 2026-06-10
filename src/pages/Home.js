@@ -477,8 +477,8 @@ Gracias!
                         className="card"
                         onClick={() => setSelectedService("turistico")}
                     >
-                        <h3>🏖 Alquiler turístico</h3>
-                        <p>Servicio especializado para alquileres vacacionales.</p>
+                        <h3>🏖 Limpieza de alquiler vacacional</h3>
+                        <p>Servicio especializado para alquileres turísticos.</p>
                     </div>
 
                     <div className="card" onClick={() => setSelectedService("gestion_turistica")}>
