@@ -43,6 +43,7 @@ function LimpiezaAltea() {
                         <li>Limpieza de viviendas</li>
                         <li>Limpieza de apartamentos turísticos</li>
                         <li>Limpieza profunda</li>
+                        <li>Limpieza de comunidades</li>
                         <li>Limpieza fin de obra</li>
                         <li>Gestión de alquiler turístico</li>
                         <li>Check-in y check-out de huéspedes</li>

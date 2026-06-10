@@ -936,7 +936,7 @@ Gracias!
 
                                     <p>
                                         Nos encargamos de la gestión operativa de tu vivienda vacacional
-                                        para que puedas obtener rentabilidad sin preocuparte por el día a día.
+                                        para que puedas maximizar la rentabilidad sin preocuparte por el día a día.
                                     </p>
 
                                     <p><strong>Incluye:</strong></p>
@@ -944,7 +944,7 @@ Gracias!
                                     <ul>
                                         <li>Check-in y check-out de huéspedes</li>
                                         <li>Atención al cliente</li>
-                                        <li>Supervisión de limpiezas</li>
+                                        <li>Servicio de limpieza</li>
                                         <li>Reposición de suministros</li>
                                         <li>Control de incidencias</li>
                                         <li>Seguimiento operativo</li>
