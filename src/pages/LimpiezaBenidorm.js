@@ -13,12 +13,21 @@ function LimpiezaBenidorm() {
     return (
         <>
             <Navbar />
+            <Link to="/" className="back-link">
+                ← Volver al inicio
+            </Link>
+
 
             <div className="legal-page">
                 <div className="legal-container">
+                    <img
+                        src="/gestion-turistica.jpeg"
+                        alt="Limpieza de viviendas y apartamentos turísticos en Benidorm"
+                        className="seo-hero"
+                    />
 
                     <h1>
-                        Servicio de limpieza en Benidorm
+                        Limpieza de viviendas y apartamentos turísticos en Benidorm
                     </h1>
 
                     <p>
@@ -52,7 +61,23 @@ function LimpiezaBenidorm() {
                         un servicio rápido, profesional y de confianza.
                     </p>
 
-                    <div style={{ marginTop: "30px" }}>
+                    <h2>Zonas donde trabajamos</h2>
+
+                    <p>
+                        Prestamos servicios de limpieza y gestión de alquiler turístico
+                        en Benidorm, Altea, Altea Hills, La Nucía, Villajoyosa,
+                        Cala de Finestrat, Albir y Mascarat.
+                    </p>
+
+                    <h2>Solicita presupuesto gratuito</h2>
+
+                    <p>
+                        Contacta con nuestro equipo y recibe un presupuesto personalizado
+                        sin compromiso para tu vivienda, apartamento turístico o propiedad vacacional.
+                    </p>
+
+                    <div className="cta-buttons">
+
                         <a
                             href="https://wa.me/34611009814"
                             target="_blank"
@@ -61,15 +86,14 @@ function LimpiezaBenidorm() {
                         >
                             Solicitar presupuesto por WhatsApp
                         </a>
-                    </div>
 
-                    <div style={{ marginTop: "20px" }}>
-                        <Link
-                            to="/#contacto"
+                        <a
+                            href="/#contacto"
                             className="secondary-btn"
                         >
                             Solicitar presupuesto online
-                        </Link>
+                        </a>
+
                     </div>
 
                 </div>
