@@ -52,7 +52,7 @@ function LimpiezaBenidorm() {
                         <li>Limpieza de alquiler turístico</li>
                         <li>Limpieza profunda</li>
                         <li>Limpieza fin de obra</li>
-                        <li>limpieza de comunidades</li>
+                        <li>Limpieza de comunidades</li>
                         <li>Gestión de alquiler turístico</li>
                         <li>Check-in y check-out de huéspedes</li>
 
