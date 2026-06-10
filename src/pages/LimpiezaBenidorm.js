@@ -20,11 +20,29 @@ function LimpiezaBenidorm() {
 
             <div className="legal-page">
                 <div className="legal-container">
-                    <img
-                        src="/gestion-turistica.jpeg"
-                        alt="Limpieza de viviendas y apartamentos turísticos en Benidorm"
-                        className="seo-hero"
-                    />
+                    <div className="hero-benidorm">
+
+                        <video
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            className="hero-video"
+                        >
+                            <source src="/benidorm.mp4" type="video/mp4" />
+                        </video>
+
+                        <div className="hero-overlay">
+                            <h1>
+                                Limpieza de apartamentos turísticos en Benidorm
+                            </h1>
+
+                            <p>
+                                Airbnb · Booking · Viviendas vacacionales
+                            </p>
+                        </div>
+
+                    </div>
 
                     <h1>
                         Limpieza de viviendas y apartamentos turísticos en Benidorm
@@ -47,7 +65,7 @@ function LimpiezaBenidorm() {
                         <li>limpieza de comunidades</li>
                         <li>Gestión de alquiler turístico</li>
                         <li>Check-in y check-out de huéspedes</li>
-                        
+
                     </ul>
 
                     <h2>¿Por qué elegirnos?</h2>
