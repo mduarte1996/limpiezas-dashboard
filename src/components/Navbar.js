@@ -25,7 +25,7 @@ function Navbar() {
                 className="logo"
                 onClick={() => window.scrollTo(0, 0)}
             >
-                <img src="/logo.png" alt="Limpiezas Costa Blanca" />
+                <img src="/logo-nuevo-lcb.png" alt="Limpiezas Costa Blanca" />
             </Link>
 
             <div className="lang-switch">
