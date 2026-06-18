@@ -27,7 +27,7 @@ function LimpiezaBenidorm() {
                             muted
                             loop
                             playsInline
-                            className="hero-video"
+                            className="benidorm-video"
                         >
                             <source src="/benidorm.mp4" type="video/mp4" />
                         </video>
