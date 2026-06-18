@@ -22,12 +22,18 @@ function LimpiezaBenidorm() {
                 <div className="legal-container">
                     <div className="hero-benidorm">
 
+                        <img
+                            src="/benidorm-desktop.jpg"
+                            alt="Limpieza de apartamentos turísticos en Benidorm"
+                            className="hero-desktop"
+                        />
+
                         <video
                             autoPlay
                             muted
                             loop
                             playsInline
-                            className="benidorm-video"
+                            className="hero-mobile"
                         >
                             <source src="/benidorm.mp4" type="video/mp4" />
                         </video>
