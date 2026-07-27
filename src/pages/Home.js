@@ -7,9 +7,12 @@ import jsPDF from "jspdf";
 import { getReviews, createReview, deleteReview } from "../services/api";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 
 function Home() {
+    const { t } = useTranslation();
+
     const [formData, setFormData] = useState({
         client_name: "",
         phone: "",
@@ -340,23 +343,23 @@ Gracias!
 
                 <div className="overlay">
 
-                    <h1>
-                        Limpieza profesional en Benidorm y Costa Blanca
-                    </h1>
+                    <h1>{t("hero.title")}</h1>
 
-                    <p className="hero-trust">
-                        ⭐ Servicio rápido y profesional
-                        ⭐ Atención personalizada
-                        ⭐ Clientes satisfechos en toda la zona
-                    </p>
+                    <div className="hero-trust">
+                        <span>⭐ {t("hero.trust.fast")}</span>
+                        <span>⭐ {t("hero.trust.personalized")}</span>
+                        <span>⭐ {t("hero.trust.satisfied")}</span>
+                    </div>
 
                     <a
-                        href="https://wa.me/34611009814?text=Hola,%20quiero%20un%20presupuesto%20de%20limpieza"
+                        href={`https://wa.me/34611009814?text=${encodeURIComponent(
+                            t("hero.whatsappMessage")
+                        )}`}
                         className="hero-btn"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Solicitar presupuesto GRATIS por WhatsApp
+                        {t("hero.button")}
                     </a>
 
                 </div>

@@ -4,5 +4,15 @@
     "services": "Servicios",
     "about": "Sobre nosotros",
     "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Limpieza profesional en Benidorm y Costa Blanca",
+    "trust": {
+      "fast": "Servicio rápido y profesional",
+      "personalized": "Atención personalizada",
+      "satisfied": "Clientes satisfechos en toda la zona"
+    },
+    "button": "Solicitar presupuesto GRATIS por WhatsApp",
+    "whatsappMessage": "Hola, quiero un presupuesto de limpieza"
   }
 }

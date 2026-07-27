@@ -4,5 +4,15 @@
     "services": "Services",
     "about": "About Us",
     "contact": "Contact"
+  },
+  "hero": {
+    "title": "Professional cleaning in Benidorm and the Costa Blanca",
+    "trust": {
+      "fast": "Fast and professional service",
+      "personalized": "Personalized customer care",
+      "satisfied": "Satisfied clients throughout the area"
+    },
+    "button": "Request a FREE quote on WhatsApp",
+    "whatsappMessage": "Hello, I would like to request a cleaning quote"
   }
 }
