@@ -58,25 +58,25 @@ function Navbar() {
             <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
                 <li>
                     <a href="/#inicio" onClick={() => setMenuOpen(false)}>
-                        {t("inicio")}
+                        {t("menu.home")}
                     </a>
                 </li>
 
                 <li>
                     <a href="/#servicios" onClick={() => setMenuOpen(false)}>
-                        {t("servicios")}
+                        {t("menu.services")}
                     </a>
                 </li>
 
                 <li>
                     <a href="/#sobre" onClick={() => setMenuOpen(false)}>
-                        {t("sobre")}
+                        {t("menu.about")}
                     </a>
                 </li>
 
                 <li>
                     <a href="/#contacto" onClick={() => setMenuOpen(false)}>
-                        {t("contacto")}
+                        {t("menu.contact")}
                     </a>
                 </li>
             </ul>

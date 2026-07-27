@@ -372,36 +372,63 @@ Gracias!
 
                         <p>
                             En <strong>Limpiezas Costa Blanca</strong> somos especialistas en la
-                            <strong>limpieza de apartamentos turísticos</strong>, viviendas familiares y alojamientos vacacionales
-                            gestionados en plataformas como <strong>Airbnb</strong> y <strong>Booking</strong> en Benidorm y alrededores.
-                            Ofrecemos servicio en <strong>Altea</strong>, <strong>Altea Hills</strong>, <strong>Albir</strong>,
-                            <strong>Cala de Finestrat</strong>, <strong>Villajoyosa</strong>, <strong>La Nucía</strong> y <strong>Mascarat</strong>.
+                            <strong> limpieza de apartamentos turísticos</strong>,
+                            <strong> viviendas particulares</strong>,
+                            <strong> comunidades de vecinos</strong>,
+                            <strong> alojamientos vacacionales</strong> y
+                            <strong> gestión de alquiler turístico</strong> en
+                            <strong> Benidorm</strong> y toda la
+                            <strong> Costa Blanca</strong>. Prestamos servicio profesional en
+                            <strong> Altea</strong>, <strong>Altea Hills</strong>,
+                            <strong> Albir</strong>, <strong>Cala de Finestrat</strong>,
+                            <strong> Villajoyosa</strong>, <strong>La Nucía</strong> y
+                            <strong> Mascarat</strong>, ofreciendo soluciones adaptadas tanto para
+                            particulares como para propietarios, empresas y comunidades.
                         </p>
 
                         <p>
-                            Entendemos la importancia de cada <strong>cambio de huésped</strong>, por eso trabajamos con
-                            <strong>puntualidad</strong>, <strong>organización</strong> y una <strong>atención minuciosa a los detalles</strong>,
-                            garantizando resultados inmediatos y una presentación impecable del alojamiento.
+                            Realizamos <strong>limpieza de viviendas</strong>,
+                            <strong> limpieza de apartamentos turísticos</strong>,
+                            <strong> limpieza de comunidades de propietarios</strong>,
+                            <strong> limpieza fin de obra</strong>,
+                            <strong> limpiezas profundas</strong> y
+                            <strong> gestión integral de alquileres vacacionales</strong>,
+                            garantizando siempre un servicio puntual, profesional y de máxima calidad.
                         </p>
 
                         <p>
-                            Nuestro objetivo es ayudarte a ofrecer una <strong>experiencia excelente</strong> desde el primer momento,
-                            favoreciendo <strong>mejores valoraciones</strong> y <strong>reviews positivas</strong> por parte de tus huéspedes en
-                            <strong>Airbnb</strong> y <strong>Booking</strong>.
+                            Para los propietarios que anuncian sus viviendas en
+                            <strong> Airbnb</strong> y <strong>Booking</strong>, entendemos la
+                            importancia de cada <strong>cambio de huésped</strong>. Cuidamos cada
+                            detalle para que el alojamiento esté impecable, organizado y preparado
+                            para ofrecer una excelente primera impresión, favoreciendo
+                            <strong> mejores valoraciones</strong> y
+                            <strong> reseñas positivas</strong>.
                         </p>
 
                         <p>
-                            Nos adaptamos a los <strong>horarios del alquiler turístico</strong> y a las necesidades de cada propiedad,
-                            asegurando espacios limpios, ordenados y listos para la llegada del siguiente huésped.
-                            Realizamos <strong>limpieza profesional de viviendas turísticas en Benidorm y toda la Costa Blanca</strong>,
-                            aportando tranquilidad, calidad y profesionalidad en cada servicio.
+                            También ofrecemos un servicio profesional de
+                            <strong> limpieza y mantenimiento de comunidades de vecinos</strong>,
+                            incluyendo portales, escaleras, ascensores y zonas comunes, adaptándonos
+                            a las necesidades de cada comunidad con planes de limpieza periódicos y
+                            totalmente personalizados.
+                        </p>
+
+                        <p>
+                            Nos adaptamos a los horarios y necesidades de cada cliente,
+                            proporcionando un servicio de limpieza rápido, eficaz y de confianza.
+                            Nuestro compromiso es ofrecer espacios limpios, seguros y perfectamente
+                            preparados, aportando tranquilidad, profesionalidad y una atención al
+                            detalle que nos diferencia en toda la Costa Blanca.
                         </p>
 
                         <div className="about-features">
-                            <span>✔ Gestion Alquiler turístico</span>
-                            <span>✔ limpieza post check-out</span>
+                            <span>✔ Gestión de alquiler turístico</span>
+                            <span>✔ Limpieza de comunidades</span>
+                            <span>✔ Limpieza de viviendas</span>
                             <span>✔ Servicio de lavandería</span>
-                            <span>✔ Benidorm y alrededores</span>
+                            <span>✔ Benidorm y Costa Blanca</span>
+                            <span>✔ Presupuestos gratuitos</span>
                         </div>
                     </div>
 
